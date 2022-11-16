@@ -14,4 +14,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <RouterProvider router={router} />
     </section>
   </React.StrictMode>
+  
 )
