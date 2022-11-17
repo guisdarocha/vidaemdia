@@ -5,11 +5,11 @@ type ArticleProps = {}
 function Article({}: ArticleProps) {
 
   return (
-        <ArticleCard className='row justify-content-between g-5'>
-          <div className="bg1 col-lg-6 card">
+        <ArticleCard className='row justify-content-around gy-5'>
+          <div className="bg1 col-lg-6 card ">
             <div>
               <div>
-                <h3>documento online abre novas possiblidades para área da saúde <span><br/>----------</span></h3>
+                <h3>documento online abre novas possiblidades para área da saúde <span><br/>------</span></h3>
               </div>
             <div>
                 <h4>com o avanço da tencologia na área da saúde, redes públicas e particulares estão aderindo ao novo...</h4>
@@ -23,7 +23,7 @@ function Article({}: ArticleProps) {
             <div className="bg2 col-lg-6 card">
             <div>
               <div>
-                <h3>documento online abre novas possiblidades para área da saúde <span><br/>----------</span></h3>
+                <h3>documento online abre novas possiblidades para área da saúde <span><br/>------</span></h3>
               </div>
             <div>
                 <h4>com o avanço da tencologia na área da saúde, redes públicas e particulares estão aderindo ao novo...</h4>

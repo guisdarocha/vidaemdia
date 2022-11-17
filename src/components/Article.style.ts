@@ -10,7 +10,7 @@ export const ArticleCard = styled.article`
   h3{
   margin-top:129px;
   margin-left: 1.2rem;
-  font-family: 'Inter';
+  font-family: 'roboto', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -19,15 +19,15 @@ export const ArticleCard = styled.article`
   }
 
   h3 span{
-    font-size: 50px;
+    font-size: 25px;
     color: #FFFFFF;
     opacity: 0.5;
-    letter-spacing: -3px;
+    letter-spacing: -5.5px;
 
   }
 
   h4{
-    font-family: 'Roboto';
+    font-family: 'roboto', sans-serif;
     margin-left: 1.2rem;
     font-style: normal;
     font-weight: 500;
@@ -51,7 +51,7 @@ export const ArticleCard = styled.article`
 }
 
 .bg2{
-    background: url(${art2}) no-repeat center top ;
+    background: url(${art2}) no-repeat center center ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
