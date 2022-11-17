@@ -1,11 +1,12 @@
-
 type HomeProps = {
 
 }
 
 const Home = (props: HomeProps) => {
   return (
-    <div>Home</div>
+    <>
+      <div>Home</div>
+    </>
   )
 }
 
