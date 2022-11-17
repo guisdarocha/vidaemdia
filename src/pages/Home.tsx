@@ -1,3 +1,4 @@
+import Article from "../components/Article"
 
 type HomeProps = {
 
@@ -5,7 +6,13 @@ type HomeProps = {
 
 const Home = (props: HomeProps) => {
   return (
-    <div>Home</div>
+    <>
+    <div>navbar</div>
+      <div className="container">
+        <Article  />
+      </div>
+    <div>footer</div>
+    </>
   )
 }
 
