@@ -4,11 +4,14 @@ import art2 from "../assets/artigo2.png"
 
 export const ArticleCard = styled.article`
 
-
-
+  img{
+    margin-left: 1.2rem;
+    max-width: 100%;
+  }
 
   h3{
-  margin-top:129px;
+  padding-top:136px;
+  text-transform: initial uppercase;
   margin-left: 1.2rem;
   font-family: 'roboto', sans-serif;
   font-style: normal;
@@ -16,6 +19,9 @@ export const ArticleCard = styled.article`
   font-size: 32px;
   line-height: 38px;
   color: #F5F5F5;
+  :first-letter {
+    text-transform: uppercase;
+    }
   }
 
   h3 span{
@@ -29,12 +35,16 @@ export const ArticleCard = styled.article`
   h4{
     font-family: 'roboto', sans-serif;
     margin-left: 1.2rem;
+    margin-bottom: 5vh;
     font-style: normal;
     font-weight: 500;
     font-size: 22.0556px;
     line-height: 150%;
     letter-spacing: -0.011em;
     color: #F5F5F5;
+    :first-letter {
+    text-transform: uppercase;
+    }
   }
 
  .bg1{
@@ -42,7 +52,7 @@ export const ArticleCard = styled.article`
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: auto ;
+    background-size: 100% ;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 15px;
@@ -55,7 +65,7 @@ export const ArticleCard = styled.article`
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: auto ;
+    background-size: 100% ;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 15px;
@@ -64,11 +74,12 @@ export const ArticleCard = styled.article`
 }
 
 .card{
-    max-width: 550px;
+    max-width: 608px;
     padding: 0;
  }
 
 .readlink{
+  position: relative;
   text-align: center;
   background: #1FC4CC;
   p{
@@ -80,7 +91,11 @@ export const ArticleCard = styled.article`
     color: #F5F5F5;
     margin-bottom: 0;
     padding-bottom: 14px;
+    :first-letter {
+    text-transform: uppercase;
+    }
   }
+
 }
 
 `
