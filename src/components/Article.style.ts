@@ -56,6 +56,10 @@ export const ArticleCard = styled.article`
     :first-letter {
     text-transform: uppercase;
     }
+    @media only screen and (max-width: 1200px){
+
+      margin-bottom: 0.5rem;
+   }
     @media only screen and (max-width: 525px){
     font-size: 18px;
     margin: 0 1.2rem 1rem;
