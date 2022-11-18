@@ -10,7 +10,7 @@ export const ArticleCard = styled.article`
   }
 
   h3{
-  padding-top:136px;
+  margin-top:136px;
   text-transform: initial uppercase;
   margin-left: 1.2rem;
   font-family: 'roboto', sans-serif;
@@ -22,6 +22,17 @@ export const ArticleCard = styled.article`
   :first-letter {
     text-transform: uppercase;
     }
+  @media only screen and (max-width: 525px){
+    font-size: 24px;
+    margin: 5rem 0 0 1.2rem ;
+   }
+  @media only screen and (max-width: 330px){
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    margin: 1rem 0 0 1.2rem ;
+
+   }
   }
 
   h3 span{
@@ -35,7 +46,7 @@ export const ArticleCard = styled.article`
   h4{
     font-family: 'roboto', sans-serif;
     margin-left: 1.2rem;
-    margin-bottom: 5vh;
+    margin-bottom: 2rem;
     font-style: normal;
     font-weight: 500;
     font-size: 22.0556px;
@@ -45,6 +56,14 @@ export const ArticleCard = styled.article`
     :first-letter {
     text-transform: uppercase;
     }
+    @media only screen and (max-width: 525px){
+    font-size: 18px;
+    margin: 0 1.2rem 1rem;
+   }
+    @media only screen and (max-width: 420px){
+    font-size: 12px;
+
+   }
   }
 
  .bg1{
@@ -89,11 +108,18 @@ export const ArticleCard = styled.article`
     font-size: 36.85px;
     line-height: 45px;
     color: #F5F5F5;
-    margin-bottom: 0;
-    padding-bottom: 14px;
+    margin: 23px 0;
     :first-letter {
     text-transform: uppercase;
     }
+
+    @media only screen and (max-width: 525px){
+    font-size: 20px;
+    margin: 0;
+   }
+    @media only screen and (max-width: 420px){
+    font-size: 12px;
+   }
   }
 
 }
