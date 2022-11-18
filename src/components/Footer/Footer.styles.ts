@@ -7,12 +7,12 @@ export const FooterContainer = styled.div `
     align-items: center;
 
     color: #F5F5F5;
-    background-color:#1FC4CC;
+    background-color:#2C5EDE;
     height:120px;  
 
     font-family: Inter;
     font-weight: 400;
-    font-size: 21px;
+    font-size: 20px;
 ;
 `
 
