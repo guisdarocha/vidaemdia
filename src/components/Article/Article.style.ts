@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import art1 from "../assets/artigo1.png"
-import art2 from "../assets/artigo2.png"
+import art1 from "../../assets/artigo1.png"
+import art2 from "../../assets/artigo2.png"
 
 export const ArticleCard = styled.article`
 

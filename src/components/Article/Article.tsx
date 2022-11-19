@@ -1,5 +1,5 @@
 import { ArticleCard } from './Article.style'
-import barra from "../assets/barracinza.png"
+import barra from "../../assets/barracinza.png"
 
 type ArticleProps = {}
 

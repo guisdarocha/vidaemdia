@@ -1,4 +1,4 @@
-import Article from "../components/Article"
+import Article from "../components/Article/Article"
 
 type HomeProps = {
 
@@ -7,11 +7,11 @@ type HomeProps = {
 const Home = (props: HomeProps) => {
   return (
     <>
-    <div>navbar</div>
+    {/* navbar */}
       <div className="container">
         <Article  />
       </div>
-    <div>footer</div>
+    {/* footer */}
     </>
   )
 }
