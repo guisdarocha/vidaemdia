@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 
-export const SectionCard = styled.article`
+export const SectionCard = styled.div`
+margin-top: 2rem;
+margin-bottom: 3rem;
+
 
 img{
-    max-width: 100%;
+    max-width: 390px;
+    max-height: 420px;
 }
 
 h1{
