@@ -1,11 +1,11 @@
-
+import Section from "../components/section";
 type HomeProps = {
 
 }
 
 const Home = (props: HomeProps) => {
   return (
-    <div>Home</div>
+    <Section />
   )
 }
 
