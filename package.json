@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.26",
     "axios": "^1.1.3",
     "bootstrap": "^5.2.2",
     "localforage": "^1.10.0",
@@ -27,5 +28,17 @@
     "@vitejs/plugin-react": "^2.2.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
-  }
+  },
+  "description": "��#\u0000 \u0000v\u0000i\u0000d\u0000a\u0000e\u0000m\u0000d\u0000i\u0000a\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guisdarocha/vidaemdia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guisdarocha/vidaemdia/issues"
+  },
+  "homepage": "https://github.com/guisdarocha/vidaemdia#readme"
 }

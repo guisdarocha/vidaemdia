@@ -1,0 +1,14 @@
+{
+    "artigos" : [
+    {
+      "id": 1,
+      "titulo":"Prontuário online: Entenda como é e como funciona",
+      "resumo": "Com o avanço da tencologia na área da saúde, redes públicas e particulares estão aderindo ao novo..."
+    },
+    {
+      "id": 2,
+      "titulo":"Documento online abre novas possiblidades para área da saúde",
+      "resumo": "Com o avanço da tencologia na área da saúde, redes públicas e particulares estão aderindo ao novo..."
+    }
+  ]
+}
