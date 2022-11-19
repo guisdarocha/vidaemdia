@@ -10,7 +10,7 @@ export const FooterContainer = styled.div `
     background-color:#2C5EDE;
     height:120px;  
 
-    font-family: Inter;
+    font-family: Roboto;
     font-weight: 400;
     font-size: 20px;
 ;
