@@ -1,3 +1,4 @@
+import Article from "../components/Article/Article"
 import { Footer } from "../components/Footer/Footer"
 
 type HomeProps = {
@@ -6,9 +7,19 @@ type HomeProps = {
 
 const Home = (props: HomeProps) => {
   return (
-    <div>
-      <Footer/>
-    </div>
+
+    <>
+    {/* navbar */}
+      <div className="container">
+        <Article  />
+      </div>
+      <div>
+        <Footer/>
+      </div>
+    </>
+
+    
+
   )
 }
 
