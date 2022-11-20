@@ -1,10 +1,13 @@
 import React from 'react'
+import { ProntuarioForm } from '../components/ProntuarioForm/ProntuarioForm'
 
 type ProntuarioProps = {}
 
 const Prontuario = (props: ProntuarioProps) => {
   return (
-    <div></div>
+    <div className='container'>
+      <ProntuarioForm />
+    </div>
   )
 }
 
