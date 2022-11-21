@@ -1,12 +1,19 @@
+import { Footer } from "../components/Footer/Footer"
+
+
+
 type HomeProps = {
 
 }
 
 const Home = (props: HomeProps) => {
   return (
-    <>
-      <div>Home</div>
-    </>
+
+    
+      <div>
+        <Footer/>
+      </div>
+    
   )
 }
 
