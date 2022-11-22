@@ -13,20 +13,21 @@ export const BlurContainer = styled.div `
 `
 
 export const ModalContainer = styled.div `
-    height: 700px;
-    width: 700px;
+    height: 780px;
+    width: 800px;
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
     display: flex;
     background-color: white;
     justify-content: center;
+    border-radius: 42px;
 `
 
 export const StyledContainer = styled.div `
     
     font-family: roboto;
-    margin-left: 1.5%;
+    margin-left: 4.5%;
 
     p {
         font-size: 27px;
@@ -85,13 +86,23 @@ export const FormContainer = styled.div `
 
 export const StyledInput = styled.input `
  display: block;
+ height: 45px;
  width: 400px;
  font-family: roboto;
+ font-size: 18px;
+ border: 0.31px solid #494949;
+ border-radius: 2px;
+ color:#494949;
+
+ &.register {
+    margin-bottom: 3.5%;
+ }
 
  ::placeholder {
     color: #777777;
     font-size:16px;
  };
+
 
 `
 

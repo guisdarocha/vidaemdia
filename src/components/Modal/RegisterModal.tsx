@@ -12,21 +12,27 @@ export const RegisterModal = () => {
                     <FormContainer>
                         <form>
                             <label>
+                                Seu nome:
+                                <StyledInput className="register" placeholder="Insira seu email"/>
+                            </label>
+                            <label>
                                 Email:
-                                <StyledInput placeholder="Insira seu email"/>
+                                <StyledInput className="register" placeholder="Insira seu email"/>
                             </label>
                             <label>
                                 Senha:
-                                <StyledInput placeholder="Insira sua senha"/>
+                                <StyledInput className="register" placeholder="Insira sua senha"/>
                             </label>
-                            <a>Esqueceu sua senha ?</a>
-                            <StyledButton> Entrar </StyledButton>
+                            <label>
+                                Confirme sua senha:
+                                <StyledInput placeholder="Insira sua senha"/>
+                            </label>                       
+                            <StyledButton> Cadastre-se </StyledButton>
                        </form>
-                       <span>_________________________ ou ___________________________  </span>
                     </FormContainer>
-                       <StyledButton> Cadastre-se </StyledButton>
                 </StyledContainer>
             </ModalContainer>
         </BlurContainer>
   );
 }
+

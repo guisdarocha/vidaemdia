@@ -63,9 +63,6 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             </label>
           </div>
         </div>
-
-
-
 {/* CEP, endereço, numero, bairro, estado e cidade */}
         <div className='row'>
           <div className="col-3">
