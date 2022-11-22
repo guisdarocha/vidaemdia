@@ -5,10 +5,10 @@ type ButtonProps = {
   text: string
 }
 
-const Button = (props: ButtonProps) => {
+const Button = ({text}: ButtonProps) => {
   return (
     <ButtonLink to={'#'}>
-      teste
+      {text}
     </ButtonLink>
   )
 }

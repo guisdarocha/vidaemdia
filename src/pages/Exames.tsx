@@ -1,12 +1,13 @@
 import BemVindo from "../components/BemVindo/BemVindo"
 import Button from "../components/Button/Button"
+import { TopSection } from "./Exames.style"
 
 
 type ExamesProps = {}
 
 const Exames = (props: ExamesProps) => {
   return (
-    <div className="container d-flex">
+    <TopSection className="container d-flex mobile">
       <div>
         <BemVindo
           user={"Fernando Predes"}
@@ -17,7 +18,7 @@ const Exames = (props: ExamesProps) => {
       <div className="d-flex align-items-end pb-5">
         <Button text="teste"/>
       </div>
-    </div>
+    </TopSection>
   )
 }
 

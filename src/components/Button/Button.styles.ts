@@ -15,11 +15,20 @@ export const ButtonLink = styled(Link) `
   :hover{
     color: white;
   }
+
+  @media only screen and (max-width: 375px){
+
+  font-size: 28px;
+  padding: 0px 20px;
+  margin: 0 auto;
+
+}
+
 `
 export const ButtonSubmit = styled(Link) `
   font-style: normal;
   font-weight: 700;
-  font-size: 41.7904px;
+  font-size: 42px;
   line-height: 49px;
   color: #FFFFFF;
   background: #2C5EDE;
@@ -29,5 +38,13 @@ export const ButtonSubmit = styled(Link) `
   text-decoration: none;
   :hover{
     color: white;
+  }
+
+  @media only screen and (max-width: 375px){
+
+  font-size: 28px;
+  padding: 0px 20px;
+  margin: 0 auto;
+
   }
 `
