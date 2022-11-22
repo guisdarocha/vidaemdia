@@ -62,7 +62,7 @@ input::placeholder{
     }
   }
 
-  .estadocivil{
+  .bottom{
     margin-top: 21.5px;
     input{
       margin-top: 9px;
@@ -70,28 +70,71 @@ input::placeholder{
     }
   }
 
-  .sexo{
-    margin-top: 21.5px;
+
+  @media only screen and (max-width: 1400px){
+    font-size: 15px;
+
+    .data{
+      font-size: 15px;
+    }
+   }
+
+   @media only screen and (max-width: 1200px){
+
+    .bottom{
+      input{
+        max-width: 100px;
+      }
+    }
+
+    .data{
+      font-size: 13px;
+      input{
+        max-width: 120px;
+      }
+    }
+   }
+
+   @media only screen and (max-width: 992px){
+    font-size: 14px;
+  .bottom{
+    margin-top: 42px;
     input{
-      margin-top: 9px;
-      max-width: 160px;
+      max-width: 100px;
     }
   }
 
-  .peso{
-    margin-top: 21.5px;
+  .data{
+    font-size: 13px;
     input{
-      margin-top: 9px;
-      max-width: 160px;
+      max-width: 100px;
     }
   }
+}
 
-  .altura{
-    margin-top: 21.5px;
-    input{
-      margin-top: 9px;
-      max-width: 160px;
+
+   @media only screen and (max-width: 767px){
+
+    .bottom{
+      display: flex;
+      flex-direction: column;
+      margin-top: 21.5px;
     }
-  }
+    .email input{
+      margin: 0;
+    }
 
+    .bottom input{
+      max-width: 100%;
+    }
+    .data{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .data input{
+      max-width: 100%;
+    }
+
+   }
 `
