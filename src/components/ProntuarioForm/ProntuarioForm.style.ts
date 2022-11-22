@@ -43,6 +43,7 @@ input::placeholder{
     margin-top: 25.5px;
     input{
       margin-right: 24px;
+
     }
   }
 
@@ -56,6 +57,7 @@ input::placeholder{
     font-size: 19px;
     input{
       max-width: 160px;
+      margin-top: 9px;
 
     }
   }
@@ -63,7 +65,7 @@ input::placeholder{
   .estadocivil{
     margin-top: 21.5px;
     input{
-
+      margin-top: 9px;
       max-width: 160px;
     }
   }
@@ -71,7 +73,7 @@ input::placeholder{
   .sexo{
     margin-top: 21.5px;
     input{
-
+      margin-top: 9px;
       max-width: 160px;
     }
   }
@@ -79,7 +81,7 @@ input::placeholder{
   .peso{
     margin-top: 21.5px;
     input{
-
+      margin-top: 9px;
       max-width: 160px;
     }
   }
@@ -87,7 +89,7 @@ input::placeholder{
   .altura{
     margin-top: 21.5px;
     input{
-
+      margin-top: 9px;
       max-width: 160px;
     }
   }
