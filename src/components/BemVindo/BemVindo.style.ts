@@ -35,6 +35,8 @@ export const BemVindoStyle = styled.div `
     margin-bottom: 61px;
   }
 
+ 
+
   @media only screen and (max-width: 375px){
     h1{
       font-size: 36px;
