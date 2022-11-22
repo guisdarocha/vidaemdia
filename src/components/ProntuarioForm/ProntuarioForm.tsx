@@ -34,6 +34,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
 
         <div className='row'>
           <div className="col-2">
+            
             <label className='data'>
               Data de Nascimento<p className='obrigatorio'>*</p>
               <input placeholder="01/01/2022" />
@@ -62,6 +63,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
               Altura<p className='obrigatorio'>*</p>
               <input placeholder="1,80cm" />
             </label>
+
           </div>
         </div>
       </ProntuarioStyle>
