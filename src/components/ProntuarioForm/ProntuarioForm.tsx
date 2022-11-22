@@ -65,6 +65,55 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
 
           </div>
         </div>
+
+
+
+{/* CEP, endereço, numero, bairro, estado e cidade */}
+        <div className='row'>
+          <div className="col-3">
+            <label className='cep'>
+              CEP<p className='obrigatorio'>*</p>
+              <input placeholder="Ex: 11111-000" />
+            </label>
+          </div>
+          <div className="col-8">
+            <label className='endereco'>
+              Endereço<p className='obrigatorio'>*</p>
+              <input placeholder="Rua do zé" />
+            </label>
+          </div>
+          <div className="col-2">
+            <label className='numero'>
+              Número<p className='obrigatorio'>*</p>
+              <input placeholder="0123" />
+            </label>
+          </div>
+          <div className="col-6">
+            <label className='bairro'>
+              Bairro<p className='obrigatorio'>*</p>
+              <input placeholder="Tupiniquim" />
+            </label>
+          </div>
+          <div className="col-6">
+            <label className='complemento'>
+              Complemento
+              <input placeholder="Perto da padaria" />
+            </label>
+          </div>
+          <div className="col-6">
+            <label className='estado'>
+              Estado<p className='obrigatorio'>*</p>
+              <input placeholder="RJ" />
+            </label>
+          </div>
+          <div className="col-6">
+            <label className='cidade'>
+              Cidade<p className='obrigatorio'>*</p>
+              <input placeholder="Rio de Janeiro" />
+            </label>
+          </div>
+        </div> 
       </ProntuarioStyle>
+      
   );
 };
