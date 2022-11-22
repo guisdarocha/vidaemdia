@@ -2,11 +2,20 @@ import styled from "styled-components";
 
 // blur effect, show and hide modal on the screen 
 export const BlurContainer = styled.div `
+   z-index: 999;
+   height: 200%;
+   width: 100vw;
+   position: fixed;
+   top: 0;
+   background-color: rgba(0,0,0,0.75);
+   /* display: none; */
    
 `
 
 export const ModalContainer = styled.div `
     height: 700px;
+    width: 700px;
+    margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
     display: flex;
@@ -18,6 +27,14 @@ export const StyledContainer = styled.div `
     
     font-family: roboto;
     margin-left: 1.5%;
+
+    p {
+        font-size: 27px;
+        font-weight: 700;
+        display: block;
+        margin-left: 83%;
+        color: #2C5EDE;
+    }
 
     img {
         margin-left: 10%;
@@ -79,7 +96,7 @@ export const StyledInput = styled.input `
 `
 
 export const StyledButton = styled.button `
-    width: 400px;
+    width: 380px;
     height: 45px;
     background-color: #2C5EDE;
     color: #F5F5F5;
@@ -87,4 +104,5 @@ export const StyledButton = styled.button `
     font-size: 20px;
     margin-top: 5%;
     margin-bottom: 5%;
+    margin-left: 3%;
 `

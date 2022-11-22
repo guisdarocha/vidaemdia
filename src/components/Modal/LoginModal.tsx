@@ -6,6 +6,7 @@ export const LoginModal = () => {
             <ModalContainer>
                 <img src="/biological-scene.png" alt="" />
                 <StyledContainer>
+                    <p>x</p>
                     <img src="/Component1.svg" alt="" />                   
                     <h3>Bem vindo de volta</h3>
                     <h4>Área de Login</h4>

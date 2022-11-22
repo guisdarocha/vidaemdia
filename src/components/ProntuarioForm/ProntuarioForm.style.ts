@@ -70,6 +70,11 @@ input::placeholder{
     }
   }
 
+  .cep, .endereco {
+    display: grid;
+    margin-top: 25.5px;
+  }
+
 
   @media only screen and (max-width: 1400px){
     font-size: 15px;
