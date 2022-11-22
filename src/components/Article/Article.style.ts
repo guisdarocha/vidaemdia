@@ -3,6 +3,13 @@ import art1 from "../../assets/artigo1.png"
 import art2 from "../../assets/artigo2.png"
 
 export const ArticleCard = styled.article`
+  margin-top: 15.5vh;
+  margin-bottom: 20vh;
+
+  @media only screen and (max-width: 1400px){
+    margin-top: 11vh;
+    margin-bottom: 10vh;
+   }
 
   img{
     margin-left: 1.2rem;
@@ -97,7 +104,7 @@ export const ArticleCard = styled.article`
 }
 
 .card{
-    max-width: 608px;
+    max-width: 65.5vh;
     padding: 0;
  }
 

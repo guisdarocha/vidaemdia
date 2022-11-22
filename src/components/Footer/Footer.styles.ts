@@ -8,7 +8,7 @@ export const FooterContainer = styled.div `
 
     color: #F5F5F5;
     background-color:#2C5EDE;
-    height:120px;  
+    height:120px;
 
     font-family: Roboto;
     font-weight: 400;
@@ -41,18 +41,20 @@ export const IconsContainer = styled.div `
     img {
         padding: 0 10px;
     }
-
+   
     @media only screen and (max-width: 375px) {
         img {
             height: 25px;
-            margin-top: 8px;
+            margin-top:8px;
         }
     }
-
+    
     @media only screen and (max-width: 390px) {
         img {
             height: 25px;
             margin-top: 8px;
         }
     }
+
 `
+
