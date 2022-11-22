@@ -1,7 +1,7 @@
 import sabin from "../../assets/sabin.svg";
 import unimed from "../../assets/unimed.svg";
 import conect from "../../assets/conect.svg";
-import { ParceirosStyle } from "./HighLight.style"
+import { ParceirosStyle } from "./Parceiros.style"
 
 
 const Parceiros = () => {

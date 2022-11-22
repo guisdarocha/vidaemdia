@@ -8,7 +8,7 @@ export const FooterContainer = styled.div `
 
     color: #F5F5F5;
     background-color:#2C5EDE;
-    height:120px;  
+    height:120px;
 
     font-family: Roboto;
     font-weight: 400;
