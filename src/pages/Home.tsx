@@ -24,7 +24,7 @@ const Home = (props: HomeProps) => {
         <Parceiros  />
       </div>
       {/* <LoginModal/> */}
-      <RegisterModal/>
+      {/* <RegisterModal/> */}
       <div>
         <Footer/>
       </div>
