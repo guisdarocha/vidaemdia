@@ -9,7 +9,7 @@ import Avatar from "../../assets/icons/avatar.png"
 import "./styles.css"
 
 function Header() {
-    return (<header className="container">
+    return (<header className="barraheader">
       <div className="bar">
       <img className="logo" src={Logo} alt="" />
       <div className="navcomponent">
