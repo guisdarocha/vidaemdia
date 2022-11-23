@@ -40,20 +40,19 @@ export const ArticleCard = styled.article`
     margin: 1rem 0 0 1.2rem ;
 
    }
+   @media only screen and (max-width: 1200px){
+      font-size: 18px;
+      line-height: 100%;
+      margin-bottom: 0.5rem;
+   }
   }
 
-  h3 span{
-    font-size: 25px;
-    color: #FFFFFF;
-    opacity: 0.5;
-    letter-spacing: -5.5px;
 
-  }
 
   h4{
     font-family: 'roboto', sans-serif;
     margin-left: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.7rem;
     font-style: normal;
     font-weight: 500;
     font-size: 22.0556px;
@@ -64,8 +63,9 @@ export const ArticleCard = styled.article`
     text-transform: uppercase;
     }
     @media only screen and (max-width: 1200px){
-
-      margin-bottom: 0.5rem;
+      font-size: 15px;
+      line-height: 100%;
+      margin-bottom: 3rem;
    }
     @media only screen and (max-width: 525px){
     font-size: 18px;
@@ -109,10 +109,8 @@ export const ArticleCard = styled.article`
  }
 
 .readlink{
-  position: relative;
-  text-align: center;
-  background: #1FC4CC;
-  p{
+    padding-bottom: 5px;
+    text-align: center;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -124,14 +122,19 @@ export const ArticleCard = styled.article`
     text-transform: uppercase;
     }
 
+    @media only screen and (max-width: 990px){
+  padding-top: 25px;
+   }
+
     @media only screen and (max-width: 525px){
+    padding-top: 25px;
     font-size: 20px;
     margin: 0;
    }
     @media only screen and (max-width: 420px){
     font-size: 12px;
    }
-  }
+
 
 }
 

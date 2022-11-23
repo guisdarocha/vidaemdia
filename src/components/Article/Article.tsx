@@ -13,12 +13,10 @@ function Article({}: ArticleProps) {
                 <h3>Prontuário online: Entenda como é e como funciona</h3>
                 <img src={barra} alt="barra horizontal" />
               </div>
-            <div>
-                <h4>com o avanço da tencologia na área da saúde, redes públicas e particulares estão aderindo ao novo...</h4>
-            </div>
-            </div>
-              <div className='readlink'>
-                <p>ler mais</p>
+                <div>
+                  <h4>com o avanço da tencologia na área da saúde, redes públicas e particulares estão aderindo ao novo...</h4>
+                  <p className='readlink'>ler mais</p>
+                </div>
               </div>
             </div>
 
@@ -30,11 +28,10 @@ function Article({}: ArticleProps) {
               </div>
             <div>
                 <h4>com o avanço da tencologia na área da saúde, redes públicas e particulares estão aderindo ao novo...</h4>
+                <p className='readlink'>ler mais</p>
             </div>
             </div>
-              <div className='readlink'>
-                <p>ler mais</p>
-              </div>
+
             </div>
         </ArticleCard>
   )
