@@ -13,6 +13,7 @@ const Prontuario = (props: ProntuarioProps) => {
         subtext={"*Cadastre e edite seus dados relacionados a sua saúde, seus hábitos sociais e dados pessoais."}
         />
       <ProntuarioForm />
+      
     </div>
   )
 }

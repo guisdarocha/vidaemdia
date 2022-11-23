@@ -1,9 +1,7 @@
-import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { ProntuarioStyle } from './ProntuarioForm.style';
 
-const RadioGroupContext = React.createContext(null);
 type ProntuarioFormProps = {};
 
 export const ProntuarioForm = (props: ProntuarioFormProps) => {
@@ -68,12 +66,8 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
               Altura<p className='obrigatorio'>*</p>
               <input placeholder="1,80cm" />
             </label>
-
           </div>
         </div>
-
-
-
 {/* CEP, endereço, numero, bairro, estado e cidade */}
         <div className='row'>
           <div className="col-3">
