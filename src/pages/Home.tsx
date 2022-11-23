@@ -5,6 +5,7 @@ import { LoginModal } from "../components/Modal/LoginModal";
 import HighLight from "../components/HighLight/HighLight";
 import Parceiros from "../components/Parceiros/Parceiros";
 import { RegisterModal } from "../components/Modal/RegisterModal";
+import Header from "../components/Header";
 
 
 type HomeProps = {
@@ -15,7 +16,7 @@ const Home = (props: HomeProps) => {
   return (
 
     <>
-    {/* navbar */}
+    <Header />
       <div className="container">
         <Section  />
         <HighLight text="Confira nossos artigos"/>
@@ -24,7 +25,7 @@ const Home = (props: HomeProps) => {
         <Parceiros  />
       </div>
       {/* <LoginModal/> */}
-      <RegisterModal/>
+      {/* <RegisterModal/> */}
       <div>
         <Footer/>
       </div>
