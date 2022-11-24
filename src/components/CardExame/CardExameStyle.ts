@@ -31,7 +31,7 @@ export const Card = styled.div`
       font-size: 49.3617px;
       line-height: 58px;
       color: #2C5EDE;
-      margin-bottom: 80px;
+
     }
     h3:first-letter {
     text-transform: uppercase;
@@ -60,5 +60,8 @@ export const Card = styled.div`
   }
   .icone{
     margin-left: 40px;
+  }
+  .topo{
+    margin-bottom: 80px;
   }
 `

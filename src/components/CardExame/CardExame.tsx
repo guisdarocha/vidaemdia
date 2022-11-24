@@ -21,9 +21,9 @@ const CardExame = ({id, date, exam, clinic, doctor, comments, status}:CardProps)
 
   return (
     <Card>
-      <div className='d-flex justify-content-between align-items-center'>
+      <div className='d-flex justify-content-between align-items-center topo'>
         <h3>exame {id} </h3>
-        <div className='d-flex'>
+        <div className='d-flex '>
           <h4>data: <p>{date}</p></h4>
           <Link className='icone' to={"#"}><img src={lapis} alt="icone de lápis" /></Link>
           <Link className='icone' to={"#"}><img  src={lata} alt="icone de lata" /></Link>
