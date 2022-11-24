@@ -72,7 +72,9 @@ export const FormContainer = styled.div `
     };
 
     span {  
-       color: #141414
+       color: #141414;
+       font-size: 20px;
+       margin-left: 39%;
     }
 
     a {

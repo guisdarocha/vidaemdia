@@ -1,38 +1,53 @@
-import {BlurContainer ,FormContainer, ModalContainer, StyledButton, StyledContainer, StyledInput } from "./Modal.style"
+import { BlurContainer, FormContainer, ModalContainer, StyledButton, StyledContainer, StyledInput } from "./Modal.style"
+import { useForm, SubmitHandler } from "react-hook-form";
+
+type Inputs = {
+    name: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
+};
 
 export const RegisterModal = () => {
-  return (
+
+    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
+    const onSubmit: SubmitHandler<Inputs> = (data) => {
+        console.log(data);
+    }
+
+    return (
         <BlurContainer>
             <ModalContainer>
                 <img src="/biological-scene.png" alt="" />
                 <StyledContainer>
-                    <img src="/Component1.svg" alt="" />                   
+                    <p>x</p>
+                    <img src="/Component1.svg" alt="" />
                     <h3>Bem vindo de volta</h3>
                     <h4>Área de Login</h4>
                     <FormContainer>
                         <form>
                             <label>
                                 Seu nome:
-                                <StyledInput className="register" placeholder="Insira seu email"/>
+                                <StyledInput {...register("name", { required: true })} className="register" placeholder="Insira seu email" />
                             </label>
                             <label>
                                 Email:
-                                <StyledInput className="register" placeholder="Insira seu email"/>
+                                <StyledInput {...register("email", { required: true })} className="register" placeholder="Insira seu email" />
                             </label>
                             <label>
                                 Senha:
-                                <StyledInput className="register" placeholder="Insira sua senha"/>
+                                <StyledInput {...register("password", { required: true })} className="register" placeholder="Insira sua senha" />
                             </label>
                             <label>
                                 Confirme sua senha:
-                                <StyledInput placeholder="Insira sua senha"/>
-                            </label>                       
+                                <StyledInput {...register("confirmPassword", { required: true })} placeholder="Insira sua senha" />
+                            </label>
                             <StyledButton> Cadastre-se </StyledButton>
-                       </form>
+                        </form>
                     </FormContainer>
                 </StyledContainer>
             </ModalContainer>
         </BlurContainer>
-  );
+    );
 }
 
