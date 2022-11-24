@@ -10,6 +10,11 @@ export const Card = styled.div`
   border-radius: 14px;
   margin-bottom: 50px;
 
+  @media only screen and (max-width: 800px){
+      height: 80vh;
+
+      }
+
     p{
       margin: 0 0 0 10px;
       font-family: 'Roboto';
@@ -20,6 +25,11 @@ export const Card = styled.div`
       display: flex;
       align-items: center;
       color: #2C5EDE;
+
+      @media only screen and (max-width: 800px){
+      font-size: 21px;
+      margin: 0;
+      }
     }
 
     p:first-letter {
@@ -31,8 +41,13 @@ export const Card = styled.div`
       font-size: 49.3617px;
       line-height: 58px;
       color: #2C5EDE;
+      @media only screen and (max-width: 800px){
+      font-size: 28px;
+
+      }
 
     }
+
     h3:first-letter {
     text-transform: uppercase;
     }
@@ -44,7 +59,11 @@ export const Card = styled.div`
       display: flex;
       align-items: center;
       color: #464A53;
-
+      @media only screen and (max-width: 800px){
+      font-size: 18px;
+      display: block;
+      margin: 0;
+      }
     }
 
 
@@ -54,14 +73,30 @@ export const Card = styled.div`
       line-height: 23px;
       color: #2C5EDE;
       margin: 0 290px 0 10px;
+      @media only screen and (max-width: 800px){
+        margin: 0;
+      }
+
     }
+
   .linha{
     margin-bottom: 40px;
+    @media only screen and (max-width: 800px){
+    display: block !important;
+    margin-bottom: 20px;
+   }
   }
   .icone{
     margin-left: 40px;
   }
   .topo{
     margin-bottom: 80px;
+
+    @media only screen and (max-width: 800px){
+    display: block !important;
+    margin-bottom: 40px;
+   }
   }
+
+
 `
