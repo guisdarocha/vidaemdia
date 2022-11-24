@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { ProntuarioStyle } from './ProntuarioForm.style';
+import { ProntuarioStyle, BlueButton, Select } from './ProntuarioForm.style';
 
 type ProntuarioFormProps = {};
 
@@ -47,13 +47,13 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           </div>
           <div className="col-12 col-md-2 ">
             <label className='sexo bottom'>
-              Sexo<p className='obrigatorio'>*</p>
-              <select name="sexo" required>
+            Sexo<p className='obrigatorio'>*</p>
+            < Select name="sexo" required>
                 <option value="genero" disabled selected hidden></option>
                 <option value="masculino">Masculino</option>
                 <option value="feminino">Feminino</option>
                 <option value="naodizer">Prefiro não dizer</option>
-              </select>
+            </ Select > 
             </label>
           </div>
           <div className="col-12 col-md-2 ">
@@ -74,7 +74,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
       <ProntuarioStyle>
         {/* CEP, endereço, numero, bairro, estado e cidade */}
         <div className='row'>
-          <div className="col-3">
+          <div className="col-12">
             <label className='cep'>
               CEP<p className='obrigatorio'>*</p>
               <input placeholder="Ex: 11111-000" />
@@ -86,31 +86,31 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
               <input placeholder="Rua do zé" />
             </label>
           </div>
-          <div className="col-2">
+          <div className="numero col-4">
             <label className='numero'>
               Número<p className='obrigatorio'>*</p>
               <input placeholder="0123" />
             </label>
           </div>
-          <div className="col-6">
+          <div className="bairro col-12">
             <label className='bairro'>
               Bairro<p className='obrigatorio'>*</p>
               <input placeholder="Tupiniquim" />
             </label>
           </div>
-          <div className="col-6">
+          <div className="completo col-12">
             <label className='complemento'>
               Complemento
               <input placeholder="Perto da padaria" />
             </label>
           </div>
-          <div className="col-6">
+          <div className="estado col-6">
             <label className='estado'>
               Estado<p className='obrigatorio'>*</p>
               <input placeholder="RJ" />
             </label>
           </div>
-          <div className="col-6">
+          <div className="cidade col-6">
             <label className='cidade'>
               Cidade<p className='obrigatorio'>*</p>
               <input placeholder="Rio de Janeiro" />
@@ -123,13 +123,13 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
       <ProntuarioStyle>
         <h3> Histórico Social </h3>
 
-        <div className="col-6">
+        <div className="col-6">        
           <label className='fumar'>
             Fumo:
-            <input value='sim' type='radio' name='fumar' />
+            <input className="radio" value='sim' type='radio' name='fumar' />
             <span> Sim </span>
             <input value='nao' type='radio' name='fumar' />
-            <span> Não </span>
+            <span> Não </ span>
           </label>
         </div>
         <div className="col-6">
@@ -333,6 +333,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             Segunda Dose de Reforço
           </label>
         </div>
+
       </ProntuarioStyle>
     </>
   );
