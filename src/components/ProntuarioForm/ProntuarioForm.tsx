@@ -127,9 +127,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='fumar'>
             Fumo:
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='drogas' />
+              <input className="radio" value='sim' type='radio' name='fumar' />
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='drogas' />
+              <input className="radio" value='nao' type='radio' name='fumar' />
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -149,9 +149,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='alcool'>
             Álcool
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='drogas' />
+              <input className="radio" value='sim' type='radio' name='alcool' />
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='drogas' />
+              <input className="radio" value='nao' type='radio' name='alcool' />
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -160,9 +160,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='exercicios'>
             Pratica exercícios?
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='drogas' />
+              <input className="radio" value='sim' type='radio' name='exercicios' />
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='drogas' />
+              <input className="radio" value='nao' type='radio' name='exercicios' />
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -171,9 +171,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='recreacao'>
             Pratica alguma recreação?
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='drogas' />
+              <input className="radio" value='sim' type='radio' name='recreacao' />
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='drogas' />
+              <input className="radio" value='nao' type='radio' name='recreacao' />
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -182,9 +182,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='familia'>
             Doença na familia?
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='drogas' />
+              <input className="radio" value='sim' type='radio' name='familia' />
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='drogas' />
+              <input className="radio" value='nao' type='radio' name='familia' />
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -193,9 +193,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='tratamento'>
             Esta fazendo algum tratamento?
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='drogas' />
+              <input className="radio" value='sim' type='radio' name='tratamento' />
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='drogas' />
+              <input className="radio" value='nao' type='radio' name='tratamento' />
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -203,21 +203,19 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <div className="col-6">
           <label className='medicamento'>
             Faz uso de algum medicamento?
-            <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='drogas' />
-              <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='drogas' />
-              <span className='alinhamento-y'> Não </span>
-            </div>
+            <input value='sim' type='radio' name='medicamento' />
+            <span> Sim </span>
+            <input value='nao' type='radio' name='medicamento' />
+            <span> Não </span>
           </label>
         </div>
         <div className="col-6">
           <label className='alergico'>
             É alergico a algum medicamento?
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='drogas' />
+              <input className="radio" value='sim' type='radio' name='alergico' />
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='drogas' />
+              <input className="radio" value='nao' type='radio' name='alergico' />
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -226,9 +224,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='gravida'>
             Está grávida?
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='drogas' />
+              <input className="radio" value='sim' type='radio' name='gravida' />
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='drogas' />
+              <input className="radio" value='nao' type='radio' name='gravida' />
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
