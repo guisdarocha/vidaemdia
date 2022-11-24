@@ -7,6 +7,8 @@ import Parceiros from "../components/Parceiros/Parceiros";
 import { RegisterModal } from "../components/Modal/RegisterModal";
 
 
+
+
 type HomeProps = {
 
 }
