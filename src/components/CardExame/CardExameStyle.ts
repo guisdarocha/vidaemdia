@@ -6,23 +6,59 @@ export const Card = styled.div`
   max-width: 1027px;
   height: 637px;
   background: #F5F5F5;
-  border: 0.681462px solid #CFCFCF;
+  border: 0.7px solid #CFCFCF;
   border-radius: 14px;
-  h3:first-letter {
-    text-transform: uppercase;
+  margin-bottom: 50px;
+
+    p{
+      margin: 0 0 0 10px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 31px;
+      line-height: 36px;
+      display: flex;
+      align-items: center;
+      color: #2C5EDE;
     }
-  p:first-letter {
-    text-transform: uppercase;
-    }
+
+    p:first-letter {
+      text-transform: uppercase;
+      }
 
     h3{
       font-weight: 600;
       font-size: 49.3617px;
       line-height: 58px;
       color: #2C5EDE;
+      margin-bottom: 80px;
+    }
+    h3:first-letter {
+    text-transform: uppercase;
     }
 
-  .lata{
+    h4{
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+      display: flex;
+      align-items: center;
+      color: #464A53;
+
+    }
+
+
+    h5{
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+      color: #2C5EDE;
+      margin: 0 290px 0 10px;
+    }
+  .linha{
+    margin-bottom: 40px;
+  }
+  .icone{
     margin-left: 40px;
   }
 `

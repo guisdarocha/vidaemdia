@@ -9,6 +9,7 @@ type ExamesProps = {}
 const Exames = (props: ExamesProps) => {
   return (
     <>
+      {/* componente do topo */}
       <TopSection className="container d-flex mobile">
         <div>
           <BemVindo
@@ -21,8 +22,18 @@ const Exames = (props: ExamesProps) => {
           <Button text="cadastrar"/>
         </div>
       </TopSection>
+
       <div className="container">
-        <CardExame id={1} date={Date()}/>
+        {/* componente dos cards */}
+        <CardExame
+         id={1}
+         date={(new Date()).toLocaleDateString('en-US',)}
+         exam="Eletrocardiograma"
+         status="Sopro na válvula mitral"
+         clinic="HCor - Associação Beneficente Síria"
+         doctor="Dr. Luis Pacheco"
+         comments="Preciso agendar o retorno com o médico e apresentar o resultado do     exame que está salvo no meu Drive."
+         />
       </div>
     </>
   )
