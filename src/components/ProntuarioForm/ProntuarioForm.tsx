@@ -126,91 +126,111 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <div className="col-6">
           <label className='fumar'>
             Fumo:
-            <input value='sim' type='radio' name='fumar' />
-            <span> Sim </span>
-            <input value='nao' type='radio' name='fumar' />
-            <span> Não </span>
+            <div className='div-space'>
+              <input className="radio" value='sim' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Sim </span>
+              <input className="radio" value='nao' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Não </span>
+            </div>
           </label>
         </div>
         <div className="col-6">
           <label className='drogas'>
             Drogas:
-            <input value='sim' type='radio' name='drogas' />
-            <span> Sim </span>
-            <input value='nao' type='radio' name='drogas' />
-            <span> Não </span>
+            <div className='div-space'>
+              <input className="radio" value='sim' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Sim </span>
+              <input className="radio" value='nao' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Não </span>
+            </div>
           </label>
         </div>
         <div className="col-6">
           <label className='alcool'>
             Álcool
-            <input value='sim' type='radio' name='alcool' />
-            <span> Sim </span>
-            <input value='nao' type='radio' name='alcool' />
-            <span> Não </span>
+            <div className='div-space'>
+              <input className="radio" value='sim' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Sim </span>
+              <input className="radio" value='nao' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Não </span>
+            </div>
           </label>
         </div>
         <div className="col-6">
           <label className='exercicios'>
             Pratica exercícios?
-            <input value='sim' type='radio' name='exercicios' />
-            <span> Sim </span>
-            <input value='nao' type='radio' name='exercicios' />
-            <span> Não </span>
+            <div className='div-space'>
+              <input className="radio" value='sim' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Sim </span>
+              <input className="radio" value='nao' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Não </span>
+            </div>
           </label>
         </div>
         <div className="col-6">
           <label className='recreacao'>
             Pratica alguma recreação?
-            <input value='sim' type='radio' name='recreacao' />
-            <span> Sim </span>
-            <input value='nao' type='radio' name='recreacao' />
-            <span> Não </span>
+            <div className='div-space'>
+              <input className="radio" value='sim' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Sim </span>
+              <input className="radio" value='nao' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Não </span>
+            </div>
           </label>
         </div>
         <div className="col-6">
           <label className='familia'>
             Doença na familia?
-            <input value='sim' type='radio' name='familia' />
-            <span> Sim </span>
-            <input value='nao' type='radio' name='familia' />
-            <span> Não </span>
+            <div className='div-space'>
+              <input className="radio" value='sim' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Sim </span>
+              <input className="radio" value='nao' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Não </span>
+            </div>
           </label>
         </div>
         <div className="col-6">
           <label className='tratamento'>
             Esta fazendo algum tratamento?
-            <input value='sim' type='radio' name='tratamento' />
-            <span> Sim </span>
-            <input value='nao' type='radio' name='tratamento' />
-            <span> Não </span>
+            <div className='div-space'>
+              <input className="radio" value='sim' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Sim </span>
+              <input className="radio" value='nao' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Não </span>
+            </div>
           </label>
         </div>
         <div className="col-6">
           <label className='medicamento'>
             Faz uso de algum medicamento?
-            <input value='sim' type='radio' name='medicamento' />
-            <span> Sim </span>
-            <input value='nao' type='radio' name='medicamento' />
-            <span> Não </span>
+            <div className='div-space'>
+              <input className="radio" value='sim' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Sim </span>
+              <input className="radio" value='nao' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Não </span>
+            </div>
           </label>
         </div>
         <div className="col-6">
           <label className='alergico'>
             É alergico a algum medicamento?
-            <input value='sim' type='radio' name='alergico' />
-            <span> Sim </span>
-            <input value='nao' type='radio' name='alergico' />
-            <span> Não </span>
+            <div className='div-space'>
+              <input className="radio" value='sim' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Sim </span>
+              <input className="radio" value='nao' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Não </span>
+            </div>
           </label>
         </div>
         <div className="col-6">
           <label className='gravida'>
             Está grávida?
-            <input value='sim' type='radio' name='gravida' />
-            <span> Sim </span>
-            <input value='nao' type='radio' name='gravida' />
-            <span> Não </span>
+            <div className='div-space'>
+              <input className="radio" value='sim' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Sim </span>
+              <input className="radio" value='nao' type='radio' name='drogas' />
+              <span className='alinhamento-y'> Não </span>
+            </div>
           </label>
         </div>
       </ProntuarioStyle>
