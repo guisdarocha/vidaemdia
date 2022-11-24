@@ -1,6 +1,6 @@
 import BemVindo from "../components/BemVindo/BemVindo"
 import Button from "../components/Button/Button"
-import CardExame from "../components/CardExame/CardExame"
+import CardConsulta from "../components/CardConsulta/CardConsulta"
 import { TopSection } from "./Exames.style"
 
 
@@ -25,12 +25,12 @@ const Exames = (props: ExamesProps) => {
 
       <div className="container">
         {/* componente dos cards */}
-        <CardExame
+        <CardConsulta
          id={1}
          date={(new Date()).toLocaleDateString('en-US',)}
-         exam="Eletrocardiograma"
+         medicalSpecialties="Cardiologista"
          diagnosis="Sopro na válvula mitral"
-         clinic="HCor - Associação Beneficente Síria"
+         hospital="HCor - Associação Beneficente Síria"
          doctor="Dr. Luis Pacheco"
          comments="Preciso agendar o retorno com o médico e apresentar o resultado do     exame que está salvo no meu Drive."
          />
