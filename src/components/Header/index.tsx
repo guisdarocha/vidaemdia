@@ -1,54 +1,28 @@
-import BurguerMenu from "../../assets/icons/burguer-menu.png"
-import Link from "../Link"
-import LinkMenu from "../LinkMenu"
-import LinkMenu2 from "../LinkMenu2"
-import Logo from "../../assets/images/logo-header.png.png"
-import Search from "../../assets/icons/search2.png"
-import Avatar from "../../assets/icons/avatar.png"
 
-import "./styles.css"
+import logo from '../../assets/images/logo-header.png'
+import avatar from '../../assets/icons/avatar.png'
+import burguer from '../../assets/icons/burguer-menu.png'
+import React from 'react'
+import { HeaderStyle, LinkStyle } from './Header.style'
+import { Link } from 'react-router-dom'
 
-function Header() {
-    return (<header className="barraheader">
-      <div className="bar">
-      <img className="logo" src={Logo} alt="" />
-      <div className="navcomponent">
-      <img className="burguer-menu" src={BurguerMenu} alt="" />
-      
-      
-      <div className="navbar">
-      
-   
-    
-      <nav className="nav">
-         <Link texto="Home" redirect="/cursos"/>
-         <Link texto="Quem Somos" redirect="/blog"/>
-         <Link texto="Meu prontuário" redirect="/contato"/>
-         <Link texto="Suporte" redirect="/cursos"/>
-         <Link texto="Acesse" redirect="/blog"/>
-      </nav>
-      <img className="search" src={Search} alt="" />
-      <img className="avatar" src={Avatar} alt="" />
+
+
+const index = () => {
+  return (
+    <HeaderStyle className='d-flex justify-content-around align-items-center'>
+      <div><img src={logo} alt="logo" /></div>
+      <div className='links'>
+        <LinkStyle to="#">Home</LinkStyle>
+        <LinkStyle to="#">Quem somos</LinkStyle>
+        <LinkStyle to="#">Meus Exames</LinkStyle>
+        <LinkStyle to="#">Minhas Consultas</LinkStyle>
+        <LinkStyle to="#">Suporte</LinkStyle>
+        <LinkStyle to="#">Acesse</LinkStyle>
+        <img src={avatar} alt="" />
       </div>
-      </div>
-      
-      
-      </div>
-      <div className="submenu">
-         <LinkMenu texto="Home" redirect="/cursos"/>
-         <LinkMenu texto="Quem somos" redirect="/blog"/>
-         <LinkMenu texto="Meu prontuário" redirect="/contato"/>
-         <LinkMenu texto="Suporte" redirect="/cursos"/>
-         <LinkMenu texto="Acesse" redirect="/blog"/>
-      </div> 
-      <div className="submenu2">
-         <LinkMenu2 texto="Editar" redirect="/editar"/>
-         <LinkMenu2 texto="Visualizar" redirect="/visualizar"/>
-         
-      </div> 
-      
-    </header>
-    );
+    </HeaderStyle>
+  )
 }
 
-export default Header;
+export default index

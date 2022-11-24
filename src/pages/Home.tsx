@@ -9,8 +9,6 @@ import Header from "../components/Header";
 import { Cards } from "./Home.style";
 
 
-
-
 type HomeProps = {
 
 }
