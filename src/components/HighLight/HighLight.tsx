@@ -1,9 +1,15 @@
 import * as S from "./HighLight.style";
 
-const HighLight = () => {
+type HighProps = {
+  text: string
+}
+
+const HighLight = ({text}: HighProps) => {
   return (
       <>
-          <S.HighLight />
+          <S.DivHighLight>
+            <S.HighLight>{text}</S.HighLight>
+          </S.DivHighLight>
       </>
   )
 }
