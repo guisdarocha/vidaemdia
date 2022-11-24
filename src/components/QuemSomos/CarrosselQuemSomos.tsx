@@ -2,7 +2,7 @@ import { HighLight } from "../HighLight/HighLight.style";
 import * as S from "./CarrosselQuemSomos.style";
 import amanda from "../../assets/img/Amanda.png";
 import pedro from "../../assets/img/Pedro.png";
-import pietra from "../../assets/img/Pietra.png";
+import pietra from "../../assets/img/pietra.png";
 import carlos from "../../assets/img/Carlos.png";
 
 const CarroselQuemSomos = () => {
@@ -20,7 +20,7 @@ const CarroselQuemSomos = () => {
                     <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
-                  </ol>   
+                  </ol>
                   <div className="carousel-inner">
                     <div className="item active">
                       <div className="img-box">
@@ -32,7 +32,7 @@ const CarroselQuemSomos = () => {
 
                     <div className="item">
                       <div className="img-box"><img src={pedro} alt=""/></div>
-                      <p className="testimonial">“Quero deixar aqui meu agradecimento a toda equipe que cuida da infraestrutura do site, pois saber que a probabilidade dos meus dados serem vazados é muito pequena. Meu muito obrigado” 
+                      <p className="testimonial">“Quero deixar aqui meu agradecimento a toda equipe que cuida da infraestrutura do site, pois saber que a probabilidade dos meus dados serem vazados é muito pequena. Meu muito obrigado”
                       </p>
                       <b className="name">Clóvis Damaceno</b>
                     </div>
