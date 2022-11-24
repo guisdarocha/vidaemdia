@@ -14,6 +14,15 @@ export const ButtonLink = styled(Link) `
   text-decoration: none;
   :hover{
     color: white;
+    text-decoration: none;
+  }
+  :visited{
+    color: white;
+    text-decoration: none;
+  }
+  :active{
+    color: white;
+    text-decoration: none;
   }
 
   @media only screen and (max-width: 375px){
