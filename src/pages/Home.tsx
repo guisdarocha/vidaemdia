@@ -21,12 +21,9 @@ const Home = (props: HomeProps) => {
       <div className="container">
         <Section  />
         <HighLight text="Confira nossos artigos"/>
-        <Article  />
-        <HighLight text="Nossos parceiros"/>
-        <Parceiros  />
+        <Article />
+        <Parceiros />
       </div>
-      {/* <LoginModal/> */}
-      {/* <RegisterModal/> */}
       <div>
         <Footer/>
       </div>
