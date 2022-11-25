@@ -30,11 +30,11 @@ export const LoginModal = (props: LoginModalProps) => {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <label>
                                 Email:
-                                <StyledInput {...register("email", { required: true })} placeholder="Insira seu email" />
+                                <StyledInput type='email' {...register("email", { required: true })} placeholder="Insira seu email" />
                             </label>
                             <label>
                                 Senha:
-                                <StyledInput  {...register("password", { required: true })}  placeholder="Insira sua senha" />
+                                <StyledInput type='password'  {...register("password", { required: true })}  placeholder="Insira sua senha" />
                             </label>
                             <a>Esqueceu sua senha ?</a>
                             <StyledButton> Entrar </StyledButton>

@@ -16,7 +16,7 @@ export const ModalContainer = styled.div `
     height: 780px;
     width: 800px;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-bottom: 5%;
     display: flex;
     background-color: white;

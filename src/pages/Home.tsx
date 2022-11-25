@@ -4,11 +4,8 @@ import { Footer } from "../components/Footer/Footer"
 import HighLight from "../components/HighLight/HighLight";
 import Parceiros from "../components/Parceiros/Parceiros";
 import Header from "../components/Header";
-<<<<<<< HEAD
-=======
 import { Cards } from "./Home.style";
 
->>>>>>> 365bb6976688227744fd915e1db9e064a2795721
 
 type HomeProps = {
 
@@ -20,11 +17,6 @@ const Home = (props: HomeProps) => {
     <Header />
       <div className="container">
         <Section  />
-<<<<<<< HEAD
-        <HighLight text="Confira nossos artigos"/>
-        <Article />
-        <Parceiros />
-=======
           <HighLight text="Confira nossos artigos"/>
           <Cards className="d-flex justify-content-around">
               <Article
@@ -39,7 +31,6 @@ const Home = (props: HomeProps) => {
               />
           </Cards>
         <Parceiros  />
->>>>>>> 365bb6976688227744fd915e1db9e064a2795721
       </div>
       <div>
         <Footer/>

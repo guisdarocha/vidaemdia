@@ -8,7 +8,7 @@ interface LinkProps {
 }
 export default function NavLink(props: LinkProps){
     return (
-        <a onClick={props.onClick} className="link"  target="_blank">
+        <a onClick={props.onClick} className="link">
             {props.texto}
         </a>
     );
