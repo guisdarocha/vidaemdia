@@ -1,9 +1,9 @@
 import BemVindo from "../components/BemVindo/BemVindo"
 import Button from "../components/Button/Button"
-import CardExame from "../components/CardExame/CardExame"
-import { Footer } from "../components/Footer/Footer"
-import Header from '../components/Header'
+import CardConsulta from "../components/CardConsulta/CardConsulta"
 import { TopSection } from "./Exames.style"
+import Header from '../components/Header'
+import { Footer } from "../components/Footer/Footer"
 
 
 type ExamesProps = {}
@@ -11,14 +11,13 @@ type ExamesProps = {}
 const Exames = (props: ExamesProps) => {
   return (
     <>
-      <Header/>
-      {/* componente do topo */}
+      <Header />
       <TopSection className="container d-flex mobile">
         <div>
           <BemVindo
             user={"Fernando Predes"}
-            text={"Insira aqui os dados do seu exame"}
-            subtext={"*Insira e edite os dados sobre o exame que foi realizado"}
+            text={"Insira aqui os dados da  sua consulta"}
+            subtext={"*Insira e edite os dados sobre a consulta que foi realizada"}
             />
         </div>
         <div className="d-flex align-items-end pb-5">
@@ -28,12 +27,12 @@ const Exames = (props: ExamesProps) => {
 
       <div className="container">
         {/* componente dos cards */}
-        <CardExame
+        <CardConsulta
          id={1}
          date={(new Date()).toLocaleDateString('en-US',)}
-         exam="Eletrocardiograma"
+         medicalSpecialties="Cardiologista"
          diagnosis="Sopro na válvula mitral"
-         clinic="HCor - Associação Beneficente Síria"
+         hospital="HCor - Associação Beneficente Síria"
          doctor="Dr. Luis Pacheco"
          comments="Preciso agendar o retorno com o médico e apresentar o resultado do     exame que está salvo no meu Drive."
          />
