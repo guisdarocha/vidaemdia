@@ -50,14 +50,6 @@ h3{
   color: #696969;
 }
 
-
-.radio{
-  appearance: none;
-  background-color: red;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
 input{
   border-radius: 10px;
   border: #DDDFE1 solid 1px;
@@ -120,6 +112,91 @@ input::placeholder{
     margin-top: 25.5px;
   }
 
+  h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    color: #696969;
+    font-size: 50px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 90px;
+  }
+
+  label {
+    color: gray;
+  }
+
+  .radio {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  
+  }
+  
+  .div-space {
+    display: flex; 
+    margin-left: 190px;
+    justify-content: right;
+    align-items: right;
+    text-align: right;
+    width: 100%;
+  }
+
+  .alinhamento-y {
+    display: flex;
+    align-items: center;
+  }
+  
+  .fumar {
+    display: flex;
+    align-items: center;
+  }
+
+  .drogas {
+    display: flex;
+    align-items: center;
+  }
+
+  .alcool {
+    display: flex;
+    align-items: center;
+  }
+
+  .exercicios {
+    display: flex;
+    align-items: center;
+  }
+
+  .recreacao {
+    display: flex;
+    align-items: center;
+  }
+
+  .familia {
+    display: flex;
+    align-items: center;
+  }
+
+  .tratamento {
+    display: flex;
+    align-items: center;
+  }
+
+  .medicamento {
+    display: flex;
+    align-items: center;
+  }
+
+  .alergico {
+    display: flex;
+    align-items: center;
+  }
+
+  .gravida {
+    display: flex;
+    align-items: center;
+  }
 
   @media only screen and (max-width: 1400px){
     font-size: 15px;
