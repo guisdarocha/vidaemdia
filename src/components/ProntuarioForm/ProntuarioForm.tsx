@@ -123,7 +123,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
       <ProntuarioStyle>
         <h3> Histórico Social </h3>
 
-        <div className="col-6">
+        <div>
           <label className='fumar'>
             Fumo:
             <div className='div-space'>
@@ -134,7 +134,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             </div>
           </label>
         </div>
-        <div className="col-6">
+        <div>
           <label className='drogas'>
             Drogas:
             <div className='div-space'>
@@ -145,7 +145,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             </div>
           </label>
         </div>
-        <div className="col-6">
+        <div>
           <label className='alcool'>
             Álcool
             <div className='div-space'>
@@ -156,7 +156,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             </div>
           </label>
         </div>
-        <div className="col-6">
+        <div>
           <label className='exercicios'>
             Pratica exercícios?
             <div className='div-space'>
@@ -167,7 +167,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             </div>
           </label>
         </div>
-        <div className="col-6">
+        <div>
           <label className='recreacao'>
             Pratica alguma recreação?
             <div className='div-space'>
@@ -178,7 +178,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             </div>
           </label>
         </div>
-        <div className="col-6">
+        <div>
           <label className='familia'>
             Doença na familia?
             <div className='div-space'>
@@ -189,7 +189,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             </div>
           </label>
         </div>
-            <div className="col-6">
+            <div>
               <label className='tratamento'>
                 Esta fazendo algum tratamento?
                 <div className='div-space'>
@@ -200,7 +200,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
                 </div>
               </label>
             </div>
-            <div className="col-6">
+            <div>
               <label className='medicamento'>
                 Faz uso de algum medicamento?
                 <div className='div-space'>
@@ -211,7 +211,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
                 </div>
               </label>
             </div>
-            <div className="col-6">
+            <div>
               <label className='alergico'>
                 É alergico a algum medicamento?
                 <div className='div-space'>
@@ -222,7 +222,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
                 </div>
               </label>
             </div>
-            <div className="col-6">
+            <div>
               <label className='gravida'>
                 Está grávida?
                 <div className='div-space'>
