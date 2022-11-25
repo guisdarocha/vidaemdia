@@ -50,7 +50,7 @@ const meuProntuario = ({
         <div>
           <BemVindo
             user={meuProntuario.name}
-            text={"Insira aqui os dados do seu exame"}
+            text={"Visualizar aqui seu Prontuário Digital"}
             subtext={"*Insira e edite os dados sobre o exame que foi realizado"}
             />
         </div>
