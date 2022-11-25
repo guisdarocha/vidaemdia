@@ -186,7 +186,7 @@ transform: rotate(135deg);
 
 .menu.menuOpen{
   width: 140px;
-  height: 385px;
+  height: 420px;
   text-align: center;
   margin-left: -10px;
   background: #F5F5F5;
