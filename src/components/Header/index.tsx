@@ -37,13 +37,12 @@ const index = () => {
       <HeaderStyle className='d-flex justify-content-around align-items-center'>
         <div><img src={logo} alt="logo" /></div>
         <div className='links'>
-
-          <LinkStyle to="#">Home</LinkStyle>
-          <LinkStyle to="#">Quem somos</LinkStyle>
-          <LinkStyle to="#">Meus Exames</LinkStyle>
-          <LinkStyle to="#">Minhas Consultas</LinkStyle>
-          <LinkStyle to="#">Suporte</LinkStyle>
-          <LinkStyle to="#">Acesse</LinkStyle>
+          <LinkStyle className='linksin' to="#">Home</LinkStyle>
+          <LinkStyle className='linksin' to="#">Quem somos</LinkStyle>
+          <LinkStyle className='linksin' to="#">Meus Exames</LinkStyle>
+          <LinkStyle className='linksin' to="#">Minhas Consultas</LinkStyle>
+          <LinkStyle className='linksin' to="#">Suporte</LinkStyle>
+          <LinkStyle className='linksin' to="#">Acesse</LinkStyle>
           <img src={avatar} alt="" />
         </div>
       </HeaderStyle>

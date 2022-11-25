@@ -22,14 +22,17 @@ img{
 @media only screen and (max-width: 931px){
 
 
-  img{
-    display: none;
+    justify-content: center !important;;
 
+  .links img{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    }
+  .linksin{
+    display: none;
   }
 
-  .links{
-    display: none;
-  }
 
 }
 
@@ -63,12 +66,17 @@ margin: 0 10px;
 `
 
 export const Menu = styled.div `
+
 margin: 0;
 margin-left: 35px;
-margin-top: 5px;
+margin-top: 20px;
 box-sizing: border-box;
 position: absolute;
 z-index: 2;
+
+@media only screen and (min-width: 931px){
+  display: none;
+}
 
 .Menu{
   position: fixed;
