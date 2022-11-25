@@ -25,7 +25,7 @@ const index = () => {
         <div className="list">
           <ul className="listItems">
             <Link to='/'><li>Home</li></Link>
-            <Link to="quemsomos"><li>Quem somos</li></Link>
+            <Link to="/quemsomos"><li>Quem somos</li></Link>
             <Link to="/exames"><li>Meus Exames</li></Link>
             <Link to="/consultas"><li>Minhas Consultas</li></Link>
             <Link to='#'><li>Suporte</li></Link>
@@ -38,7 +38,7 @@ const index = () => {
         <div><img src={logo} alt="logo" /></div>
         <div className='links'>
           <LinkStyle className='linksin' to="/">Home</LinkStyle>
-          <LinkStyle className='linksin' to="quemsomos">Quem somos</LinkStyle>
+          <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
           <LinkStyle className='linksin' to="/exames">Meus Exames</LinkStyle>
           <LinkStyle className='linksin' to="/consultas">Minhas Consultas</LinkStyle>
           <LinkStyle className='linksin' to="#">Suporte</LinkStyle>
