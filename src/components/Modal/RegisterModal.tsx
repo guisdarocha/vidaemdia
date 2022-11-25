@@ -14,7 +14,7 @@ type Inputs = {
 const schema = yup.object({
     name: yup.string().required('O nome é obrigatório'),
     email: yup.string().email('Digite um e-mail válido').required('O email é obrigatório'),
-    password: yup.string().min(8,'A senha deve ter no mínimo 8 dígitos').required('Preencha uma senha'),
+    password: yup.string().min(8, 'A senha deve ter no mínimo 8 dígitos').required('Preencha uma senha'),
     confirmPassword: yup.string().required('Confirme sua senha').oneOf([yup.ref("password")], 'As senhas devem ser iguais')
 }).required();
 
@@ -45,12 +45,16 @@ export const RegisterModal = () => {
         registerUser();
     };
 
+    const closeModal = () => {
+        window.location.reload()
+    }
+
     return (
         <BlurContainer>
             <ModalContainer>
                 <img src="/biological-scene.png" alt="" />
                 <StyledContainer>
-                    <p>x</p>
+                    <p onClick={closeModal}>x</p>
                     <img src="/Component1.svg" alt="" />
                     <h3>Bem vindo de volta</h3>
                     <h4>Área de Login</h4>

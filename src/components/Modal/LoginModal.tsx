@@ -30,8 +30,10 @@ export const LoginModal = (props: LoginModalProps) => {
                 .then((res) => {
                     alert('Login bem sucedido')
                     localStorage.setItem('token', `${String(res.data.token)}`);
-                    window.location.reload();
+                    localStorage.setItem('id', `${String(res.data.User.idUser)}`);
                     console.log(res)
+                    window.location.reload();
+                   
                 })
                 .catch((error) => {
                     console.log(error)
