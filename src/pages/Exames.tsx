@@ -1,6 +1,8 @@
 import BemVindo from "../components/BemVindo/BemVindo"
 import Button from "../components/Button/Button"
 import CardExame from "../components/CardExame/CardExame"
+import { Footer } from "../components/Footer/Footer"
+import Header from '../components/Header'
 import { TopSection } from "./Exames.style"
 
 
@@ -9,6 +11,7 @@ type ExamesProps = {}
 const Exames = (props: ExamesProps) => {
   return (
     <>
+      <Header/>
       {/* componente do topo */}
       <TopSection className="container d-flex mobile">
         <div>
@@ -35,6 +38,7 @@ const Exames = (props: ExamesProps) => {
          comments="Preciso agendar o retorno com o médico e apresentar o resultado do     exame que está salvo no meu Drive."
          />
       </div>
+      <Footer />
     </>
   )
 }

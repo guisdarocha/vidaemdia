@@ -1,0 +1,24 @@
+.link {
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    text-decoration: none;
+    color: #F5F5F5;
+    padding: 8px 18px;
+    align-items: right;
+
+   
+}
+
+.link:hover {
+    background-color: #F5F5F5;
+    color: #2C5EDE;
+    border-style: none;
+    border-radius: 10px;
+    
+}
