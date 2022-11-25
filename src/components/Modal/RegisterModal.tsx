@@ -1,7 +1,8 @@
-import { BlurContainer, FormContainer, ModalContainer, StyledButton, StyledContainer, StyledInput } from "./Modal.style"
+import { BlurContainer, ErrorMessage, FormContainer, ModalContainer, StyledButton, StyledContainer, StyledInput } from "./Modal.style"
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import api from '../../api'
 
 type Inputs = {
     name: string;
@@ -25,7 +26,23 @@ export const RegisterModal = () => {
     });
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        console.log(data);
+        const registerUser = () => {
+            api.post('/users',
+                {
+                    name: data.name,
+                    email: data.email,
+                    password: data.password
+                })
+                .then((res) => {
+                    console.log(res)
+                    alert('usuário cadastrado com sucesso')
+                })
+                .catch((err) => {
+                    console.log(err)
+                    alert('houve um erro')
+                });
+        }
+        registerUser();
     };
 
     return (
@@ -38,26 +55,26 @@ export const RegisterModal = () => {
                     <h3>Bem vindo de volta</h3>
                     <h4>Área de Login</h4>
                     <FormContainer>
-                        <form>
+                        <form onSubmit={handleSubmit(onSubmit)}>
                             <label>
                                 Seu nome:
                                 <StyledInput {...register("name", { required: true })} className="register" placeholder="Insira seu email" />
-                                <span></span>
+                                <ErrorMessage>{errors.name?.message}</ErrorMessage>
                             </label>
                             <label>
                                 Email:
                                 <StyledInput {...register("email", { required: true })} className="register" placeholder="Insira seu email" />
-                                <span></span>
+                                <ErrorMessage>{errors.email?.message}</ErrorMessage>
                             </label>
                             <label>
                                 Senha:
-                                <StyledInput {...register("password", { required: true })} className="register" placeholder="Insira sua senha" />
-                                <span></span>
+                                <StyledInput type='password' {...register("password", { required: true })} className="register" placeholder="Insira sua senha" />
+                                <ErrorMessage>{errors.password?.message}</ErrorMessage>
                             </label>
                             <label>
                                 Confirme sua senha:
-                                <StyledInput {...register("confirmPassword", { required: true })} placeholder="Insira sua senha" />
-                                <span></span>
+                                <StyledInput type='password' {...register("confirmPassword", { required: true })} placeholder="Insira sua senha" />
+                                <ErrorMessage>{errors.confirmPassword?.message}</ErrorMessage>
                             </label>
                             <StyledButton> Cadastre-se </StyledButton>
                         </form>

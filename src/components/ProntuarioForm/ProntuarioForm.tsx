@@ -1,16 +1,58 @@
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import { ProntuarioStyle, BlueButton, Select } from './ProntuarioForm.style';
+import { useForm, SubmitHandler } from "react-hook-form";
+import api from "../../api";
 
 type ProntuarioFormProps = {};
 
+type Inputs = {
+  name: string;
+	email: string;
+  password: string;
+	birthDate: string;
+	telephone: string;
+	maritalStatus: string;
+	sex: string;
+	weight: number,
+	height: number,
+	zipCode: string;
+	address: string;
+	number: string;
+	neighborhood: string;
+	complement: string;
+	state: string;
+	city: string;
+	smoke: string;
+	drugs: string;
+	exercises:string;
+	recreation: string;
+	familialDisease: string;
+	treatment: string;
+	allergy: string;
+  pregnant: string;
+	medicines: string;
+	disease: string;
+	bloodType: string;
+	status: true
+};
+
+
 export const ProntuarioForm = (props: ProntuarioFormProps) => {
+  const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
+const onSubmit: SubmitHandler<Inputs> = (data) => {
+  event?.preventDefault()
+  console.log(data);
+}
+
   return (
     <>
-      <ProntuarioStyle >
+      <ProntuarioStyle onSubmit={handleSubmit(onSubmit)}>
         <div className='row'>
           <div className='col-12 col-md-12 '>
             <label className='nome'>
               Seu nome<p className='obrigatorio'>*</p>
-              <input placeholder="Nome Completo" />
+              <input {...register('name', {required:true})} placeholder="Nome Completo" />
             </label>
           </div>
         </div>
@@ -19,13 +61,13 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <div className="col-12 col-md-6">
             <label className='email'>
               E-mail<p className='obrigatorio'>*</p>
-              <input placeholder="seuemail@gmail.com" />
+              <input {...register('email', {required:true})} placeholder="seuemail@gmail.com" />
             </label>
           </div>
           <div className="col-12 col-md-6">
             <label className='telefone'>
               Telefone<p className='obrigatorio'>*</p>
-              <input placeholder="(00)0000-0000" />
+              <input {...register('telephone', {required:true})} placeholder="(00)0000-0000" />
             </label>
           </div>
         </div>
@@ -34,20 +76,26 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <div className="col-12 col-md-2 ">
             <label className='data'>
               Data de Nascimento<p className='obrigatorio'>*</p>
-              <input placeholder="01/01/2022" />
+              <input {...register('birthDate', {required:true})} placeholder="01/01/2022" />
             </label>
           </div>
           <div className="col-12 col-md-2 ">
             <label className='estadocivil bottom'>
               Estado Civil<p className='obrigatorio'>*</p>
-              <input placeholder="Casado" />
+              <Select {...register('maritalStatus', {required:true})} required>
+                <option value="genero" hidden></option>
+                <option value="masculino">Solteiro</option>
+                <option value="feminino">Casado</option>
+                <option value="naodizer">Viúvo</option>
+                <option value="naodizer">União estável</option>
+              </Select >
             </label>
           </div>
           <div className="col-12 col-md-2 ">
             <label className='sexo bottom'>
               Sexo<p className='obrigatorio'>*</p>
-              < Select name="sexo" required>
-                <option value="genero" disabled selected hidden></option>
+              < Select {...register('sex', {required:true})} required>
+                <option value="genero" hidden></option>
                 <option value="masculino">Masculino</option>
                 <option value="feminino">Feminino</option>
                 <option value="naodizer">Prefiro não dizer</option>
@@ -57,77 +105,75 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <div className="col-12 col-md-2 ">
             <label className='peso bottom'>
               Peso<p className='obrigatorio'>*</p>
-              <input placeholder="75kg" />
+              <input {...register('weight', {required:true})} placeholder="75kg" />
             </label>
           </div>
           <div className="col-12 col-md-2">
             <label className='altura bottom'>
               Altura<p className='obrigatorio'>*</p>
-              <input placeholder="1,80cm" />
+              <input {...register('height', {required:true})} placeholder="1,80cm" />
             </label>
           </div>
         </div>
-      </ProntuarioStyle>
-
-      <ProntuarioStyle>
+     
         {/* CEP, endereço, numero, bairro, estado e cidade */}
         <div className='row'>
           <div className="col-12">
             <label className='cep'>
               CEP<p className='obrigatorio'>*</p>
-              <input placeholder="Ex: 11111-000" />
+              <input {...register('zipCode', {required:true})}  placeholder="Ex: 11111-000" />
             </label>
           </div>
           <div className="col-8">
             <label className='endereco'>
               Endereço<p className='obrigatorio'>*</p>
-              <input placeholder="Rua do zé" />
+              <input {...register('address', {required:true})} placeholder="Rua do zé" />
             </label>
           </div>
           <div className="numero col-4">
             <label className='numero'>
               Número<p className='obrigatorio'>*</p>
-              <input placeholder="0123" />
+              <input {...register('number', {required:true})} placeholder="0123" />
             </label>
           </div>
           <div className="bairro col-12">
             <label className='bairro'>
               Bairro<p className='obrigatorio'>*</p>
-              <input placeholder="Tupiniquim" />
+              <input {...register('neighborhood', {required:true})} placeholder="Tupiniquim" />
             </label>
           </div>
           <div className="completo col-12">
             <label className='complemento'>
               Complemento
-              <input placeholder="Perto da padaria" />
+              <input {...register('complement')} placeholder="Perto da padaria" />
             </label>
           </div>
           <div className="estado col-6">
             <label className='estado'>
               Estado<p className='obrigatorio'>*</p>
-              <input placeholder="RJ" />
+              <input {...register('state', {required:true})} placeholder="RJ" />
             </label>
           </div>
           <div className="cidade col-6">
             <label className='cidade'>
               Cidade<p className='obrigatorio'>*</p>
-              <input placeholder="Rio de Janeiro" />
+              <input {...register('city', {required:true})} placeholder="Rio de Janeiro" />
             </label>
           </div>
         </div>
-      </ProntuarioStyle>
-
+      
+        
       {/* Histórico Social */}
-      <ProntuarioStyle>
+     
         <h3> Histórico Social </h3>
 
         <div>
           <label className='fumar'>
             Fumo:
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='fumar' />
+              <input {...register('smoke')} className="radio" value='sim' type='radio' />
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='fumar' />
+              <input {...register('smoke')} className="radio" value='nao' type='radio' />
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -136,20 +182,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='drogas'>
             Drogas:
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='drogas' />
+              <input {...register('drugs')} className="radio" value='sim' type='radio'/>
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='drogas' />
-              <span className='alinhamento-y'> Não </span>
-            </div>
-          </label>
-        </div>
-        <div>
-          <label className='alcool'>
-            Álcool
-            <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='alcool' />
-              <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='alcool' />
+              <input {...register('drugs')} className="radio" value='nao' type='radio'/>
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -158,9 +193,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='exercicios'>
             Pratica exercícios?
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='exercicios' />
+              <input {...register('exercises')} className="radio" value='sim' type='radio'/>
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='exercicios' />
+              <input {...register('exercises')} className="radio" value='nao' type='radio'/>
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -169,9 +204,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='recreacao'>
             Pratica alguma recreação?
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='recreacao' />
+              <input {...register('recreation')} className="radio" value='sim' type='radio'/>
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='recreacao' />
+              <input {...register('recreation')} className="radio" value='nao' type='radio'/>
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -180,9 +215,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='familia'>
             Doença na familia?
             <div className='div-space'>
-              <input className="radio" value='sim' type='radio' name='familia' />
+              <input {...register('familialDisease')} className="radio" value='sim' type='radio'/>
               <span className='alinhamento-y'> Sim </span>
-              <input className="radio" value='nao' type='radio' name='familia' />
+              <input {...register('familialDisease')} className="radio" value='nao' type='radio'/>
               <span className='alinhamento-y'> Não </span>
             </div>
           </label>
@@ -191,9 +226,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
               <label className='tratamento'>
                 Esta fazendo algum tratamento?
                 <div className='div-space'>
-                  <input className="radio" value='sim' type='radio' name='tratamento' />
+                  <input {...register('treatment')} className="radio" value='sim' type='radio'/>
                   <span className='alinhamento-y'> Sim </span>
-                  <input className="radio" value='nao' type='radio' name='tratamento' />
+                  <input {...register('treatment')} className="radio" value='nao' type='radio'/>
                   <span className='alinhamento-y'> Não </span>
                 </div>
               </label>
@@ -202,9 +237,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
               <label className='medicamento'>
                 Faz uso de algum medicamento?
                 <div className='div-space'>
-                  <input className="radio" value='sim' type='radio' name='medicamento' />
+                  <input {...register('medicines')} className="radio" value='sim' type='radio'  />
                   <span className='alinhamento-y'> Sim </span>
-                  <input className="radio" value='nao' type='radio' name='medicamento' />
+                  <input {...register('medicines')} className="radio" value='nao' type='radio'  />
                   <span className='alinhamento-y'> Não </span>
                 </div>
               </label>
@@ -213,9 +248,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
               <label className='alergico'>
                 É alergico a algum medicamento?
                 <div className='div-space'>
-                  <input className="radio" value='sim' type='radio' name='alergico' />
+                  <input {...register('allergy')} className="radio" value='sim' type='radio'  />
                   <span className='alinhamento-y'> Sim </span>
-                  <input className="radio" value='nao' type='radio' name='alergico' />
+                  <input {...register('allergy')} className="radio" value='nao' type='radio'  />
                   <span className='alinhamento-y'> Não </span>
                 </div>
               </label>
@@ -224,134 +259,120 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
               <label className='gravida'>
                 Está grávida?
                 <div className='div-space'>
-                  <input className="radio" value='sim' type='radio' name='gravida' />
+                  <input {...register('pregnant')} className="radio" value='sim' type='radio'/>
                   <span className='alinhamento-y'> Sim </span>
-                  <input className="radio" value='nao' type='radio' name='gravida' />
+                  <input {...register('pregnant')} className="radio" value='nao' type='radio'/>
                   <span className='alinhamento-y'> Não </span>
                 </div>
               </label>
             </div>
-          </ProntuarioStyle>
+        
 
           {/* Diagnósticos */}
-          <ProntuarioStyle>
+         
             <h3> Diagnósticos </h3>
 
             <div className="row-12">
               <label className='diagnostico'>
-                <input value='sim' type='checkbox' name='diabetesUm' />
+                <input value='Diabetes tipo 1' type='checkbox' {...register('disease')} />
                 Diabetes tipo 1
-                <input value='sim' type='checkbox' name='diabetesDois' />
+                <input value='Diabetes tipo 2' type='checkbox' {...register('disease')} />
                 Diabetes tipo 2
-                <input value='sim' type='checkbox' name='leucemia' />
+                <input value='Leucemia' type='checkbox' {...register('disease')} />
                 Leucemia
-                <input value='sim' type='checkbox' name='linfoma' />
+                <input value='Linfoma' type='checkbox' {...register('disease')} />
                 Linfoma
-                <input value='sim' type='checkbox' name='covid' />
+                <input value='Covid-19' type='checkbox' {...register('disease')} />
                 Covid-19
-                <input value='sim' type='checkbox' name='burnout' />
+                <input value='Burnout' type='checkbox' {...register('disease')} />
                 Burnout
-                <input value='sim' type='checkbox' name='depressao' />
+                <input value='Depressão' type='checkbox' {...register('disease')} />
                 Depressão
               </label>
             </div>
             <div className="row-12">
               <label className='diagnosticoDois'>
-                <input value='sim' type='checkbox' name='tag' />
+                <input value='TAG-Transtorno de Ansiedade Generalizada' type='checkbox'{...register('disease')} />
                 TAG<h5>(Transtorno de Ansiedade Generalizada)</h5>
-                <input value='sim' type='checkbox' name='depressaoParto' />
+                <input value='Depressão pós-parto' type='checkbox' {...register('disease')} />
                 Depressão pós-parto
-                <input value='sim' type='checkbox' name='Labirintite' />
+                <input value='Labirintite' type='checkbox' {...register('disease')} />
                 Labirintite
-                <input value='sim' type='checkbox' name='hiv' />
+                <input value='HIV' type='checkbox' {...register('disease')} />
                 HIV
-                <input value='sim' type='checkbox' name='ciatico' />
+                <input value='Dor no nervo ciático' type='checkbox' {...register('disease')} />
                 Dor no nervo ciático
-                <input value='sim' type='checkbox' name='gravida' />
+                <input value='Anemia' type='checkbox' {...register('disease')} />
                 Anemia
-                <input value='sim' type='checkbox' name='dermatite' />
+                <input value='Dermatite' type='checkbox' {...register('disease')} />
                 Dermatite
               </label>
             </div>
             <div className="row-12">
               <label className='diagnosticoTres'>
-                <input value='sim' type='checkbox' name='noduloPulmonar' />
+                <input value='Nódulo pulmonar' type='checkbox' {...register('disease')} />
                 Nódulo pulmonar
-                <input value='sim' type='checkbox' name='gastrite' />
+                <input value='Gastrite' type='checkbox' {...register('disease')} />
                 Gastrite
-                <input value='sim' type='checkbox' name='cirrose' />
+                <input value='Cirrose' type='checkbox' {...register('disease')} />
                 Cirrose
-                <input value='sim' type='checkbox' name='alcoolismo' />
+                <input value='Alcoolismo' type='checkbox' {...register('disease')} />
                 Alcoolismo
-                <input value='sim' type='checkbox' name='alzheimer' />
+                <input value='Alzheimer' type='checkbox' {...register('disease')} />
                 Alzheimer
-                <input value='sim' type='checkbox' name='aneurisma' />
+                <input value='Aneurisma' type='checkbox' {...register('disease')} />
                 Aneurisma
-                <input value='sim' type='checkbox' name='asma' />
+                <input value='Asma' type='checkbox' {...register('disease')} />
                 Asma
               </label>
             </div>
             <div className="row-12">
               <label className='diagnosticoQuatro'>
-                <input value='sim' type='checkbox' name='bipolaridade' />
+                <input value='Bipolaridade' type='checkbox' {...register('disease')} />
                 Bipolaridade
-                <input value='sim' type='checkbox' name='bordeline' />
+                <input value='Borderline' type='checkbox' {...register('disease')} />
                 Bordeline
-                <input value='sim' type='checkbox' name='Bulimia' />
+                <input value='Bulimia' type='checkbox' {...register('disease')} />
                 Bulimia
-                <input value='sim' type='checkbox' name='hepatiteA' />
+                <input value='Hepatite A' type='checkbox' {...register('disease')} />
                 Hepatite A
-                <input value='sim' type='checkbox' name='hepatiteC' />
+                <input value='Hepatite C' type='checkbox' {...register('disease')} />
                 Hepatite C
-                <input value='sim' type='checkbox' name='lupus' />
+                <input value='Lúpus' type='checkbox' {...register('disease')} />
                 Lúpus
-                <input value='sim' type='checkbox' name='osteoporose' />
+                <input value='Osteoporose' type='checkbox' {...register('disease')} />
                 Osteoporose
               </label>
             </div>
-          </ProntuarioStyle>
+          
 
           {/* Tipo Sanguíneo */}
-          <ProntuarioStyle>
+         
             <h3> Tipo Sanguíneo </h3>
 
             <div className="row-12">
               <label className='sanguineo'>
-                <input value='o+' type='radio' name='gravida' />
+                <input value='O+' type='radio' {...register('bloodType')} />
                 <span> O + </span>
-                <input value='b-' type='radio' name='gravida' />
+                <input value='B-' type='radio' {...register('bloodType')} />
                 <span> B - </span>
-                <input value='b+' type='radio' name='gravida' />
+                <input value='B+' type='radio' {...register('bloodType')} />
                 <span> B + </span>
-                <input value='a+' type='radio' name='gravida' />
+                <input value='A+' type='radio' {...register('bloodType')} />
                 <span> A + </span>
-                <input value='ab-' type='radio' name='gravida' />
+                <input value='AB-' type='radio' {...register('bloodType')} />
                 <span> AB - </span>
-                <input value='ab+' type='radio' name='gravida' />
+                <input value='AB+' type='radio' {...register('bloodType')} />
                 <span> AB + </span>
-                <input value='naosei' type='radio' name='gravida' />
+                <input value='naosei' type='radio' {...register('bloodType')} />
                 <span> Não sei </span>
               </label>
             </div>
-          </ProntuarioStyle>
-
-          {/* Vacinas Covid */}
-          <ProntuarioStyle>
-            <h3> Vacina contra a COVID-19 </h3>
-
-            <div className="row-12">
-              <label className='diagnostico'>
-                <input value='sim' type='checkbox' name='primeiraDose' />
-                Primeira Dose
-                <input value='sim' type='checkbox' name='segundaDose' />
-                Segunda Dose
-                <input value='sim' type='checkbox' name='primeiraDoseReforco' />
-                Primeira Dose de Reforço
-                <input value='sim' type='checkbox' name='segundaDoseReforco' />
-                Segunda Dose de Reforço
-              </label>
-            </div>
-
+            <label>
+              <input  type="checkbox" {...register('status')} />
+              <span>Aceito blablabla os termos e blablablabla</span>
+            </label>
+            <button>ENVIAR</button>
           </ProntuarioStyle>
         </>
         );

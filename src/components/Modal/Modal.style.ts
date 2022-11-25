@@ -13,7 +13,7 @@ export const BlurContainer = styled.div `
 `
 
 export const ModalContainer = styled.div `
-    height: 780px;
+    height: 800px;
     width: 800px;
     margin: auto;
     margin-top: 3%;
@@ -66,16 +66,17 @@ export const FormContainer = styled.div `
     };
 
     label {
+        height: 115px;
         font-size: 20px;
         font-weight: 300;
         color: #141414;
     };
 
-    span {  
+    .text {  
        color: #141414;
        font-size: 20px;
-       margin-left: 39%;
-    }
+       margin-left: 39%;   
+    };
 
     a {
         color: #141414;
@@ -83,9 +84,20 @@ export const FormContainer = styled.div `
         margin-bottom:2%;
         margin-right:20%;
         text-align: end;
+        font-size:16px
     };
 `
 
+export const ErrorMessage = styled.span ` 
+    width: 450px;
+    color: red;
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+    right: 45px;
+    bottom: 5px;
+    text-align: end;   
+`
 export const StyledInput = styled.input `
  display: block;
  height: 45px;
@@ -98,7 +110,7 @@ export const StyledInput = styled.input `
 
  &.register {
     margin-bottom: 3.5%;
- }
+ };
 
  ::placeholder {
     color: #777777;
