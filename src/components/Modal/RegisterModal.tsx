@@ -1,38 +1,91 @@
-import {BlurContainer ,FormContainer, ModalContainer, StyledButton, StyledContainer, StyledInput } from "./Modal.style"
+import { BlurContainer, ErrorMessage, FormContainer, ModalContainer, StyledButton, StyledContainer, StyledInput } from "./Modal.style"
+import { useForm, SubmitHandler } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+import api from '../../api'
+
+type Inputs = {
+    name: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
+};
+
+const schema = yup.object({
+    name: yup.string().required('O nome é obrigatório'),
+    email: yup.string().email('Digite um e-mail válido').required('O email é obrigatório'),
+    password: yup.string().min(8, 'A senha deve ter no mínimo 8 dígitos').required('Preencha uma senha'),
+    confirmPassword: yup.string().required('Confirme sua senha').oneOf([yup.ref("password")], 'As senhas devem ser iguais')
+}).required();
+
 
 export const RegisterModal = () => {
-  return (
+
+    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>({
+        resolver: yupResolver(schema)
+    });
+
+    const onSubmit: SubmitHandler<Inputs> = (data) => {
+        const registerUser = () => {
+            api.post('/users',
+                {
+                    name: data.name,
+                    email: data.email,
+                    password: data.password
+                })
+                .then((res) => {
+                    console.log(res)
+                    alert('usuário cadastrado com sucesso')
+                })
+                .catch((err) => {
+                    console.log(err)
+                    alert('houve um erro')
+                });
+        }
+        registerUser();
+    };
+
+    const closeModal = () => {
+        window.location.reload()
+    }
+
+    return (
         <BlurContainer>
             <ModalContainer>
                 <img src="/biological-scene.png" alt="" />
                 <StyledContainer>
-                    <img src="/Component1.svg" alt="" />                   
+                    <p onClick={closeModal}>x</p>
+                    <img src="/Component1.svg" alt="" />
                     <h3>Bem vindo de volta</h3>
                     <h4>Área de Login</h4>
                     <FormContainer>
-                        <form>
+                        <form onSubmit={handleSubmit(onSubmit)}>
                             <label>
                                 Seu nome:
-                                <StyledInput className="register" placeholder="Insira seu email"/>
+                                <StyledInput {...register("name", { required: true })} className="register" placeholder="Insira seu email" />
+                                <ErrorMessage>{errors.name?.message}</ErrorMessage>
                             </label>
                             <label>
                                 Email:
-                                <StyledInput className="register" placeholder="Insira seu email"/>
+                                <StyledInput {...register("email", { required: true })} className="register" placeholder="Insira seu email" />
+                                <ErrorMessage>{errors.email?.message}</ErrorMessage>
                             </label>
                             <label>
                                 Senha:
-                                <StyledInput className="register" placeholder="Insira sua senha"/>
+                                <StyledInput type='password' {...register("password", { required: true })} className="register" placeholder="Insira sua senha" />
+                                <ErrorMessage>{errors.password?.message}</ErrorMessage>
                             </label>
                             <label>
                                 Confirme sua senha:
-                                <StyledInput placeholder="Insira sua senha"/>
-                            </label>                       
+                                <StyledInput type='password' {...register("confirmPassword", { required: true })} placeholder="Insira sua senha" />
+                                <ErrorMessage>{errors.confirmPassword?.message}</ErrorMessage>
+                            </label>
                             <StyledButton> Cadastre-se </StyledButton>
-                       </form>
+                        </form>
                     </FormContainer>
                 </StyledContainer>
             </ModalContainer>
         </BlurContainer>
-  );
+    );
 }
 

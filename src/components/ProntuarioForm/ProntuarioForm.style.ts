@@ -48,6 +48,7 @@ h3{
   display: flex;
   align-items: center;
   color: #696969;
+  margin-top: 5%;
 }
 
 input{
