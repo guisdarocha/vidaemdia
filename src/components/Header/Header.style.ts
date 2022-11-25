@@ -19,7 +19,7 @@ img{
 }
 }
 
-@media only screen and (max-width: 931px){
+@media only screen and (max-width: 960px){
 
 
     justify-content: center !important;;
@@ -39,7 +39,7 @@ img{
 `
 export const LinkStyle = styled(Link) `
 
-margin: 0 36px;
+margin: 0 25px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 600;
@@ -74,7 +74,7 @@ box-sizing: border-box;
 position: absolute;
 z-index: 2;
 
-@media only screen and (min-width: 931px){
+@media only screen and (min-width: 960px){
   display: none;
 }
 
@@ -186,7 +186,7 @@ transform: rotate(135deg);
 
 .menu.menuOpen{
   width: 140px;
-  height: 365px;
+  height: 385px;
   text-align: center;
   margin-left: -10px;
   background: #F5F5F5;
