@@ -18,13 +18,14 @@ const Home = (props: HomeProps) => {
     {/* navbar */}
       <div className="container">
         <Section  />
+       
         <HighLight text="Confira nossos artigos"/>
         <Article  />
         <HighLight text="Nossos parceiros"/>
         <Parceiros  />
       </div>
       {/* <LoginModal/> */}
-      <RegisterModal/>
+      {/* <RegisterModal/> */}
       <div>
         <Footer/>
       </div>
