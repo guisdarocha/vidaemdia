@@ -118,6 +118,7 @@ input::placeholder{
     font-weight: 600;
     color: #696969;
     font-size: 50px;
+    justify-content: center;
     text-align: center;
     margin-bottom: 90px;
   }
@@ -136,7 +137,10 @@ input::placeholder{
   .div-space {
     display: flex; 
     margin-left: 190px;
-    
+    justify-content: right;
+    align-items: right;
+    text-align: right;
+    width: 100%;
   }
 
   .alinhamento-y {
