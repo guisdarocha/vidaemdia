@@ -56,7 +56,7 @@ input{
   border: #DDDFE1 solid 1px;
   max-width: 100%;
   min-height: 53px;
-  padding-left: 17px;
+  padding-left: 2px;
 }
 input::placeholder{
   background-color: #FAFAFA;
@@ -78,16 +78,12 @@ input::placeholder{
 
   .email{
     display: grid;
-    margin-top: 25.5px;
-    input{
-      margin-right: 24px;
-
-    }
+    margin-top: 2rem;
   }
 
   .telefone{
     display: grid;
-    margin-top: 25.5px;
+    margin-top: 2rem;
   }
 
   .data{
@@ -128,13 +124,79 @@ input::placeholder{
     color: gray;
   }
 
-  .radio {
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 5px;
-  
+  .radio{
+    width: 55px;
+    height: 10px;
+    cursor: pointer;
+    appearance: none;
+    border: 1px solid #2C5EDE;
+    border-radius: 50%;
+    position: relative;
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background: none;
+    position: relative;
   }
+
+  .radio:before{
+    content: '';
+    outline: none;
+    width: 25px;
+    height: 25px;
+    background: #2C5EDE;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    position: center;
+    color: #2C5EDE;
+  }
+
+  .radio:checked:before{
+    opacity: 1;
+}
+
+  input[type="radio"] {
+  -ms-transform: scale(0.5); /* IE 9 /
+  -webkit-transform: scale(1.5); / Chrome, Safari, Opera */
+  transform: scale(0.5);
+}
+
+.diagnostico{
+  display: grid;
+  align-items: center;
+  justify-content: flex;
   
+  input{
+      margin-left: 55px;
+      margin-bottom: 5px;
+      max-width: 160px;
+      color: blue;
+      border-radius: 50%;
+      border: 1px solid blue;
+    }
+}
+
+input[type="checkbox"] {
+  -ms-transform: scale(0.5); /* IE 9 /
+  -webkit-transform: scale(1.5); / Chrome, Safari, Opera */
+  transform: scale(0.5);
+}
+.diagnosticoDois{
+  display: grid;
+  align-items: center;
+  justify-content: flex;
+  
+  input{
+      margin-left: 55px;
+      margin-bottom: 5px;
+      max-width: 160px;
+    }
+}
+
+
   .div-space {
     display: flex; 
     margin-left: 190px;
@@ -147,6 +209,12 @@ input::placeholder{
   .alinhamento-y {
     display: flex;
     align-items: center;
+  }
+
+  .historicoSocial {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .fumar {
@@ -268,9 +336,9 @@ input::placeholder{
 `
 export const Select = styled.select`
       width: 100%;
-      height: 3.5rem;
+      height: 5.5rem;
       background: white;
-      color: black;
+      color: grey;
       padding: 5px;
       font-size: 14px;
       border: 0.9875px solid #CFCFCF;
@@ -287,23 +355,3 @@ export const Select = styled.select`
       }
 `;
 
-
-export const RadioButtonLabel = styled.label`
-position: absolute;
-top: 25%;
-left: 4px;
-width: 24px;
-height: 24px;
-border-radius: 50%;
-background: white;
-border: 1px solid #ccc;
-`;
-
-export const BlueButton = styled.input`
-  opacity: 0;
-  z-index: 1;
-  cursor: pointer;
-  width: 25px;
-  height: 25px;
-  margin-right: 10px;
-`;
