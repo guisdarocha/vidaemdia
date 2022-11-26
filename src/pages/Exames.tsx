@@ -54,7 +54,7 @@ const Exames = (props: ExamesProps) => {
   let total = exames.length +1
 
   let data = exames.map((exame) => {
-    return exame.date.slice(0, -14).replace(/'-'/,'/')
+    return exame.date.slice(0, -14).replace(/-/g,'/')
   })
   console.log(data)
 
