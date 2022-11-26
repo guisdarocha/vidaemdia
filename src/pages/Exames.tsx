@@ -11,7 +11,7 @@ import jwt_decode from "jwt-decode";
 import api from "../api"
 
 
-type ExamesProps = {
+export type ExamesProps = {
   decoded: Array<string>,
   date: string,
   diagnosis: string,
@@ -65,13 +65,13 @@ const Exames = (props: ExamesProps) => {
             />
         </div>
         <div className="d-flex align-items-end pb-5">
-          <Button text="cadastrar" link="/exames/cadastroexame"/>
+          <Button text="cadastrar" link="/exames/cadastroexame/"/>
         </div>
       </TopSection>
 
       <div className="container">
         {/* componente dos cards */}
-        {exames.map((exame) => (<CardExame
+        {exames.slice(0).reverse().map((exame) => (<CardExame
          id={exame.idExams}
          date={exame.date}
          diagnosis={exame.diagnosis}
