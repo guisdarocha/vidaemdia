@@ -277,16 +277,15 @@ input[type="checkbox"] {
     align-items: center;
   }
 
-
   .sanguineo{
     align-items: center;
     justify-content: center;
     text-align: center;
 
   input{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       width: 90px;
       margin-bottom: 0.4rem;
       max-width: 160px;
@@ -294,6 +293,22 @@ input[type="checkbox"] {
       border-radius: 50%;
       border: 1px solid blue;
     }
+}
+
+.termos{
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  font-size: 16px;
+}
+
+.enviar {
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 30px;
+  background-color: #2C5EDE;
+  width: 300px;
+  height: 60px;
 }
 
   @media only screen and (max-width: 1400px){

@@ -478,10 +478,12 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           </label>
         </div>
         <label>
-          <input type="checkbox" {...register('status')} />
-          <span>Aceito blablabla os termos e blablablabla</span>
+          <input className='termos' type="checkbox" {...register('status')} />
+          <span className='termos'>Aceito e estou de acordo com os termos de uso deste site, bem como o armazenamento dos meus dados pessoais confiando na total segurança e privacidade.</span>
         </label>
-        <button>ENVIAR</button>
+        <div className="row d-flex justify-content-center">
+        <button type="button" class="btn btn-primary enviar">ENVIAR</button>
+        </div>
       </ProntuarioStyle>
     </>
   );
