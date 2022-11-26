@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import QuemSomos from "../pages/QuemSomos";
 import Prontuario from "../pages/Prontuario"
 import Consultas from "../pages/Consultas";
+import { MeuProntuario } from "../pages/MeuProntuario";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
     element: <Prontuario />,
   },
 
+  
   {
     path: "/exames",
     element: <Exames />,

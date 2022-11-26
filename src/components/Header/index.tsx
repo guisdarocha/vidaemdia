@@ -39,7 +39,7 @@ const index = () => {
               <Link to='/'><li>Home</li></Link>
               <Link to="/quemsomos"><li>Quem somos</li></Link>
               <Link to="/exames"><li>Meus Exames</li></Link>
-              <LinkStyle className='linksin' to="/prontuario">Meu Prontuário</LinkStyle>
+              <Link to="/prontuario"><li>Meu Prontuário</li></Link>
               <Link to="/consultas"><li>Minhas Consultas</li></Link>
               <Link to='#'><li>Suporte</li></Link>
               <Link onClick={openLoginModal} to='#'><li>Login</li></Link>
