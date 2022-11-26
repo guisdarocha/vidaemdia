@@ -6,52 +6,44 @@ export const ArticleCard = styled.article`
   margin-top: 15.5vh;
   margin-bottom: 20vh;
 
-  @media only screen and (max-width: 1400px){
-    margin-top: 11vh;
-    margin-bottom: 10vh;
-   }
+
 
   img{
-    margin-left: 1.2rem;
+    margin-left: 4rem;
     max-width: 100%;
   }
 
   h3{
   margin-top:136px;
   text-transform: initial uppercase;
-  margin-left: 1.2rem;
+  margin-left: 4rem;
   font-family: 'roboto', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 38px;
   color: #F5F5F5;
   :first-letter {
     text-transform: uppercase;
     }
-  @media only screen and (max-width: 525px){
-    font-size: 24px;
-    margin: 5rem 0 0 1.2rem ;
-   }
-  @media only screen and (max-width: 330px){
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 21px;
-    margin: 1rem 0 0 1.2rem ;
+
+    @media only screen and (max-width: 500px){
+      margin-top: 67px;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 21px;
 
    }
-   @media only screen and (max-width: 1200px){
-      font-size: 18px;
-      line-height: 100%;
-      margin-bottom: 0.5rem;
-   }
+
   }
 
 
 
   h4{
     font-family: 'roboto', sans-serif;
-    margin-left: 1.2rem;
+    text-align: left;
+    margin-right: 2rem ;
+    margin-left: 4rem;
     margin-bottom: 0.7rem;
     font-style: normal;
     font-weight: 500;
@@ -62,17 +54,12 @@ export const ArticleCard = styled.article`
     :first-letter {
     text-transform: uppercase;
     }
-    @media only screen and (max-width: 1200px){
-      font-size: 15px;
-      line-height: 100%;
-      margin-bottom: 3rem;
-   }
-    @media only screen and (max-width: 525px){
-    font-size: 18px;
-    margin: 0 1.2rem 1rem;
-   }
-    @media only screen and (max-width: 420px){
-    font-size: 12px;
+
+    @media only screen and (max-width: 500px){
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 150%;
+      letter-spacing: -0.011em;
 
    }
   }
@@ -82,11 +69,13 @@ export const ArticleCard = styled.article`
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 100% ;
+    background-size: 608px ;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 15px;
     border: none;
+    padding: 0;
+
 
 }
 
@@ -95,18 +84,18 @@ export const ArticleCard = styled.article`
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 100% ;
+    background-size: 608px ;
     -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
     border-radius: 15px;
+    -moz-border-radius: 50px;
     border: none;
+    padding: 0;
 
 }
 
-.card{
-    max-width: 65.5vh;
-    padding: 0;
- }
+
+
+
 
 .readlink{
     padding-bottom: 5px;
@@ -114,26 +103,33 @@ export const ArticleCard = styled.article`
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 36.85px;
+    font-size: 37px;
     line-height: 45px;
     color: #F5F5F5;
-    margin: 23px 0;
+    background-color: #2C5EDE;
+
+    @media only screen and (min-width: 1400px ) and (min-height: 890px ){
+      margin-left: 20px;
+      margin-right: 20px;
+
+   }
+
     :first-letter {
     text-transform: uppercase;
     }
+    p{
+      margin-top: 50px;
 
-    @media only screen and (max-width: 990px){
-  padding-top: 25px;
+    }
+
+    @media only screen and (max-width: 500px){
+      font-weight: 600;
+      font-size: 20.1969px;
+      line-height: 24px;
+
    }
 
-    @media only screen and (max-width: 525px){
-    padding-top: 25px;
-    font-size: 20px;
-    margin: 0;
-   }
-    @media only screen and (max-width: 420px){
-    font-size: 12px;
-   }
+
 
 
 }
