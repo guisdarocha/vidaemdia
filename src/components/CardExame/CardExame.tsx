@@ -19,7 +19,7 @@ type CardProps = {
 }
 
 const CardExame = ({id, date, exam, clinic, doctor, comments, diagnosis, index}:CardProps) => {
-  
+
   const [exames, setExames] = useState<ExamesProps[]>([])
 
   const USUARIO = localStorage.getItem('token');

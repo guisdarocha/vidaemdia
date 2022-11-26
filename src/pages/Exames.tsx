@@ -34,7 +34,7 @@ const Exames = (props: ExamesProps) => {
 
   const token = USUARIO;
   const decoded : any = jwt_decode(token!);
-  console.log(decoded);
+
 
   async function getExames() {
     const { data } = await  api.get(`/exam/${ID}`,{
@@ -52,6 +52,12 @@ const Exames = (props: ExamesProps) => {
   }, [])
 
   let total = exames.length +1
+
+  let data = exames.map((exame) => {
+    return exame.date.slice(0, -14).replace(/'-'/,'/')
+  })
+  console.log(data)
+
 
 
   return (
@@ -72,10 +78,10 @@ const Exames = (props: ExamesProps) => {
       </TopSection>
 
       <div className="container">
-        {exames.slice(0).reverse().map((exame) => (<CardExame
+        {exames.slice(0).reverse().map((exame, i) => (<CardExame
          index={total-=1}
          id={exame.idExams}
-         date={exame.date}
+         date={data[i]}
          diagnosis={exame.diagnosis}
          exam={exame.exam}
          clinic={exame.clinic}
