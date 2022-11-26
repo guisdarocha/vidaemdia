@@ -242,13 +242,13 @@ input[type="checkbox"] {
 }
 
 
-  .div-space {
+  .div-space { 
  
     display: flex;
     
     justify-content: flex-end; 
     align-items: center;   
-    margin-left: 24rem; 
+    margin-left: 23rem; 
   }
 
   .alinhamento-y {
