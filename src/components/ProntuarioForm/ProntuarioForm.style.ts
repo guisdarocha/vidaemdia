@@ -183,7 +183,7 @@ input::placeholder{
     gap: 5px;
   
   input{
-      margin-left: 55px;
+    margin-bottom: 0.4rem;
       max-width: 160px;
       color: blue;
       border-radius: 50%;
@@ -192,9 +192,9 @@ input::placeholder{
 }
 
 .dado{
-    display: grid;
-    align-items: baseline;
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-items: center;
     margin-left: 5rem;
   
 }
@@ -255,11 +255,12 @@ input[type="checkbox"] {
 
 
   .div-space {
+ 
     display: flex;
-    justify-content: right;
-    align-items: space-between;
-    text-align: right;
-    width: 100%;
+    
+    justify-content: flex-end; 
+    align-items: center;   
+    margin-left: 12rem; 
   }
 
   .alinhamento-y {
@@ -269,9 +270,9 @@ input[type="checkbox"] {
 
   .historicoSocial {
     display: grid;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    margin-left: 5rem;
+    background-color: white;
   }
   
   .fumar, 
