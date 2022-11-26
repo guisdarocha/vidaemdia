@@ -168,20 +168,8 @@ input::placeholder{
 .diagnosticoDois,
 .diagnosticoTres,
 .diagnosticoQuatro{
-  display: grid;
-    
-    justify-content: center; 
-    align-items: baseline; 
+  /* background-color: #bbdefb; */
 
-    flex-direction: row; 
-    flex-wrap: nowrap; 
-    align-content: flex-start;
-
-    background-color: #bbdefb;
-    height: 100%;
-    padding: 15px;
-    gap: 5px;
-  
   input{
     margin-bottom: 0.4rem;
       max-width: 160px;
@@ -260,7 +248,7 @@ input[type="checkbox"] {
     
     justify-content: flex-end; 
     align-items: center;   
-    margin-left: 12rem; 
+    margin-left: 24rem; 
   }
 
   .alinhamento-y {
