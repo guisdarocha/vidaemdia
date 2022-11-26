@@ -326,77 +326,81 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
 
         <h3> Diagnósticos </h3>
 
-        <div className="row-4">
-          <label className='diagnostico'>
-            <input value='Diabetes tipo 1' type='checkbox' {...register('disease')} />
-            Diabetes tipo 1
-            <input value='Diabetes tipo 2' type='checkbox' {...register('disease')} />
-            Diabetes tipo 2
-            <input value='Leucemia' type='checkbox' {...register('disease')} />
-            Leucemia
-            <input value='Linfoma' type='checkbox' {...register('disease')} />
-            Linfoma
-            <input value='Covid-19' type='checkbox' {...register('disease')} />
-            Covid-19
-            <input value='Burnout' type='checkbox' {...register('disease')} />
-            Burnout
-            <input value='Depressão' type='checkbox' {...register('disease')} />
-            Depressão
-          </label>
-        </div>
-        <div className="row-4">
-          <label className='diagnosticoDois'>
-            <input value='TAG-Transtorno de Ansiedade Generalizada' type='checkbox'{...register('disease')} />
-            TAG<h5>(Transtorno de Ansiedade Generalizada)</h5>
-            <input value='Depressão pós-parto' type='checkbox' {...register('disease')} />
-            Depressão pós-parto
-            <input value='Labirintite' type='checkbox' {...register('disease')} />
-            Labirintite
-            <input value='HIV' type='checkbox' {...register('disease')} />
-            HIV
-            <input value='Dor no nervo ciático' type='checkbox' {...register('disease')} />
-            Dor no nervo ciático
-            <input value='Anemia' type='checkbox' {...register('disease')} />
-            Anemia
-            <input value='Dermatite' type='checkbox' {...register('disease')} />
-            Dermatite
-          </label>
-        </div>
-        <div className="row-12">
-          <label className='diagnosticoTres'>
-            <input value='Nódulo pulmonar' type='checkbox' {...register('disease')} />
-            Nódulo pulmonar
-            <input value='Gastrite' type='checkbox' {...register('disease')} />
-            Gastrite
-            <input value='Cirrose' type='checkbox' {...register('disease')} />
-            Cirrose
-            <input value='Alcoolismo' type='checkbox' {...register('disease')} />
-            Alcoolismo
-            <input value='Alzheimer' type='checkbox' {...register('disease')} />
-            Alzheimer
-            <input value='Aneurisma' type='checkbox' {...register('disease')} />
-            Aneurisma
-            <input value='Asma' type='checkbox' {...register('disease')} />
-            Asma
-          </label>
-        </div>
-        <div className="row-12">
-          <label className='diagnosticoQuatro'>
-            <input value='Bipolaridade' type='checkbox' {...register('disease')} />
-            Bipolaridade
-            <input value='Borderline' type='checkbox' {...register('disease')} />
-            Bordeline
-            <input value='Bulimia' type='checkbox' {...register('disease')} />
-            Bulimia
-            <input value='Hepatite A' type='checkbox' {...register('disease')} />
-            Hepatite A
-            <input value='Hepatite C' type='checkbox' {...register('disease')} />
-            Hepatite C
-            <input value='Lúpus' type='checkbox' {...register('disease')} />
-            Lúpus
-            <input value='Osteoporose' type='checkbox' {...register('disease')} />
-            Osteoporose
-          </label>
+        
+          <div className="row-4">
+              <label className='diagnostico'>
+                <div className="box">
+                  <input value='Diabetes tipo 1' type='checkbox' {...register('disease')} />
+                  Diabetes tipo 1
+                  <input value='Diabetes tipo 2' type='checkbox' {...register('disease')} />
+                  Diabetes tipo 2
+                  <input value='Leucemia' type='checkbox' {...register('disease')} />
+                  Leucemia
+                  <input value='Linfoma' type='checkbox' {...register('disease')} />
+                  Linfoma
+                  <input value='Covid-19' type='checkbox' {...register('disease')} />
+                  Covid-19
+                  <input value='Burnout' type='checkbox' {...register('disease')} />
+                  Burnout
+                  <input value='Depressão' type='checkbox' {...register('disease')} />
+                  Depressão
+                </div>
+            </label>
+          
+          <div className="row-12">
+            <label className='diagnosticoDois'>  
+                  <input value='TAG-Transtorno de Ansiedade Generalizada' type='checkbox'{...register('disease')} />
+                  <div>TAG<h5>(Transtorno de Ansiedade Generalizada)</h5></div>
+                  <input value='Depressão pós-parto' type='checkbox' {...register('disease')} />
+                  Depressão pós-parto
+                  <input value='Labirintite' type='checkbox' {...register('disease')} />
+                  Labirintite
+                  <input value='HIV' type='checkbox' {...register('disease')} />
+                  HIV
+                  <input value='Dor no nervo ciático' type='checkbox' {...register('disease')} />
+                  Dor no nervo ciático
+                  <input value='Anemia' type='checkbox' {...register('disease')} />
+                  Anemia
+                  <input value='Dermatite' type='checkbox' {...register('disease')} />
+                  Dermatite
+            </label>
+          </div>
+          <div className="row-12">
+              <label className='diagnosticoTres'>
+                <input value='Nódulo pulmonar' type='checkbox' {...register('disease')} />
+                Nódulo pulmonar
+                <input value='Gastrite' type='checkbox' {...register('disease')} />
+                Gastrite
+                <input value='Cirrose' type='checkbox' {...register('disease')} />
+                Cirrose
+                <input value='Alcoolismo' type='checkbox' {...register('disease')} />
+                Alcoolismo
+                <input value='Alzheimer' type='checkbox' {...register('disease')} />
+                Alzheimer
+                <input value='Aneurisma' type='checkbox' {...register('disease')} />
+                Aneurisma
+                <input value='Asma' type='checkbox' {...register('disease')} />
+                Asma
+            </label>
+          </div>
+          <div className="row-12">
+            <label className='diagnosticoQuatro'>
+                <input value='Bipolaridade' type='checkbox' {...register('disease')} />
+                Bipolaridade
+                <input value='Borderline' type='checkbox' {...register('disease')} />
+                Bordeline
+                <input value='Bulimia' type='checkbox' {...register('disease')} />
+                Bulimia
+                <input value='Hepatite A' type='checkbox' {...register('disease')} />
+                Hepatite A
+                <input value='Hepatite C' type='checkbox' {...register('disease')} />
+                Hepatite C
+                <input value='Lúpus' type='checkbox' {...register('disease')} />
+                Lúpus
+                <input value='Osteoporose' type='checkbox' {...register('disease')} />
+                Osteoporose
+            </label>
+          </div>
         </div>
 
 

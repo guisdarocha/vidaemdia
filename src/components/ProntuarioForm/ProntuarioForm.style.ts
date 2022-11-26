@@ -164,18 +164,23 @@ input::placeholder{
   transform: scale(0.5);
 }
 
-.diagnostico{
-  display: grid;
+
+.diagnostico,
+.diagnosticoDois,
+.diagnosticoTres,
+.diagnosticoQuatro {
+ 
+  display: flex;
   align-items: center;
-  justify-content: flex;
-  
+
   input{
-      margin-left: 55px;
+      width: 32px;
+      margin-left: 10px;
       margin-bottom: 5px;
       max-width: 160px;
       color: blue;
       border-radius: 50%;
-      border: 1px solid blue;
+      border: 1px solid blue;   
     }
 }
 
@@ -183,17 +188,6 @@ input[type="checkbox"] {
   -ms-transform: scale(0.5); /* IE 9 /
   -webkit-transform: scale(1.5); / Chrome, Safari, Opera */
   transform: scale(0.5);
-}
-.diagnosticoDois{
-  display: grid;
-  align-items: center;
-  justify-content: flex;
-  
-  input{
-      margin-left: 55px;
-      margin-bottom: 5px;
-      max-width: 160px;
-    }
 }
 
 
@@ -217,54 +211,20 @@ input[type="checkbox"] {
     justify-content: space-between;
   }
   
-  .fumar {
-    display: flex;
-    align-items: center;
-  }
-
-  .drogas {
-    display: flex;
-    align-items: center;
-  }
-
-  .alcool {
-    display: flex;
-    align-items: center;
-  }
-
-  .exercicios {
-    display: flex;
-    align-items: center;
-  }
-
-  .recreacao {
-    display: flex;
-    align-items: center;
-  }
-
-  .familia {
-    display: flex;
-    align-items: center;
-  }
-
-  .tratamento {
-    display: flex;
-    align-items: center;
-  }
-
-  .medicamento {
-    display: flex;
-    align-items: center;
-  }
-
-  .alergico {
-    display: flex;
-    align-items: center;
-  }
-
+  .fumar, 
+  .drogas, 
+  .alcool,
+  .exercicios,
+  .recreacao,
+  .familia,
+  .medicamento,
+  .tratamento,
+  .alergico,
   .gravida {
+    width: 950px;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
   }
 
   @media only screen and (max-width: 1400px){
