@@ -1,3 +1,5 @@
+import axios from "axios"
+import { useEffect, useState } from "react"
 import BemVindo from "../components/BemVindo/BemVindo"
 import Button from "../components/Button/Button"
 import CardExame from "../components/CardExame/CardExame"
@@ -9,6 +11,29 @@ import { TopSection } from "./Exames.style"
 type ExamesProps = {}
 
 const Exames = (props: ExamesProps) => {
+  const [exames, setExames] = useState([])
+
+  const USUARIO = localStorage.getItem('token');
+  const ID = localStorage.getItem('id');
+
+  async function getAllExams() {
+    return await axios.get(`https://prontuario-digital-production-ff54.up.railway.app/exam/${ID}`, {
+        headers: {
+          Authorization: `Bearer ${USUARIO}`
+        }
+      }
+    ).then(response => {
+      setExames(response.data)
+      console.log(exames)
+    });
+  }
+
+  useEffect(() => {
+    getAllExams()
+
+  }, [])
+
+
   return (
     <>
       <Header/>
