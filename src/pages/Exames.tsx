@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import BemVindo from "../components/BemVindo/BemVindo"
 import Button from "../components/Button/Button"
+import CadastroExame from "../components/CadastroExame/CadastroExame"
 import CardExame from "../components/CardExame/CardExame"
 import { Footer } from "../components/Footer/Footer"
 import Header from '../components/Header'
@@ -10,7 +11,7 @@ import jwt_decode from "jwt-decode";
 import api from "../api"
 
 
-type ExamesProps = {
+export type ExamesProps = {
   decoded: Array<string>,
   date: string,
   diagnosis: string,
@@ -33,7 +34,7 @@ const Exames = (props: ExamesProps) => {
 
   const token = USUARIO;
   const decoded : any = jwt_decode(token!);
-  console.log(decoded);
+
 
   async function getExames() {
     const { data } = await  api.get(`/exam/${ID}`,{
@@ -50,6 +51,14 @@ const Exames = (props: ExamesProps) => {
 
   }, [])
 
+  let total = exames.length +1
+
+  let data = exames.map((exame) => {
+    return exame.date.slice(0, -14).replace(/-/g,'/')
+  })
+  console.log(data)
+
+
 
   return (
     <>
@@ -59,20 +68,20 @@ const Exames = (props: ExamesProps) => {
         <div>
           <BemVindo
             user={decoded.name}
-            text={"Insira aqui os dados do seu exame"}
-            subtext={"*Insira e edite os dados sobre o exame que foi realizado"}
+            text={"Aqui estão seus exames cadastrados:"}
+
             />
         </div>
         <div className="d-flex align-items-end pb-5">
-          <Button text="cadastrar"/>
+          <Button text="cadastrar" link="/exames/cadastroexame/"/>
         </div>
       </TopSection>
 
       <div className="container">
-        {/* componente dos cards */}
-        {exames.map((exame) => (<CardExame
+        {exames.slice(0).reverse().map((exame, i) => (<CardExame
+         index={total-=1}
          id={exame.idExams}
-         date={exame.date}
+         date={data[i]}
          diagnosis={exame.diagnosis}
          exam={exame.exam}
          clinic={exame.clinic}

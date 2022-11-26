@@ -17,3 +17,12 @@ a:active {
   z-index: 1;
   position: relative;
 }
+
+button{
+  border: none;
+  margin-bottom: 10px;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+}
