@@ -6,30 +6,38 @@ import CardExame from "../components/CardExame/CardExame"
 import { Footer } from "../components/Footer/Footer"
 import Header from '../components/Header'
 import { TopSection } from "./Exames.style"
+import jwt_decode from "jwt-decode";
 
 
-type ExamesProps = {}
+type ExamesProps = {
+  decoded: Array<string>
+}
 
 const Exames = (props: ExamesProps) => {
+
+
+
   const [exames, setExames] = useState([])
 
   const USUARIO = localStorage.getItem('token');
   const ID = localStorage.getItem('id');
 
-  async function getAllExams() {
-    return await axios.get(`https://prontuario-digital-production-ff54.up.railway.app/exam/${ID}`, {
-        headers: {
-          Authorization: `Bearer ${USUARIO}`
-        }
+  const token = USUARIO;
+  const decoded = jwt_decode(token!);
+  console.log(decoded);
+
+  async function getExames() {
+    const { data } = await  axios.get(`https://prontuario-digital-production-ff54.up.railway.app/exam/${ID}`,{
+      headers: {
+        Authorization: `Bearer ${USUARIO}`
       }
-    ).then(response => {
-      setExames(response.data)
-      console.log(exames)
-    });
-  }
+    })
+
+    setExames(data)
+    }
 
   useEffect(() => {
-    getAllExams()
+    getExames()
 
   }, [])
 
@@ -41,7 +49,7 @@ const Exames = (props: ExamesProps) => {
       <TopSection className="container d-flex mobile">
         <div>
           <BemVindo
-            user={"Fernando Predes"}
+            user={decoded.name}
             text={"Insira aqui os dados do seu exame"}
             subtext={"*Insira e edite os dados sobre o exame que foi realizado"}
             />
@@ -53,15 +61,15 @@ const Exames = (props: ExamesProps) => {
 
       <div className="container">
         {/* componente dos cards */}
-        <CardExame
-         id={1}
-         date={(new Date()).toLocaleDateString('en-US',)}
-         exam="Eletrocardiograma"
-         diagnosis="Sopro na válvula mitral"
-         clinic="HCor - Associação Beneficente Síria"
-         doctor="Dr. Luis Pacheco"
-         comments="Preciso agendar o retorno com o médico e apresentar o resultado do     exame que está salvo no meu Drive."
-         />
+        {exames.map((exame) => (<CardExame
+         id={exame.idExams}
+         date={exame.date}
+         diagnosis={exame.diagnosis}
+         exam={exame.exam}
+         clinic={exame.clinic}
+         doctor={exame.doctor}
+         comments={exame.comments}
+         />))}
       </div>
       <Footer />
     </>
