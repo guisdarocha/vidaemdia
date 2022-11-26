@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { ProntuarioStyle, BlueButton, Select } from './ProntuarioForm.style';
+import { ProntuarioStyle , Select } from './ProntuarioForm.style';
 import { useForm, SubmitHandler } from "react-hook-form";
 import api from "../../api";
 
@@ -99,7 +99,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         </div>
 
         <div className='row'>
-          <div className="col-12 col-md-6">
+          <div className="col-6 col-md-6">
             <label className='email'>
               E-mail<p className='obrigatorio'>*</p>
               <input {...register('email', { required: true })} placeholder="seuemail@gmail.com" />
@@ -107,7 +107,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           </div>
         </div>
         <div className='row'>
-          <div className="col-12 col-md-6">
+          <div className="col-6 col-md-6">
             <label className='telefone'>
               Telefone<p className='obrigatorio'>*</p>
               <input {...register('telephone', { required: true })} placeholder="(00)0000-0000" />
@@ -217,15 +217,17 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         {/* Histórico Social */}
 
         <h3> Histórico Social </h3>
-
+    <div className="historicoSocial">
         <div>
           <label className='fumar'>
             Fumo:
             <div className='div-space'>
+
               <input {...register('smoke')} className="radio" value='sim' type='radio' />
               <span className='alinhamento-y'> Sim </span>
               <input {...register('smoke')} className="radio" value='nao' type='radio' />
               <span className='alinhamento-y'> Não </span>
+
             </div>
           </label>
         </div>
@@ -317,13 +319,14 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             </div>
           </label>
         </div>
+    </div>
 
 
         {/* Diagnósticos */}
 
         <h3> Diagnósticos </h3>
 
-        <div className="row-12">
+        <div className="row-4">
           <label className='diagnostico'>
             <input value='Diabetes tipo 1' type='checkbox' {...register('disease')} />
             Diabetes tipo 1
@@ -341,7 +344,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             Depressão
           </label>
         </div>
-        <div className="row-12">
+        <div className="row-4">
           <label className='diagnosticoDois'>
             <input value='TAG-Transtorno de Ansiedade Generalizada' type='checkbox'{...register('disease')} />
             TAG<h5>(Transtorno de Ansiedade Generalizada)</h5>
