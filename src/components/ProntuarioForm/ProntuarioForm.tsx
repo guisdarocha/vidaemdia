@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import { ProntuarioStyle, BlueButton, Select } from './ProntuarioForm.style';
 import { useForm, SubmitHandler } from "react-hook-form";
 import api from "../../api";
+import axios from 'axios'
 
 type ProntuarioFormProps = {};
 
@@ -47,7 +48,6 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
       api.put(`/users/${id}`, {
         name: data.name,
         email: data.email,
-        // password: data.password,
         birthDate: data.birthDate,
         telephone: data.telephone,
         maritalStatus: data.maritalStatus,
@@ -77,11 +77,11 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         {
           headers:
             { 'Authorization': `Bearer ${token}` }
-        })
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err))
-      
-      
+        }).then((res) => {
+          console.log(res);
+        }).catch((err) => {
+          console.log(err);
+        });
     }
     submitInfos()
   };
