@@ -34,7 +34,7 @@ export const ButtonLink = styled(Link) `
 }
 
 `
-export const ButtonSubmit = styled(Link) `
+export const ButtonSubmit = styled.button `
   font-style: normal;
   font-weight: 700;
   font-size: 42px;
