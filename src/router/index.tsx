@@ -21,10 +21,6 @@ const router = createBrowserRouter([
     element: <Prontuario />,
   },
 
-  {
-    path: "/meuprontuario",
-    element: <MeuProntuario />,
-  },
   
   {
     path: "/exames",
