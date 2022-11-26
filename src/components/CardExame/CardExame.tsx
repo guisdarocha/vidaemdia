@@ -58,7 +58,7 @@ const CardExame = ({id, date, exam, clinic, doctor, comments, diagnosis}:CardPro
         <h3>exame {id} </h3>
         <div className='d-flex '>
           <h4>data: <p>{date}</p></h4>
-          <Link className='icone' to={`/exames/cadastroexame/${id}`}><img src={lapis} alt="icone de lápis" /></Link>
+          <Link className='icone' to={`/exames/editarexame/${id}`}><img src={lapis} alt="icone de lápis" /></Link>
           <button className='icone'onClick={deleteExames}><img  src={lata} alt="icone de lata" /></button>
         </div>
       </div>

@@ -6,6 +6,7 @@ import Prontuario from "../pages/Prontuario"
 import Consultas from "../pages/Consultas";
 import { MeuProntuario } from "../pages/MeuProntuario";
 import CadastroDeExame from "../pages/CadastroDeExame";
+import EditarExame from "../pages/EditarExame";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/exames/cadastroexame",
     element: <CadastroDeExame />,
+  },
+  {
+    path: "/exames/editarexame/:id",
+    element: <EditarExame />,
   },
   {
     path: "/consultas",

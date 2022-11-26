@@ -4,7 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import api from "../../api"
 import Button from "../../components/Button/Button"
 import jwt_decode from "jwt-decode";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 type Inputs = {
   exam: string
@@ -16,7 +16,7 @@ type Inputs = {
 
 }
 
-const CadastroExame = () => {
+const CompEditarExame = () => {
   const navigate = useNavigate()
 
   const USUARIO = localStorage.getItem('token');
@@ -26,10 +26,12 @@ const CadastroExame = () => {
   const decoded : any = jwt_decode(token!);
   const finalId = decoded.idUser
 
+  const { id } = useParams();
+
   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const submitInfos = () => {
-      api.post(`/exam/${finalId}`, {
+      api.put(`/exam/${finalId}/${id}`, {
         exam: data.exam,
         date: data.date,
         diagnosis: data.diagnosis,
@@ -116,4 +118,4 @@ const CadastroExame = () => {
   )
 }
 
-export default CadastroExame
+export default CompEditarExame

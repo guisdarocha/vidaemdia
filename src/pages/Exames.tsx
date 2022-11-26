@@ -71,7 +71,7 @@ const Exames = (props: ExamesProps) => {
 
       <div className="container">
         {/* componente dos cards */}
-        {exames.slice(0).reverse().map((exame) => (<CardExame
+        {exames.slice(0).reverse().map((exame, index) => (<CardExame
          id={exame.idExams}
          date={exame.date}
          diagnosis={exame.diagnosis}
