@@ -296,9 +296,10 @@ input[type="checkbox"] {
 }
 
 .termos{
-  justify-content: center;
-  align-items: center;
   width: 40px;
+}
+
+.termos-span{
   font-size: 16px;
 }
 

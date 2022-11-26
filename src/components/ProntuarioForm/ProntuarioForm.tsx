@@ -460,7 +460,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <h3> Tipo Sanguíneo </h3>
 
         <div className="row">
-          <label className='sanguineo'>
+          <label className='sanguineo d-flex align-items-center'>
             <input value='O+' type='radio' {...register('bloodType')} />
             <span> O + </span>
             <input value='B-' type='radio' {...register('bloodType')} />
@@ -477,9 +477,9 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             <span> Não sei </span>
           </label>
         </div>
-        <label>
+        <label className='d-flex align-items-center'>
           <input className='termos' type="checkbox" {...register('status')} />
-          <span className='termos'>Aceito e estou de acordo com os termos de uso deste site, bem como o armazenamento dos meus dados pessoais confiando na total segurança e privacidade.</span>
+          <span className='termos-span'>Aceito e estou de acordo com os termos de uso deste site, bem como o armazenamento dos meus dados pessoais confiando na total segurança e privacidade.</span>
         </label>
         <div className="row d-flex justify-content-center">
         <button type="button" class="btn btn-primary enviar">ENVIAR</button>
