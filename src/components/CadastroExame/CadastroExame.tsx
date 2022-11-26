@@ -65,7 +65,7 @@ const CadastroExame = () => {
             <div className='col-12 col-md-12 '>
                 <label typeof="date" className='data'>
                 Data
-                <input {...register('date', { required: true })} placeholder="__/__/__" />
+                <input {...register('date', { required: true })} typeof="date"  placeholder="__/__/__" />
                 </label>
             </div>
             </div>
