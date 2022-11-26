@@ -219,22 +219,20 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <h3> Histórico Social </h3>
     <div className="historicoSocial">
         <div>
-          <label className='fumar'>
+          <label className='fumar '>
             Fumo:
-            <div className='div-space'>
-
+            <div className='div-space col'>
               <input {...register('smoke')} className="radio" value='sim' type='radio' />
-              <span className='alinhamento-y'> Sim </span>
+              <span> Sim </span>
               <input {...register('smoke')} className="radio" value='nao' type='radio' />
-              <span className='alinhamento-y'> Não </span>
-
+              <span> Não </span>
             </div>
           </label>
         </div>
         <div>
           <label className='drogas'>
             Drogas:
-            <div className='div-space'>
+            <div className='div-space col'>
               <input {...register('drugs')} className="radio" value='sim' type='radio' />
               <span className='alinhamento-y'> Sim </span>
               <input {...register('drugs')} className="radio" value='nao' type='radio' />
@@ -245,7 +243,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <div>
           <label className='exercicios'>
             Pratica exercícios?
-            <div className='div-space'>
+            <div className='div-space col'>
               <input {...register('exercises')} className="radio" value='sim' type='radio' />
               <span className='alinhamento-y'> Sim </span>
               <input {...register('exercises')} className="radio" value='nao' type='radio' />
@@ -256,7 +254,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <div>
           <label className='recreacao'>
             Pratica alguma recreação?
-            <div className='div-space'>
+            <div className='div-space col'>
               <input {...register('recreation')} className="radio" value='sim' type='radio' />
               <span className='alinhamento-y'> Sim </span>
               <input {...register('recreation')} className="radio" value='nao' type='radio' />
@@ -267,7 +265,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <div>
           <label className='familia'>
             Doença na familia?
-            <div className='div-space'>
+            <div className='div-space col'>
               <input {...register('familialDisease')} className="radio" value='sim' type='radio' />
               <span className='alinhamento-y'> Sim </span>
               <input {...register('familialDisease')} className="radio" value='nao' type='radio' />
@@ -278,7 +276,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <div>
           <label className='tratamento'>
             Esta fazendo algum tratamento?
-            <div className='div-space'>
+            <div className='div-space col'>
               <input {...register('treatment')} className="radio" value='sim' type='radio' />
               <span className='alinhamento-y'> Sim </span>
               <input {...register('treatment')} className="radio" value='nao' type='radio' />
@@ -289,7 +287,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <div>
           <label className='medicamento'>
             Faz uso de algum medicamento?
-            <div className='div-space'>
+            <div className='div-space col'>
               <input {...register('medicines')} className="radio" value='sim' type='radio' />
               <span className='alinhamento-y'> Sim </span>
               <input {...register('medicines')} className="radio" value='nao' type='radio' />
@@ -300,7 +298,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <div>
           <label className='alergico'>
             É alergico a algum medicamento?
-            <div className='div-space'>
+            <div className='div-space col'>
               <input {...register('allergy')} className="radio" value='sim' type='radio' />
               <span className='alinhamento-y'> Sim </span>
               <input {...register('allergy')} className="radio" value='nao' type='radio' />
@@ -311,7 +309,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <div>
           <label className='gravida'>
             Está grávida?
-            <div className='div-space'>
+            <div className='div-space col'>
               <input {...register('pregnant')} className="radio" value='sim' type='radio' />
               <span className='alinhamento-y'> Sim </span>
               <input {...register('pregnant')} className="radio" value='nao' type='radio' />
@@ -321,13 +319,12 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         </div>
     </div>
 
+   {/* Diagnósticos */}
 
-        {/* Diagnósticos */}
-
-        <h3> Diagnósticos </h3>
-        <div className="row">
-        <div className="col">
-          <label className='diagnostico'> 
+  <h3> Diagnósticos </h3>
+    <div className="row">
+      <div className="col">
+        <label className='diagnostico'> 
           <div className="dado">
             <input value='Diabetes tipo 1'className='checkbox' type='checkbox' {...register('disease')} />
            <h4> Diabetes tipo 1 </h4>
@@ -361,7 +358,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <div className="col">
           <label className='diagnosticoDois'>
             <input value='TAG-Transtorno de Ansiedade Generalizada' className='checkbox' type='checkbox'{...register('disease')} />
-            TAG<h5>(Transtorno de Ansiedade Generalizada)</h5>
+            <h4>TAG</h4><h5>(Transtorno de Ansiedade Generalizada)</h5>
             <input value='Depressão pós-parto' className='checkbox' type='checkbox' {...register('disease')} />
             Depressão pós-parto
             <input value='Labirintite' className='checkbox' type='checkbox' {...register('disease')} />
