@@ -44,6 +44,9 @@ export const  CadastroExameStyle = styled.form`
 
     }
 
+    .salvar{
+      text-align: center;
+    }
 
     .exame{
         display: grid;
@@ -110,7 +113,7 @@ export const  CadastroExameStyle = styled.form`
         }
 
     }
-    
+
     .data{
         display: grid;
         margin-top: 20px;

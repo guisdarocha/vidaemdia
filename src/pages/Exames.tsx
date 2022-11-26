@@ -53,19 +53,35 @@ const Exames = (props: ExamesProps) => {
 
 
   return (
-   <>
+    <>
+      <Header/>
+      {/* componente do topo */}
       <TopSection className="container d-flex mobile">
         <div>
           <BemVindo
-            user={"Fernando Predes"}
-            text={"Insira aqui os dados do seu exame"}
-            subtext={"*Insira e edite os dados sobre o exame que foi realizado"}
+            user={decoded.name}
+            text={"Aqui estão seus exames cadastrados:"}
+
             />
         </div>
         <div className="d-flex align-items-end pb-5">
-          <Button text="teste"/>
+          <Button text="cadastrar" link="/exames/cadastroexame"/>
         </div>
       </TopSection>
+
+      <div className="container">
+        {/* componente dos cards */}
+        {exames.map((exame) => (<CardExame
+         id={exame.idExams}
+         date={exame.date}
+         diagnosis={exame.diagnosis}
+         exam={exame.exam}
+         clinic={exame.clinic}
+         doctor={exame.doctor}
+         comments={exame.comments}
+         />))}
+      </div>
+      <Footer />
     </>
   )
 }

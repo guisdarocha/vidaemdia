@@ -5,6 +5,7 @@ import QuemSomos from "../pages/QuemSomos";
 import Prontuario from "../pages/Prontuario"
 import Consultas from "../pages/Consultas";
 import { MeuProntuario } from "../pages/MeuProntuario";
+import CadastroDeExame from "../pages/CadastroDeExame";
 
 const router = createBrowserRouter([
   {
@@ -21,10 +22,14 @@ const router = createBrowserRouter([
     element: <Prontuario />,
   },
 
-  
+
   {
     path: "/exames",
-    element: <Exames />,
+    element: <Exames decoded={[]} date={""} diagnosis={""} idExams={0} exam={""} clinic={""} doctor={""} comments={""} />,
+  },
+  {
+    path: "/exames/cadastroexame",
+    element: <CadastroDeExame />,
   },
   {
     path: "/consultas",

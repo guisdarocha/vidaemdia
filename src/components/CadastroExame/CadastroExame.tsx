@@ -1,3 +1,4 @@
+import { ButtonSubmit } from "../Button/Button.styles";
 import { CadastroExameStyle, AceiteTermos } from "./CadastroExame.style";
 
 
@@ -16,7 +17,7 @@ const CadastroExame = () => {
             </div>
             <div className='row'>
             <div className='col-12 col-md-12 '>
-                <label className='data'>
+                <label typeof="date" className='data'>
                 Data
                 <input placeholder="__/__/__" />
                 </label>
@@ -54,10 +55,14 @@ const CadastroExame = () => {
                 </label>
             </div>
             </div>
+            <div className="salvar">
+              <ButtonSubmit >Salvar</ButtonSubmit>
+            </div>
         </CadastroExameStyle>
-        <AceiteTermos>
+        <AceiteTermos className="mb-5">
             <p className="termo"><input type="checkbox"  checked />Aceito e estou de acordo com o termos de uso deste site, bem como o armazenamento dos meus dados pessoais confiando na totla segurança e privacidade.</p>
         </AceiteTermos>
+
     </>
   )
 }

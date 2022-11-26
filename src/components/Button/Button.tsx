@@ -1,15 +1,24 @@
-import { ButtonLink } from "./Button.styles"
+import { ButtonLink, ButtonSubmit } from "./Button.styles"
 
 
 type ButtonProps = {
-  text: string
+  text: string,
+  link: string
 }
 
-const Button = ({text}: ButtonProps) => {
+const Button = ({text, link}: ButtonProps) => {
   return (
-    <ButtonLink to={'#'}>
+    <ButtonLink to={link}>
       {text}
     </ButtonLink>
+  )
+}
+
+export const ButtonS = ({text, link}: ButtonProps) => {
+  return (
+    <ButtonSubmit>
+      {text}
+    </ButtonSubmit>
   )
 }
 
