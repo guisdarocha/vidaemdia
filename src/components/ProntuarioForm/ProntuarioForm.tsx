@@ -359,7 +359,8 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='diagnosticoDois'>
           <div className="dado">
             <input value='TAG-Transtorno de Ansiedade Generalizada' className='checkbox' type='checkbox'{...register('disease')} />
-            <h4>TAG</h4><h5>(Transtorno de Ansiedade Generalizada)</h5>
+            <h4>TAG</h4>
+            <h5>(Transtorno de Ansiedade Generalizada)</h5>
             </div>
             <div className="dado">
             <input value='Depressão pós-parto' className='checkbox' type='checkbox' {...register('disease')} />
@@ -458,7 +459,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
 
         <h3> Tipo Sanguíneo </h3>
 
-        <div className="row-12">
+        <div className="row">
           <label className='sanguineo'>
             <input value='O+' type='radio' {...register('bloodType')} />
             <span> O + </span>
