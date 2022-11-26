@@ -165,13 +165,12 @@ input::placeholder{
 }
 
 .diagnostico{
-  display: grid;
-  align-items: center;
-  justify-content: flex;
+  display: flex;
+  flex-direction: column;   
+  width: 100%;
   
   input{
       margin-left: 55px;
-      margin-bottom: 5px;
       max-width: 160px;
       color: blue;
       border-radius: 50%;
@@ -179,11 +178,54 @@ input::placeholder{
     }
 }
 
+.dado{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;  
+}
+
+.checkbox{
+    width: 55px;
+    height: 10px;
+    cursor: pointer;
+    appearance: none;
+    border: 1px solid #2C5EDE;
+    border-radius: 50%;
+    position: relative;
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background: none;
+    position: relative;
+  }
+
+  .checkbox:before{
+    content: '';
+    outline: none;
+    width: 25px;
+    height: 25px;
+    background: #2C5EDE;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    position: center;
+    color: #2C5EDE;
+  }
+
+  .checkbox:checked:before{
+    opacity: 1;
+  }
+
 input[type="checkbox"] {
   -ms-transform: scale(0.5); /* IE 9 /
   -webkit-transform: scale(1.5); / Chrome, Safari, Opera */
   transform: scale(0.5);
 }
+
+
+
 .diagnosticoDois{
   display: grid;
   align-items: center;
@@ -198,10 +240,9 @@ input[type="checkbox"] {
 
 
   .div-space {
-    display: flex; 
-    margin-left: 190px;
+    display: flex;
     justify-content: right;
-    align-items: right;
+    align-items: space-between;
     text-align: right;
     width: 100%;
   }
@@ -215,6 +256,7 @@ input[type="checkbox"] {
     display: grid;
     align-items: center;
     justify-content: space-between;
+    margin-left: 5rem;
   }
   
   .fumar {

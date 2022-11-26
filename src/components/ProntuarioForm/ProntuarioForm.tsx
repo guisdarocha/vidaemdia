@@ -326,10 +326,12 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
 
         <h3> Diagnósticos </h3>
 
-        <div className="row-4">
-          <label className='diagnostico'>
-            <input value='Diabetes tipo 1' type='checkbox' {...register('disease')} />
-            Diabetes tipo 1
+        <div className="col-2">
+          <label className='diagnostico'> 
+          <div className="dado">
+            <input value='Diabetes tipo 1'className='checkbox' type='checkbox' {...register('disease')} />
+           <h4> Diabetes tipo 1 </h4>
+          </div>
             <input value='Diabetes tipo 2' type='checkbox' {...register('disease')} />
             Diabetes tipo 2
             <input value='Leucemia' type='checkbox' {...register('disease')} />
