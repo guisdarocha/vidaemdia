@@ -7,11 +7,6 @@ import Header from '../components/Header'
 import { TopSection } from "./Exames.style"
 
 
-{/* { 
-  name, email, password, birthDate, telephone, maritalStatus, sex, weight, height, zipCode, address,
-  number, neighborhood, complement, state, city, smoke, drugs, exercises, recreation, familialDisease,
-  treatment, allergy, pregnant, medicines, disease, bloodType, status}
-*/}
 
 type MeuProntuarioProps = {
   name: string,
@@ -44,7 +39,10 @@ type MeuProntuarioProps = {
 	status: boolean	
 };
 
-export const MeuProntuario = (props : MeuProntuarioProps) => {
+export const MeuProntuario = ({ 
+  name, email, password, birthDate, telephone, maritalStatus, sex, weight, height, zipCode, address,
+  number, neighborhood, complement, state, city, smoke, drugs, exercises, recreation, familialDisease,
+  treatment, allergy, pregnant, medicines, disease, bloodType, status}: MeuProntuarioProps) => {
   return (
     <>
       <Header/>
@@ -53,7 +51,7 @@ export const MeuProntuario = (props : MeuProntuarioProps) => {
         <div>
           <BemVindo
             user={MeuProntuario.name}
-            text={"Visualizar aqui seu Prontuário Digital"}
+            text={" Visualizar aqui seu Prontuário Digital"}
             subtext={"*Insira e edite os dados sobre o exame que foi realizado"}
             />
         </div>
