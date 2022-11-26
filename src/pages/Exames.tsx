@@ -7,27 +7,36 @@ import { Footer } from "../components/Footer/Footer"
 import Header from '../components/Header'
 import { TopSection } from "./Exames.style"
 import jwt_decode from "jwt-decode";
+import api from "../api"
 
 
 type ExamesProps = {
-  decoded: Array<string>
+  decoded: Array<string>,
+  date: string,
+  diagnosis: string,
+  idExams:number,
+  exam:string,
+  clinic: string,
+  doctor: string,
+  comments:string
+
 }
 
 const Exames = (props: ExamesProps) => {
 
 
 
-  const [exames, setExames] = useState([])
+  const [exames, setExames] = useState<ExamesProps[]>([])
 
   const USUARIO = localStorage.getItem('token');
   const ID = localStorage.getItem('id');
 
   const token = USUARIO;
-  const decoded = jwt_decode(token!);
+  const decoded : any = jwt_decode(token!);
   console.log(decoded);
 
   async function getExames() {
-    const { data } = await  axios.get(`https://prontuario-digital-production-ff54.up.railway.app/exam/${ID}`,{
+    const { data } = await  api.get(`/exam/${ID}`,{
       headers: {
         Authorization: `Bearer ${USUARIO}`
       }
