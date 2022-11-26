@@ -164,25 +164,74 @@ input::placeholder{
   transform: scale(0.5);
 }
 
-
 .diagnostico,
 .diagnosticoDois,
 .diagnosticoTres,
-.diagnosticoQuatro {
- 
-  display: flex;
-  align-items: center;
+.diagnosticoQuatro{
+  display: grid;
+    
+    justify-content: center; 
+    align-items: baseline; 
 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    align-content: flex-start;
+
+    background-color: #bbdefb;
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+  
   input{
-      width: 32px;
-      margin-left: 10px;
-      margin-bottom: 5px;
+      margin-left: 55px;
       max-width: 160px;
       color: blue;
       border-radius: 50%;
       border: 1px solid blue;   
     }
 }
+
+.dado{
+    display: grid;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-left: 5rem;
+  
+}
+
+.checkbox{
+    width: 55px;
+    height: 10px;
+    cursor: pointer;
+    appearance: none;
+    border: 1px solid #2C5EDE;
+    border-radius: 50%;
+    position: relative;
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background: none;
+    position: relative;
+  }
+
+  .checkbox:before{
+    content: '';
+    outline: none;
+    width: 25px;
+    height: 25px;
+    background: #2C5EDE;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    position: center;
+    color: #2C5EDE;
+  }
+
+  .checkbox:checked:before{
+    opacity: 1;
+  }
 
 input[type="checkbox"] {
   -ms-transform: scale(0.5); /* IE 9 /
@@ -191,11 +240,24 @@ input[type="checkbox"] {
 }
 
 
+
+.diagnosticoDois{
+  display: grid;
+  align-items: center;
+  justify-content: flex;
+  
+  input{
+      margin-left: 55px;
+      margin-bottom: 5px;
+      max-width: 160px;
+    }
+}
+
+
   .div-space {
-    display: flex; 
-    margin-left: 190px;
+    display: flex;
     justify-content: right;
-    align-items: right;
+    align-items: space-between;
     text-align: right;
     width: 100%;
   }
@@ -209,6 +271,7 @@ input[type="checkbox"] {
     display: grid;
     align-items: center;
     justify-content: space-between;
+    margin-left: 5rem;
   }
   
   .fumar, 
