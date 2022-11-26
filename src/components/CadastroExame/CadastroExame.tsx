@@ -1,17 +1,63 @@
 import { ButtonSubmit } from "../Button/Button.styles";
 import { CadastroExameStyle, AceiteTermos } from "./CadastroExame.style";
+import { useForm, SubmitHandler } from "react-hook-form";
+import api from "../../api"
+import Button from "../../components/Button/Button"
+import jwt_decode from "jwt-decode";
 
+type Inputs = {
+  exam: string
+  date: string
+  diagnosis: string
+  clinic: string
+  doctor: string
+  comments: string
 
+}
 
 const CadastroExame = () => {
+
+  const USUARIO = localStorage.getItem('token');
+  const ID = localStorage.getItem('id');
+
+  const token = USUARIO;
+  const decoded : any = jwt_decode(token!);
+  const finalId = decoded.idUser
+
+  const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    const submitInfos = () => {
+      api.post(`/exam/${finalId}`, {
+        exam: data.exam,
+        date: data.date,
+        diagnosis: data.diagnosis,
+        clinic: data.clinic,
+        doctor: data.doctor,
+        comments: data.comments,
+
+      },
+        {
+          headers:
+            { 'Authorization': `Bearer ${token}` }
+        }).then((res) => {
+          console.log(res);
+        }).catch((err) => {
+          console.log(err);
+        });
+    }
+    submitInfos()
+
+  };
+  console.log(decoded)
+
   return (
     <>
-        <CadastroExameStyle>
+        <CadastroExameStyle onSubmit={handleSubmit(onSubmit)}>
             <div className='row'>
             <div className='col-12 col-md-12 '>
                 <label className='exame'>
                 Exame
-                <input placeholder="Digite aqui o nome do seu exame" />
+                <input {...register('exam', { required: true })} placeholder="Digite aqui o nome do seu exame" />
                 </label>
             </div>
             </div>
@@ -19,7 +65,7 @@ const CadastroExame = () => {
             <div className='col-12 col-md-12 '>
                 <label typeof="date" className='data'>
                 Data
-                <input placeholder="__/__/__" />
+                <input {...register('date', { required: true })} placeholder="__/__/__" />
                 </label>
             </div>
             </div>
@@ -27,7 +73,7 @@ const CadastroExame = () => {
             <div className='col-12 col-md-12 '>
                 <label className='diag'>
                 Diagnóstico
-                <input placeholder="Digite aqui seu diagnóstico" />
+                <input {...register('diagnosis', { required: true })} placeholder="Digite aqui seu diagnóstico" />
                 </label>
             </div>
             </div>
@@ -35,7 +81,7 @@ const CadastroExame = () => {
             <div className='col-12 col-md-12 '>
                 <label className='local'>
                 Local
-                <input placeholder="Local em que o exame foi feito" />
+                <input {...register('clinic', { required: true })} placeholder="Local em que o exame foi feito" />
                 </label>
             </div>
             </div>
@@ -43,7 +89,7 @@ const CadastroExame = () => {
             <div className='col-12 col-md-12 '>
                 <label className='medico'>
                 Médico Responsável
-                <input placeholder="Nome do médico" />
+                <input {...register('doctor', { required: true })} placeholder="Nome do médico" />
                 </label>
             </div>
             </div>
@@ -51,7 +97,7 @@ const CadastroExame = () => {
             <div className='col-12 col-md-12 '>
                 <label className='obs'>
                 Observação
-                <textarea placeholder="Digite aqui as observações do seu exame" />
+                <textarea {...register('comments', { required: true })} placeholder="Digite aqui as observações do seu exame" />
                 </label>
             </div>
             </div>

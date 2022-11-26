@@ -6,16 +6,24 @@ import Button from "../components/Button/Button"
 import jwt_decode from "jwt-decode";
 import { Footer } from "../components/Footer/Footer"
 import CadastroExame from '../components/CadastroExame/CadastroExame'
+import { useForm, SubmitHandler } from "react-hook-form";
+import api from "../api/index";
 
-type Props = {}
 
-const CadastroDeExame = (props: Props) => {
+
+type ExameProps = {
+
+}
+
+const CadastroDeExame = (props: ExameProps) => {
 
   const USUARIO = localStorage.getItem('token');
   const ID = localStorage.getItem('id');
 
   const token = USUARIO;
   const decoded : any = jwt_decode(token!);
+
+
 
   return (
     <>
@@ -30,7 +38,7 @@ const CadastroDeExame = (props: Props) => {
             />
         </div>
         <div className="d-flex align-items-end pb-5">
-          
+
         </div>
       </TopSection>
 
