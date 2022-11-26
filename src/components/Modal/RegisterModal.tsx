@@ -1,8 +1,10 @@
 import { BlurContainer, ErrorMessage, FormContainer, ModalContainer, StyledButton, StyledContainer, StyledInput } from "./Modal.style"
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import api from '../../api'
+import axios from 'axios'
 
 type Inputs = {
     name: string;
@@ -21,6 +23,7 @@ const schema = yup.object({
 
 export const RegisterModal = () => {
 
+    const navigate = useNavigate()
     const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>({
         resolver: yupResolver(schema)
     });
@@ -43,6 +46,7 @@ export const RegisterModal = () => {
                 });
         }
         registerUser();
+        setTimeout(() => navigate('/prontuario'), 3000)
     };
 
     const closeModal = () => {
