@@ -325,81 +325,94 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         {/* Diagnósticos */}
 
         <h3> Diagnósticos </h3>
-
-        <div className="col-2">
+        <div className="row">
+        <div className="col">
           <label className='diagnostico'> 
           <div className="dado">
             <input value='Diabetes tipo 1'className='checkbox' type='checkbox' {...register('disease')} />
            <h4> Diabetes tipo 1 </h4>
           </div>
-            <input value='Diabetes tipo 2' type='checkbox' {...register('disease')} />
-            Diabetes tipo 2
-            <input value='Leucemia' type='checkbox' {...register('disease')} />
-            Leucemia
-            <input value='Linfoma' type='checkbox' {...register('disease')} />
-            Linfoma
-            <input value='Covid-19' type='checkbox' {...register('disease')} />
-            Covid-19
-            <input value='Burnout' type='checkbox' {...register('disease')} />
-            Burnout
-            <input value='Depressão' type='checkbox' {...register('disease')} />
-            Depressão
+          <div className="dado">
+            <input value='Diabetes tipo 2' className='checkbox' type='checkbox' {...register('disease')} />
+           <h4> Diabetes tipo 2</h4>
+           </div>
+          <div className="dado">
+            <input value='Leucemia' className='checkbox' type='checkbox' {...register('disease')} />
+            <h4>Leucemia</h4>
+            </div>
+          <div className="dado">
+            <input value='Linfoma' className='checkbox'  type='checkbox' {...register('disease')} />
+            <h4>Linfoma</h4>
+            </div>
+          <div className="dado">
+            <input value='Covid-19' className='checkbox' type='checkbox' {...register('disease')} />
+            <h4> Covid-19 </h4>
+            </div>
+          <div className="dado">
+            <input value='Burnout' className='checkbox' type='checkbox' {...register('disease')} />
+            <h4> Burnout </h4>
+            </div>
+          <div className="dado">
+            <input value='Depressão' className='checkbox'  type='checkbox' {...register('disease')} />
+            <h4>Depressão</h4>
+            </div>
           </label>
         </div>
-        <div className="row-4">
+        <div className="col">
           <label className='diagnosticoDois'>
-            <input value='TAG-Transtorno de Ansiedade Generalizada' type='checkbox'{...register('disease')} />
+            <input value='TAG-Transtorno de Ansiedade Generalizada' className='checkbox' type='checkbox'{...register('disease')} />
             TAG<h5>(Transtorno de Ansiedade Generalizada)</h5>
-            <input value='Depressão pós-parto' type='checkbox' {...register('disease')} />
+            <input value='Depressão pós-parto' className='checkbox' type='checkbox' {...register('disease')} />
             Depressão pós-parto
-            <input value='Labirintite' type='checkbox' {...register('disease')} />
+            <input value='Labirintite' className='checkbox' type='checkbox' {...register('disease')} />
             Labirintite
-            <input value='HIV' type='checkbox' {...register('disease')} />
+            <input value='HIV' className='checkbox' type='checkbox' {...register('disease')} />
             HIV
-            <input value='Dor no nervo ciático' type='checkbox' {...register('disease')} />
+            <input value='Dor no nervo ciático' className='checkbox' type='checkbox' {...register('disease')} />
             Dor no nervo ciático
-            <input value='Anemia' type='checkbox' {...register('disease')} />
+            <input value='Anemia' className='checkbox' type='checkbox' {...register('disease')} />
             Anemia
-            <input value='Dermatite' type='checkbox' {...register('disease')} />
+            <input value='Dermatite' className='checkbox' type='checkbox' {...register('disease')} />
             Dermatite
           </label>
         </div>
-        <div className="row-12">
+        <div className="col">
           <label className='diagnosticoTres'>
-            <input value='Nódulo pulmonar' type='checkbox' {...register('disease')} />
+            <input value='Nódulo pulmonar' className='checkbox' type='checkbox' {...register('disease')} />
             Nódulo pulmonar
-            <input value='Gastrite' type='checkbox' {...register('disease')} />
+            <input value='Gastrite' className='checkbox' type='checkbox' {...register('disease')} />
             Gastrite
-            <input value='Cirrose' type='checkbox' {...register('disease')} />
+            <input value='Cirrose' className='checkbox' type='checkbox' {...register('disease')} />
             Cirrose
-            <input value='Alcoolismo' type='checkbox' {...register('disease')} />
+            <input value='Alcoolismo' className='checkbox' type='checkbox' {...register('disease')} />
             Alcoolismo
-            <input value='Alzheimer' type='checkbox' {...register('disease')} />
+            <input value='Alzheimer' className='checkbox' type='checkbox' {...register('disease')} />
             Alzheimer
-            <input value='Aneurisma' type='checkbox' {...register('disease')} />
+            <input value='Aneurisma' className='checkbox' type='checkbox' {...register('disease')} />
             Aneurisma
-            <input value='Asma' type='checkbox' {...register('disease')} />
+            <input value='Asma' className='checkbox' type='checkbox' {...register('disease')} />
             Asma
           </label>
         </div>
-        <div className="row-12">
+        <div className="col">
           <label className='diagnosticoQuatro'>
-            <input value='Bipolaridade' type='checkbox' {...register('disease')} />
+            <input value='Bipolaridade' className='checkbox' type='checkbox' {...register('disease')} />
             Bipolaridade
-            <input value='Borderline' type='checkbox' {...register('disease')} />
+            <input value='Borderline' className='checkbox' type='checkbox' {...register('disease')} />
             Bordeline
-            <input value='Bulimia' type='checkbox' {...register('disease')} />
+            <input value='Bulimia' className='checkbox' type='checkbox' {...register('disease')} />
             Bulimia
-            <input value='Hepatite A' type='checkbox' {...register('disease')} />
+            <input value='Hepatite A' className='checkbox' type='checkbox' {...register('disease')} />
             Hepatite A
-            <input value='Hepatite C' type='checkbox' {...register('disease')} />
+            <input value='Hepatite C' className='checkbox' type='checkbox' {...register('disease')} />
             Hepatite C
-            <input value='Lúpus' type='checkbox' {...register('disease')} />
+            <input value='Lúpus' className='checkbox' type='checkbox' {...register('disease')} />
             Lúpus
-            <input value='Osteoporose' type='checkbox' {...register('disease')} />
+            <input value='Osteoporose' className='checkbox' type='checkbox' {...register('disease')} />
             Osteoporose
           </label>
         </div>
+      </div>
 
 
         {/* Tipo Sanguíneo */}

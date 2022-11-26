@@ -164,10 +164,23 @@ input::placeholder{
   transform: scale(0.5);
 }
 
-.diagnostico{
-  display: flex;
-  flex-direction: column;   
-  width: 100%;
+.diagnostico,
+.diagnosticoDois,
+.diagnosticoTres,
+.diagnosticoQuatro{
+  display: grid;
+    
+    justify-content: center; 
+    align-items: baseline; 
+
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    align-content: flex-start;
+
+    background-color: #bbdefb;
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
   
   input{
       margin-left: 55px;
@@ -179,9 +192,11 @@ input::placeholder{
 }
 
 .dado{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;  
+    display: grid;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-left: 5rem;
+  
 }
 
 .checkbox{
