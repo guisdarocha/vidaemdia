@@ -59,8 +59,8 @@ const Exames = (props: ExamesProps) => {
         <div>
           <BemVindo
             user={decoded.name}
-            text={"Insira aqui os dados do seu exame"}
-            subtext={"*Insira e edite os dados sobre o exame que foi realizado"}
+            text={"Aqui estão todos os seus exames:"}
+
             />
         </div>
         <div className="d-flex align-items-end pb-5">
