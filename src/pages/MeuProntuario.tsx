@@ -5,6 +5,7 @@ import CardExame from "../components/CardExame/CardExame"
 import { Footer } from "../components/Footer/Footer"
 import Header from '../components/Header'
 import { TopSection } from "./Exames.style"
+import MyProntuario from "./Prontuario"
 
 
 
@@ -46,32 +47,7 @@ export const MeuProntuario = ({
   return (
     <>
       <Header/>
-      {/* componente do topo */}
-      <TopSection className="container d-flex mobile">
-        <div>
-          <BemVindo
-            user={MeuProntuario.name}
-            text={" Visualizar aqui seu Prontuário Digital"}
-            subtext={"*Insira e edite os dados sobre o exame que foi realizado"}
-            />
-        </div>
-        <div className="d-flex align-items-end pb-5">
-          <Button text="cadastrar"/>
-        </div>
-      </TopSection>
-
-      <div className="container">
-        {/* componente dos cards */}
-        <CardExame
-         id={1}
-         date={(new Date()).toLocaleDateString('en-US',)}
-         exam="Eletrocardiograma"
-         diagnosis="Sopro na válvula mitral"
-         clinic="HCor - Associação Beneficente Síria"
-         doctor="Dr. Luis Pacheco"
-         comments="Preciso agendar o retorno com o médico e apresentar o resultado do     exame que está salvo no meu Drive."
-         />
-      </div>
+      <MyProntuario/>
       <Footer />
     </>
   )
