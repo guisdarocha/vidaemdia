@@ -5,6 +5,8 @@ import HighLight from "../components/HighLight/HighLight";
 import Parceiros from "../components/Parceiros/Parceiros";
 import Header from "../components/Header";
 import { Cards } from "./Home.style";
+import {ControlledCarousel} from './Banner'
+
 
 
 type HomeProps = {
@@ -15,7 +17,8 @@ const Home = (props: HomeProps) => {
   return (
     <>
     <Header />
-      <div className="container">
+      <div className="container mt-5">
+    <ControlledCarousel/>
         <Section  />
           <HighLight text="Confira nossos artigos"/>
           <Cards className="d-flex justify-content-around">
