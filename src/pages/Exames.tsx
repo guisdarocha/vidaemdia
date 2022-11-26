@@ -51,6 +51,8 @@ const Exames = (props: ExamesProps) => {
 
   }, [])
 
+  let total = exames.length +1
+
 
   return (
     <>
@@ -70,8 +72,8 @@ const Exames = (props: ExamesProps) => {
       </TopSection>
 
       <div className="container">
-        {/* componente dos cards */}
-        {exames.slice(0).reverse().map((exame, index) => (<CardExame
+        {exames.slice(0).reverse().map((exame) => (<CardExame
+         index={total-=1}
          id={exame.idExams}
          date={exame.date}
          diagnosis={exame.diagnosis}

@@ -14,11 +14,12 @@ type CardProps = {
   clinic: string,
   doctor: string,
   comments: string,
-  diagnosis: string
+  diagnosis: string,
+  index: number
 }
 
-const CardExame = ({id, date, exam, clinic, doctor, comments, diagnosis}:CardProps) => {
-
+const CardExame = ({id, date, exam, clinic, doctor, comments, diagnosis, index}:CardProps) => {
+  
   const [exames, setExames] = useState<ExamesProps[]>([])
 
   const USUARIO = localStorage.getItem('token');
@@ -55,7 +56,7 @@ const CardExame = ({id, date, exam, clinic, doctor, comments, diagnosis}:CardPro
   return (
     <Card>
       <div className='d-flex justify-content-between align-items-center topo'>
-        <h3>exame {id} </h3>
+        <h3>exame {index} </h3>
         <div className='d-flex '>
           <h4>data: <p>{date}</p></h4>
           <Link className='icone' to={`/exames/editarexame/${id}`}><img src={lapis} alt="icone de lápis" /></Link>
