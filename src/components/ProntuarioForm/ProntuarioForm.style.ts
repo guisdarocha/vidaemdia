@@ -263,55 +263,38 @@ input[type="checkbox"] {
     background-color: white;
   }
   
-  .fumar {
-    display: flex;
-    align-items: center;
-  }
-
-  .drogas {
-    display: flex;
-    align-items: center;
-  }
-
-  .alcool {
-    display: flex;
-    align-items: center;
-  }
-
-  .exercicios {
-    display: flex;
-    align-items: center;
-  }
-
-  .recreacao {
-    display: flex;
-    align-items: center;
-  }
-
-  .familia {
-    display: flex;
-    align-items: center;
-  }
-
-  .tratamento {
-    display: flex;
-    align-items: center;
-  }
-
-  .medicamento {
-    display: flex;
-    align-items: center;
-  }
-
-  .alergico {
-    display: flex;
-    align-items: center;
-  }
-
+  .fumar, 
+  .drogas, 
+  .alcool, 
+  .exercicios, 
+  .recreacao,
+  .familia,
+  .tratamento,
+  .medicamento, 
+  .alergico,
   .gravida {
     display: flex;
     align-items: center;
   }
+
+
+  .sanguineo{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  input{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+      width: 90px;
+      margin-bottom: 0.4rem;
+      max-width: 160px;
+      color: blue;
+      border-radius: 50%;
+      border: 1px solid blue;
+    }
+}
 
   @media only screen and (max-width: 1400px){
     font-size: 15px;
