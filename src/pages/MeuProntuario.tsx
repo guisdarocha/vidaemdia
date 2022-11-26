@@ -1,9 +1,11 @@
+import { propTypes } from "react-bootstrap/esm/Image"
 import BemVindo from "../components/BemVindo/BemVindo"
 import Button from "../components/Button/Button"
 import CardExame from "../components/CardExame/CardExame"
 import { Footer } from "../components/Footer/Footer"
 import Header from '../components/Header'
 import { TopSection } from "./Exames.style"
+
 
 
 type MeuProntuarioProps = {
@@ -37,7 +39,10 @@ type MeuProntuarioProps = {
 	status: boolean	
 };
 
-const meuProntuario = (props: MeuProntuarioProps) => {
+export const MeuProntuario = ({ 
+  name, email, password, birthDate, telephone, maritalStatus, sex, weight, height, zipCode, address,
+  number, neighborhood, complement, state, city, smoke, drugs, exercises, recreation, familialDisease,
+  treatment, allergy, pregnant, medicines, disease, bloodType, status}: MeuProntuarioProps) => {
   return (
     <>
       <Header/>
@@ -45,8 +50,8 @@ const meuProntuario = (props: MeuProntuarioProps) => {
       <TopSection className="container d-flex mobile">
         <div>
           <BemVindo
-            user={"Fernando Predes"}
-            text={"Insira aqui os dados do seu exame"}
+            user={MeuProntuario.name}
+            text={" Visualizar aqui seu Prontuário Digital"}
             subtext={"*Insira e edite os dados sobre o exame que foi realizado"}
             />
         </div>
@@ -71,5 +76,3 @@ const meuProntuario = (props: MeuProntuarioProps) => {
     </>
   )
 }
-
-export default meuProntuario
