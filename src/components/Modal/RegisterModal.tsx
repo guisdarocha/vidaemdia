@@ -38,7 +38,7 @@ export const RegisterModal = () => {
                 })
                 .then((res) => {
                     console.log(res)
-                    alert('usuário cadastrado com sucesso')
+                    alert('Usuário cadastrado com sucesso')
                 })
                 .catch((err) => {
                     console.log(err)
@@ -46,7 +46,7 @@ export const RegisterModal = () => {
                 });
         }
         registerUser();
-        window.location.reload()
+        setTimeout(() => window.location.reload(), 3000)
     };
 
     const closeModal = () => {
