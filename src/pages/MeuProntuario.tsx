@@ -232,7 +232,7 @@ console.log(prontuario)
           </div>
         </Dados>
         <BtnContainer className="container btn-editar">
-          <ButtonProntuario to={'#'}>Editar</ButtonProntuario>
+          <ButtonProntuario to={'/editar/prontuario'}>Editar</ButtonProntuario>
         </BtnContainer>
       </>
       <Footer />

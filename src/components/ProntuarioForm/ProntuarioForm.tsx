@@ -317,10 +317,10 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
   <h3> Diagnósticos </h3>
     <div className="row">
       <div className="col">
-        <label className='diagnostico'> 
+        <label className='diagnostico'>
           <div className="dado">
             <input value='Diabetes tipo 1'className='checkbox' type='checkbox' {...register('disease')} />
-            Diabetes tipo 1 
+            Diabetes tipo 1
           </div>
           <div className="dado">
             <input value='Diabetes tipo 2' className='checkbox' type='checkbox' {...register('disease')} />
@@ -336,11 +336,11 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             </div>
           <div className="dado">
             <input value='Covid-19' className='checkbox' type='checkbox' {...register('disease')} />
-             Covid-19 
+             Covid-19
             </div>
           <div className="dado">
             <input value='Burnout' className='checkbox' type='checkbox' {...register('disease')} />
-             Burnout 
+             Burnout
             </div>
           <div className="dado">
             <input value='Depressão' className='checkbox'  type='checkbox' {...register('disease')} />
@@ -352,7 +352,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='diagnosticoDois'>
           <div className="dado">
             <input value='TAG-Transtorno de Ansiedade Generalizada' className='checkbox' type='checkbox'{...register('disease')} />
-             TAG 
+             TAG
              <h5>(Transtorno de Ansiedade Generalizada)</h5>
             </div>
             <div className="dado">
@@ -475,7 +475,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <span className='termos-span'>Aceito e estou de acordo com os termos de uso deste site, bem como o armazenamento dos meus dados pessoais confiando na total segurança e privacidade.</span>
         </label>
         <div className="row d-flex justify-content-center">
-        <button type="button" className="btn btn-primary enviar">ENVIAR</button>
+        <button type="submit" className="btn btn-primary enviar">ENVIAR</button>
         </div>
       </ProntuarioStyle>
     </>

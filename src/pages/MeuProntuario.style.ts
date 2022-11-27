@@ -105,6 +105,7 @@ export const Dados = styled.div`
 export const BtnContainer = styled.div`
 margin-bottom: 151px;
 
+
 `
 
 export const ButtonProntuario = styled(Link)`
