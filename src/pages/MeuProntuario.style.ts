@@ -63,4 +63,40 @@ export const Dados = styled.div`
     .info{
       margin-bottom: 60px;
     }
+
+    .grupo-diagnosis{
+
+
+    }
+    .diagnosis{
+      display: flex;
+      margin: 15px;
+
+      p{
+        margin-left: 25px;
+
+        font-weight: 600;
+        font-size: 31px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        color: #2C5EDE;
+      }
+
+    }
+
+    .tipoSanguineo{
+      p{
+        font-weight: 600;
+        font-size: 52px;
+
+        display: flex;
+        align-items: center;
+        color: #696969;
+      }
+      img{
+        padding-top: 10px;
+        margin-right: 25px;
+      }
+    }
 `

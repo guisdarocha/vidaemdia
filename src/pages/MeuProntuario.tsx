@@ -2,12 +2,13 @@ import { propTypes } from "react-bootstrap/esm/Image"
 import BemVindo from "../components/BemVindo/BemVindo"
 import { Footer } from "../components/Footer/Footer"
 import Header from '../components/Header'
-import bloodtype from "../assets/icons/bloodtype.png"
+import bloodtype from "../assets/icons/bloodtype.svg"
 import { useEffect, useState } from "react"
 import jwt_decode from "jwt-decode";
-import NenhumCadastrado from "../components/NenhumCadastrado/NenhumCadastrado"
 import api from "../api"
 import { Dados } from "./MeuProntuario.style"
+import sim from "../assets/icons/sim.svg";
+import nao from "../assets/icons/sim.svg";
 
 
 
@@ -36,7 +37,7 @@ type MeuProntuarioProps = {
 	allergy: string,
   pregnant: string,
 	medicines: string,
-	disease: string,
+	disease: Array<string>[],
 	bloodType: string,
 
 };
@@ -70,6 +71,9 @@ export const MeuProntuarioRealizado = ({
     getProntuario()
 
   }, [])
+
+  let doencas = prontuario.disease
+  console.log(doencas)
 
 console.log(prontuario)
   return (
@@ -114,11 +118,11 @@ console.log(prontuario)
               </div>
               <div className="col-md-2 col-12">
                 <h5>Peso</h5>
-                <p>{prontuario.weight}</p>
+                <p>{prontuario.weight}kg</p>
               </div>
               <div className="col-md-2 col-12">
                 <h5>Altura</h5>
-                <p>{prontuario.height}</p>
+                <p>{prontuario.height}m</p>
               </div>
             </div>
           </div>
@@ -163,51 +167,57 @@ console.log(prontuario)
             <h3>Histórico Social</h3>
             <div>
               <h5>Fumo:</h5>
-              {prontuario.smoke}
+              <p>{prontuario.smoke}</p>
             </div>
             <div>
               <h5>Drogas:</h5>
-              {prontuario.drugs}
+             <p>{prontuario.drugs}</p>
             </div>
             <div>
               <h5>Pratica exercícios?</h5>
-              {prontuario.exercises}
+              <p>{prontuario.exercises}</p>
             </div>
             <div>
               <h5>Pratica alguma recreação?</h5>
-              {prontuario.recreation}
+              <p>{prontuario.recreation}</p>
             </div>
             <div>
               <h5>Doença na familia?</h5>
-              {prontuario.familialDisease}
+              <p>{prontuario.familialDisease}</p>
             </div>
             <div>
               <h5>Esta fazendo algum tratamento?</h5>
-              {prontuario.treatment}
+              <p>{prontuario.treatment}</p>
             </div>
             <div>
               <h5>Faz uso de algum medicamento?</h5>
-              {prontuario.medicines}
+             <p>{prontuario.medicines}</p>
             </div>
             <div>
               <h5>É alergico a algum medicamento?</h5>
-              {prontuario.allergy}
+              <p>{prontuario.allergy}</p>
             </div>
             <div>
               <h5>Está grávida?</h5>
-              {prontuario.pregnant}
+             <p>{prontuario.pregnant}</p>
             </div>
           </div>
           <hr />
           <div className="diagnósticos">
             <h3> Diagnósticos </h3>
-            TAGGGGGGGGGGGGGGGGGGGGGGGGGGG {prontuario.disease}
+            <div className="grupo-diagnosis row">
+              {doencas && doencas.map((doenca) => (
+               <div className="diagnosis col-md-3 col-12">
+                  <img src={sim} alt="sinal check" /> <p className="doenca">{doenca}</p>
+                </div>
+                ))}
+            </div>
           </div>
           <hr />
           <div className="tipoSanguineo">
             <h3> Tipo Sanguíneo </h3>
-            <div>
-              <img src={bloodtype} /> {prontuario.bloodType}
+            <div className="d-flex">
+              <img src={bloodtype} /> <p>{prontuario.bloodType}</p>
             </div>
             <hr className="mb-5" />
           </div>
