@@ -124,6 +124,10 @@ export const  CadastroExameStyle = styled.form`
 
         }
     }
+    .obrigatorio{
+    display: contents;
+    color: #DC2113;
+    }
 
 
     @media only screen and (max-width: 450px){
