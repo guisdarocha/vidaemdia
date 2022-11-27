@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import { ProntuarioStyle , Select } from './ProntuarioForm.style';
 import { useForm, SubmitHandler } from "react-hook-form";
 import api from "../../api";
-import axios from 'axios'
+
 
 type ProntuarioFormProps = {};
 
@@ -114,15 +114,6 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             </label>
           </div>
         </div>
-        {/* <div className='row'>
-          <div className="col-12 col-md-6">
-            <label className='telefone'>
-              Senha<p className='obrigatorio'>*</p>
-              <input {...register('password', { required: true })} placeholder="senha" />
-            </label>
-          </div>
-        </div> */}
-
         <div className='row'>
           <div className="col-12 col-md-2 ">
             <label className='data'>
@@ -327,31 +318,31 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         <label className='diagnostico'> 
           <div className="dado">
             <input value='Diabetes tipo 1'className='checkbox' type='checkbox' {...register('disease')} />
-           <h4> Diabetes tipo 1 </h4>
+            Diabetes tipo 1 
           </div>
           <div className="dado">
             <input value='Diabetes tipo 2' className='checkbox' type='checkbox' {...register('disease')} />
-           <h4> Diabetes tipo 2</h4>
+            Diabetes tipo 2
            </div>
           <div className="dado">
             <input value='Leucemia' className='checkbox' type='checkbox' {...register('disease')} />
-            <h4>Leucemia</h4>
+            Leucemia
             </div>
           <div className="dado">
             <input value='Linfoma' className='checkbox'  type='checkbox' {...register('disease')} />
-            <h4>Linfoma</h4>
+            Linfoma
             </div>
           <div className="dado">
             <input value='Covid-19' className='checkbox' type='checkbox' {...register('disease')} />
-            <h4> Covid-19 </h4>
+             Covid-19 
             </div>
           <div className="dado">
             <input value='Burnout' className='checkbox' type='checkbox' {...register('disease')} />
-            <h4> Burnout </h4>
+             Burnout 
             </div>
           <div className="dado">
             <input value='Depressão' className='checkbox'  type='checkbox' {...register('disease')} />
-            <h4>Depressão</h4>
+            Depressão
             </div>
           </label>
         </div>
@@ -359,12 +350,12 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='diagnosticoDois'>
           <div className="dado">
             <input value='TAG-Transtorno de Ansiedade Generalizada' className='checkbox' type='checkbox'{...register('disease')} />
-            <h4>TAG</h4>
-            <h5>(Transtorno de Ansiedade Generalizada)</h5>
+             TAG 
+             <h5>(Transtorno de Ansiedade Generalizada)</h5>
             </div>
             <div className="dado">
             <input value='Depressão pós-parto' className='checkbox' type='checkbox' {...register('disease')} />
-            Depressão pós-parto
+            Depressão <br /> pós-parto
             </div>
             <div className="dado">
             <input value='Labirintite' className='checkbox' type='checkbox' {...register('disease')} />
