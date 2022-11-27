@@ -4,13 +4,15 @@ import avatar from '../../assets/icons/avatar.png'
 import burguer from '../../assets/icons/burguer-menu.png'
 import React from 'react'
 import { HeaderStyle, LinkStyle, Menu } from './Header.style'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { LoginModal } from '../Modal/LoginModal'
 import { RegisterModal } from '../Modal/RegisterModal'
 
 
 const index = () => {
+  const USUARIO = localStorage.getItem('token');
+  console.log(USUARIO === null)
 
   const [active, setMode] = useState(false)
   const toggleMode = () => {
@@ -27,6 +29,14 @@ const index = () => {
     setModalType('register')
   }
 
+  const navigate = useNavigate()
+  const deslogar = () => {
+    localStorage.setItem('token', ``);
+    localStorage.setItem('id', ``);
+    setTimeout(() => navigate('/'), 1000)
+  }
+  console.log(localStorage.token)
+
   return (
     <>
       <Menu className="Menu">
@@ -36,14 +46,24 @@ const index = () => {
         <div className={active ? 'menu menuOpen' : 'menu menuClose'}>
           <div className="list">
             <ul className="listItems">
+            {localStorage.token === '' ?
+            (<>
+              <Link to='/'><li>Home</li></Link>
+              <Link to="/quemsomos"><li>Quem somos</li></Link>
+              <Link to='#'><li>Suporte</li></Link>
+              <Link onClick={openLoginModal} to='#'><li>Login</li></Link>
+            </>)
+            :
+            (<>
               <Link to='/'><li>Home</li></Link>
               <Link to="/quemsomos"><li>Quem somos</li></Link>
               <Link to="/exames"><li>Meus Exames</li></Link>
               <Link to="/prontuario"><li>Meu Prontuário</li></Link>
               <Link to="/consultas"><li>Minhas Consultas</li></Link>
               <Link to='#'><li>Suporte</li></Link>
-              <Link onClick={openLoginModal} to='#'><li>Login</li></Link>
+              <Link to='#' onClick={deslogar}><li>Logout</li></Link>
 
+            </>)}
             </ul>
           </div>
         </div>
@@ -51,14 +71,26 @@ const index = () => {
       <HeaderStyle className='d-flex justify-content-around align-items-center'>
         <div><img src={logo} alt="logo" /></div>
         <div className='links'>
-          <LinkStyle className='linksin' to="/">Home</LinkStyle>
-          <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
-          <LinkStyle className='linksin' to="/exames">Meus Exames</LinkStyle>
-          <LinkStyle className='linksin' to="/prontuario">Meu Prontuário</LinkStyle>
-          <LinkStyle className='linksin' to="/consultas">Minhas Consultas</LinkStyle>
-          <LinkStyle className='linksin' to="#">Suporte</LinkStyle>
-          <LinkStyle onClick={openLoginModal} className='linksin' to="#">Login</LinkStyle>
-          <img src={avatar} alt="" />
+          {localStorage.token === '' ?
+          (<>
+            <LinkStyle className='linksin' to="/">Home</LinkStyle>
+            <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
+            <LinkStyle className='linksin' to="#">Suporte</LinkStyle>
+            <LinkStyle onClick={openLoginModal} className='linksin' to="#">Login</LinkStyle>
+            <img src={avatar} alt="" />
+          </>
+          )
+          :
+          (<>
+            <LinkStyle className='linksin' to="/">Home</LinkStyle>
+            <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
+            <LinkStyle className='linksin' to="/exames">Meus Exames</LinkStyle>
+            <LinkStyle className='linksin' to="/prontuario">Meu Prontuário</LinkStyle>
+            <LinkStyle className='linksin' to="/consultas">Minhas Consultas</LinkStyle>
+            <LinkStyle className='linksin' to="#">Suporte</LinkStyle>
+            <LinkStyle className='linksin' to="#" onClick={deslogar}>Logout</LinkStyle>
+            <img src={avatar} alt="" />
+          </>)}
         </div>
       </HeaderStyle>
       {modalType === 'login' && <LoginModal onClick={openRegisterModal} />}
