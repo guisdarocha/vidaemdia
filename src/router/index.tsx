@@ -53,6 +53,10 @@ const router = createBrowserRouter([
     path: "/suporte",
     element: <Suporte />,
   },
+  {
+    path:'/editar/prontuario',
+    element: <Prontuario />,
+  }
 
 ]);
 export default router
