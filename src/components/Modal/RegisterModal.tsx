@@ -46,7 +46,7 @@ export const RegisterModal = () => {
                 });
         }
         registerUser();
-        setTimeout(() => window.location.reload(), 3000)
+        setTimeout(() => window.location.reload(), 1500)
     };
 
     const closeModal = () => {
@@ -56,10 +56,10 @@ export const RegisterModal = () => {
     return (
         <BlurContainer>
             <ModalContainer>
-                <img src="/biological-scene.png" alt="" />
+                <img className="retangle" src="/biological-scene.png" alt="" />
                 <StyledContainer>
                     <p onClick={closeModal}>x</p>
-                    <img src="/Component1.svg" alt="" />
+                    <img className="vd-logo" src="/Component1.svg" alt="" />
                     <h3>Bem vindo de volta</h3>
                     <h4>Área de Login</h4>
                     <FormContainer>
@@ -84,7 +84,7 @@ export const RegisterModal = () => {
                                 <StyledInput type='password' {...register("confirmPassword", { required: true })} placeholder="Insira sua senha" />
                                 <ErrorMessage>{errors.confirmPassword?.message}</ErrorMessage>
                             </label>
-                            <StyledButton> Cadastre-se </StyledButton>
+                            <StyledButton className="button-register"> Cadastre-se </StyledButton>
                         </form>
                     </FormContainer>
                 </StyledContainer>
