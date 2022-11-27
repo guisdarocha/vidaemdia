@@ -59,7 +59,7 @@ Os desenvolvedores do front-end foram responsáveis por criar as páginas com ba
 O Banco de Dados foi criado de acordo com o padrão de tabelas e colunas exposto a seguir:
 
 <p align="center">
-<img src="./docs/bd.jpeg" alt="Banco de Dados">
+<img src="https://raw.githubusercontent.com/thiagodrodrigues/Prontuario-Digital/main/docs/bd.jpeg" alt="Banco de Dados">
 
 </br>
 
