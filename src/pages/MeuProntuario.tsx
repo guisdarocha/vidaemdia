@@ -216,7 +216,7 @@ console.log(prontuario)
             <h3> Diagnósticos </h3>
             <div className="grupo-diagnosis row">
               {doencas && doencas.map((doenca) => (
-               <div className="diagnosis col-md-3 col-12">
+               <div className="diagnosis col-md-2 col-12">
                   <img src={sim} alt="sinal check" /> <p className="doenca">{doenca}</p>
                 </div>
                 ))}
