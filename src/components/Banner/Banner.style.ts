@@ -12,3 +12,4 @@ export const Carousel = styled.div`
      
     }
 `;
+
