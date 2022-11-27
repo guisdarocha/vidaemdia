@@ -8,15 +8,12 @@ export function ControlledCarousel() {
 
 
   return (
-    <Carousel>
+    <Carousel >
       <Carousel.Item>
       <img src={firstSlide} />
-        
       </Carousel.Item>
       <Carousel.Item>
-      <img src={secondSlide} />
-
-        
+      <img src={secondSlide} />  
       </Carousel.Item>
     </Carousel>
   );

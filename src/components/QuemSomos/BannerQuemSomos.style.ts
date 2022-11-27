@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const  BannerSection = styled.section`
 
     position: relative;
-    z-index: 0;
+    z-index: -1;
+    bottom: 40px;
     h1 {
         color: #FFFFFF;
         font-family: 'Roboto', sans-serif;
@@ -22,3 +23,4 @@ export const  BannerSection = styled.section`
     }
 
 `
+
