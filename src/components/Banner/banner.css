@@ -1,0 +1,9 @@
+@media only screen and (max-width: 428px){
+    .banner {
+        width: 100vw;
+        display: none;
+    }
+}
+
+
+    
