@@ -11,7 +11,7 @@ const NenhumCadastrado = ({nome}: Props) => {
   return (
     <NenhumStyle className='container '>
       <img src={easteregg} alt="lobo bolado" />
-      <h1>Você ainda não cadastrou um {nome}</h1>
+      <h1>Você ainda não cadastrou {nome}</h1>
     </NenhumStyle>
   )
 }

@@ -38,7 +38,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/consultas",
-    element: <Consultas />,
+    element: <Consultas decoded={[]} date={""} diagnosis={""} idAppointment={0} medicalSpecialties={""} hospital={""} doctor={""} comments={""}  />,
   },
 ]);
 export default router

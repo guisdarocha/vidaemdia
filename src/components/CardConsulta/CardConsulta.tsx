@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card } from './CardConsultaStyle'
 import lata from '../../assets/lata.svg'
 import lapis from '../../assets/pencil.svg'
 import { Link } from 'react-router-dom'
+import api from '../../api'
+import jwt_decode from "jwt-decode";
+import {ConsultasProps}  from '../../pages/Consultas'
 
 type CardProps = {
   id: number,
@@ -11,22 +14,53 @@ type CardProps = {
   hospital: string,
   doctor: string,
   comments: string,
-  diagnosis: string
+  diagnosis: string,
+  index: number
 }
 
-const CardConsulta = ({id, date, medicalSpecialties, hospital, doctor, comments, diagnosis}:CardProps) => {
+const CardConsulta = ({id, date, medicalSpecialties, hospital, doctor, comments, diagnosis, index}:CardProps) => {
 
+  const [consultas, setConsultas] = useState<ConsultasProps[]>([])
+
+  const USUARIO = localStorage.getItem('token');
+  const ID = localStorage.getItem('id');
+
+  const token = USUARIO;
+  const decoded : any = jwt_decode(token!);
+
+  async function getConsultas() {
+    const { data } = await  api.get(`/appointment/${ID}`,{
+      headers: {
+        Authorization: `Bearer ${USUARIO}`
+      }
+    })
+    setConsultas(data)
+    }
+
+  useEffect(() => {
+    getConsultas()
+
+  }, [])
+
+  async function deleteConsultas() {
+    await  api.delete(`/appointment/${ID}/${id}`,{
+      headers: {
+        Authorization: `Bearer ${USUARIO}`
+      }
+    })
+      window.location.reload()
+    }
 
 
 
   return (
     <Card>
       <div className='d-flex justify-content-between align-items-center topo'>
-        <h3>Consulta {id} </h3>
+        <h3>Consulta {index} </h3>
         <div className='d-flex '>
           <h4>data: <p>{date}</p></h4>
-          <Link className='icone' to={"#"}><img src={lapis} alt="icone de lápis" /></Link>
-          <Link className='icone' to={"#"}><img  src={lata} alt="icone de lata" /></Link>
+          <Link className='icone' to={`/exames/editarconsulta/${id}`}><img src={lapis} alt="icone de lápis" /></Link>
+          <button className='icone'onClick={deleteConsultas}><img  src={lata} alt="icone de lata" /></button>
         </div>
       </div>
       <div className='linha'>

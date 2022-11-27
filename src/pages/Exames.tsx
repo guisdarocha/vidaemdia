@@ -80,7 +80,7 @@ const Exames = (props: ExamesProps) => {
       </TopSection>
       {exames.length === 0 ?
         (
-          <NenhumCadastrado nome='exame.'/>
+          <NenhumCadastrado nome='um exame.'/>
           )
         :
         (
