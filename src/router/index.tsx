@@ -9,6 +9,7 @@ import CadastroDeExame from "../pages/CadastroDeExame";
 import EditarExame from "../pages/EditarExame";
 import CadastroDeConsulta from "../pages/CadastroDeConsulta";
 import EditarConsulta from "../pages/EditarConsulta";
+import { Suporte } from "../pages/Suporte";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
     path: "/exames/editarconsulta/:id",
     element: <EditarConsulta />,
   },
-  
+  {
+    path: "/suporte",
+    element: <Suporte />,
+  },
+
 ]);
 export default router

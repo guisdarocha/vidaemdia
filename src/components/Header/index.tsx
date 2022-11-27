@@ -50,17 +50,17 @@ const index = () => {
             (<>
               <Link to='/'><li>Home</li></Link>
               <Link to="/quemsomos"><li>Quem somos</li></Link>
-              <Link to='#'><li>Suporte</li></Link>
+              <Link to='/suporte'><li>Suporte</li></Link>
               <Link onClick={openLoginModal} to='#'><li>Login</li></Link>
             </>)
             :
             (<>
               <Link to='/'><li>Home</li></Link>
               <Link to="/quemsomos"><li>Quem somos</li></Link>
-              <Link to="/exames"><li>Meus Exames</li></Link>
               <Link to="/prontuario"><li>Meu Prontuário</li></Link>
+              <Link to="/exames"><li>Meus Exames</li></Link>
               <Link to="/consultas"><li>Minhas Consultas</li></Link>
-              <Link to='#'><li>Suporte</li></Link>
+              <Link to='/suporte'><li>Suporte</li></Link>
               <Link to='#' onClick={deslogar}><li>Logout</li></Link>
 
             </>)}
@@ -75,7 +75,7 @@ const index = () => {
           (<>
             <LinkStyle className='linksin' to="/">Home</LinkStyle>
             <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
-            <LinkStyle className='linksin' to="#">Suporte</LinkStyle>
+            <LinkStyle className='linksin' to="/suporte">Suporte</LinkStyle>
             <LinkStyle onClick={openLoginModal} className='linksin' to="#">Login</LinkStyle>
             <img src={avatar} alt="" />
           </>
@@ -84,10 +84,10 @@ const index = () => {
           (<>
             <LinkStyle className='linksin' to="/">Home</LinkStyle>
             <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
-            <LinkStyle className='linksin' to="/exames">Meus Exames</LinkStyle>
             <LinkStyle className='linksin' to="/prontuario">Meu Prontuário</LinkStyle>
+            <LinkStyle className='linksin' to="/exames">Meus Exames</LinkStyle>
             <LinkStyle className='linksin' to="/consultas">Minhas Consultas</LinkStyle>
-            <LinkStyle className='linksin' to="#">Suporte</LinkStyle>
+            <LinkStyle className='linksin' to="/suporte">Suporte</LinkStyle>
             <LinkStyle className='linksin' to="#" onClick={deslogar}>Logout</LinkStyle>
             <img src={avatar} alt="" />
           </>)}
