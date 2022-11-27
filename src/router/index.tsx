@@ -8,6 +8,7 @@ import { MeuProntuario } from "../pages/MeuProntuario";
 import CadastroDeExame from "../pages/CadastroDeExame";
 import EditarExame from "../pages/EditarExame";
 import CadastroDeConsulta from "../pages/CadastroDeConsulta";
+import EditarConsulta from "../pages/EditarConsulta";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/exames/editarconsulta/:id",
-    element: <CadastroDeExame />,
+    element: <EditarConsulta />,
   },
 ]);
 export default router
