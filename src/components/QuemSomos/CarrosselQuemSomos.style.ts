@@ -56,7 +56,7 @@ h2 {
     font-family: "Roboto", sans-serif;
     font-style: italic;
     width: 40vw;
-	@media only screen and (max-width: 375px){
+	@media only screen and (max-width: 428px){
     margin-left: 8vw;
    }
 }
@@ -106,7 +106,7 @@ h2 {
 	//margin: 13vw 30.8vw 5.7vw 30.8vw;
 	margin-left:  34.5vw;
 	font-size: 2.5vw;
-	@media only screen and (max-width: 375px){
+	@media only screen and (max-width: 428px){
 		font-size: 5vw;
 		margin-left: 18vw
 	}
