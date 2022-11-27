@@ -58,12 +58,11 @@ input{
   min-height: 53px;
   padding-left: 2px;
 }
+
 input::placeholder{
   background-color: #FAFAFA;
   color: #abafb3;
   font-size: 14px;
-
-
 }
 
 
@@ -175,7 +174,7 @@ input::placeholder{
       max-width: 160px;
       color: blue;
       border-radius: 50%;
-      border: 1px solid blue;
+      border: 1px solid blue;   
     }
 }
 
@@ -184,7 +183,14 @@ input::placeholder{
     align-items: center;
     justify-items: center;
     margin-left: 5rem;
-  
+    
+}
+
+.dado h5 {
+ width: 80px;
+ margin-left: 10px;
+ font-family:'Roboto';
+ font-size: 12px;
 }
 
 .checkbox{
@@ -261,6 +267,7 @@ input[type="checkbox"] {
     align-items: flex-start;
     justify-content: space-between;
     background-color: white;
+    border-radius: 40px;
   }
   
   .fumar, 
@@ -273,8 +280,11 @@ input[type="checkbox"] {
   .medicamento, 
   .alergico,
   .gravida {
+    width: 950px;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
+    margin-left: 2%;
   }
 
   .sanguineo{
