@@ -622,7 +622,17 @@ esbuild-linux-32@0.15.13:
 
 esbuild-linux-64@0.15.13:
   version "0.15.13"
+<<<<<<< HEAD
+<<<<<<< HEAD
+  resolved "https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.15.13.tgz"
+=======
   resolved "https://registry.yarnpkg.com/esbuild-linux-64/-/esbuild-linux-64-0.15.13.tgz#4264249281ea388ead948614b57fb1ddf7779a2c"
+>>>>>>> bcabc04cae8541f0323d532fc5cb5551d943bed3
+=======
+
+  resolved "https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.15.13.tgz"
+
+>>>>>>> 588409fcc739890270098016da5dfe207d5b69f1
   integrity sha512-rXmnArVNio6yANSqDQlIO4WiP+Cv7+9EuAHNnag7rByAqFVuRusLbGi2697A5dFPNXoO//IiogVwi3AdcfPC6A==
 
 esbuild-linux-arm64@0.15.13:
@@ -677,7 +687,16 @@ esbuild-windows-32@0.15.13:
 
 esbuild-windows-64@0.15.13:
   version "0.15.13"
+<<<<<<< HEAD
+<<<<<<< HEAD
+  resolved "https://registry.yarnpkg.com/esbuild-windows-64/-/esbuild-windows-64-0.15.13.tgz#1fca8c654392c0c31bdaaed168becfea80e20660"
+=======
   resolved "https://registry.npmjs.org/esbuild-windows-64/-/esbuild-windows-64-0.15.13.tgz"
+>>>>>>> bcabc04cae8541f0323d532fc5cb5551d943bed3
+=======
+  resolved "https://registry.yarnpkg.com/esbuild-windows-64/-/esbuild-windows-64-0.15.13.tgz#1fca8c654392c0c31bdaaed168becfea80e20660"
+
+>>>>>>> 588409fcc739890270098016da5dfe207d5b69f1
   integrity sha512-Et6htEfGycjDrtqb2ng6nT+baesZPYQIW+HUEHK4D1ncggNrDNk3yoboYQ5KtiVrw/JaDMNttz8rrPubV/fvPQ==
 
 esbuild-windows-arm64@0.15.13:
