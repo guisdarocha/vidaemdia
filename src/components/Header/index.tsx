@@ -4,7 +4,7 @@ import avatar from '../../assets/icons/avatar.png'
 import burguer from '../../assets/icons/burguer-menu.png'
 import React from 'react'
 import { HeaderStyle, LinkStyle, Menu } from './Header.style'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { LoginModal } from '../Modal/LoginModal'
 import { RegisterModal } from '../Modal/RegisterModal'
@@ -29,6 +29,14 @@ const index = () => {
     setModalType('register')
   }
 
+  const navigate = useNavigate()
+  const deslogar = () => {
+    localStorage.setItem('token', ``);
+    localStorage.setItem('id', ``);
+    setTimeout(() => navigate('/'), 1000)
+  }
+  console.log(localStorage.token)
+
   return (
     <>
       <Menu className="Menu">
@@ -38,7 +46,7 @@ const index = () => {
         <div className={active ? 'menu menuOpen' : 'menu menuClose'}>
           <div className="list">
             <ul className="listItems">
-            {USUARIO === null ?
+            {localStorage.token === '' ?
             (<>
               <Link to='/'><li>Home</li></Link>
               <Link to="/quemsomos"><li>Quem somos</li></Link>
@@ -53,7 +61,8 @@ const index = () => {
               <Link to="/prontuario"><li>Meu Prontuário</li></Link>
               <Link to="/consultas"><li>Minhas Consultas</li></Link>
               <Link to='#'><li>Suporte</li></Link>
-              <Link to='#'><li>Logout</li></Link>
+              <Link to='#' onClick={deslogar}><li>Logout</li></Link>
+
             </>)}
             </ul>
           </div>
@@ -62,7 +71,7 @@ const index = () => {
       <HeaderStyle className='d-flex justify-content-around align-items-center'>
         <div><img src={logo} alt="logo" /></div>
         <div className='links'>
-          {USUARIO === null ?
+          {localStorage.token === '' ?
           (<>
             <LinkStyle className='linksin' to="/">Home</LinkStyle>
             <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
@@ -79,7 +88,7 @@ const index = () => {
             <LinkStyle className='linksin' to="/prontuario">Meu Prontuário</LinkStyle>
             <LinkStyle className='linksin' to="/consultas">Minhas Consultas</LinkStyle>
             <LinkStyle className='linksin' to="#">Suporte</LinkStyle>
-            <LinkStyle className='linksin' to="#">Logout</LinkStyle>
+            <LinkStyle className='linksin' to="#" onClick={deslogar}>Logout</LinkStyle>
             <img src={avatar} alt="" />
           </>)}
         </div>
