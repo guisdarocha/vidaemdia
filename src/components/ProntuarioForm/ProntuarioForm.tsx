@@ -101,7 +101,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         </div>
 
         <div className='row'>
-          <div className="col-6 col-md-6">
+          <div className="col ">
             <label className='email'>
               E-mail<p className='obrigatorio'>*</p>
               <input {...register('email', { required: true })} placeholder="seuemail@gmail.com" />
@@ -109,7 +109,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           </div>
         </div>
         <div className='row'>
-          <div className="col-6 col-md-6">
+          <div className="col ">
             <label className='telefone'>
               Telefone<p className='obrigatorio'>*</p>
               <input {...register('telephone', { required: true })} placeholder="(00)0000-0000" />
@@ -168,13 +168,13 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
               <input {...register('zipCode', { required: true })} placeholder="Ex: 11111-000" />
             </label>
           </div>
-          <div className="col-8">
+          <div className="col-12">
             <label className='endereco'>
               Endereço<p className='obrigatorio'>*</p>
               <input {...register('address', { required: true })} placeholder="Rua do zé" />
             </label>
           </div>
-          <div className="numero col-4">
+          <div className="numero col-12">
             <label className='numero'>
               Número<p className='obrigatorio'>*</p>
               <input {...register('number', { required: true })} placeholder="123" />
