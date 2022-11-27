@@ -1,7 +1,7 @@
 <h1 align=center> Projeto HandsOn 5- Desafio Chefão - Grupo 3 </hi> <br>
 
 <p align="center">
-  <img src="./docs/logo.jpeg" width="50%">
+  <img src="https://raw.githubusercontent.com/thiagodrodrigues/Prontuario-Digital/main/docs/logo.jpeg" width="50%">
 </p>
 
 ---
