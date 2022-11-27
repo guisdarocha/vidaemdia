@@ -4,6 +4,7 @@ import Header from "../Header";
 import { ProntuarioStyle , Select } from './ProntuarioForm.style';
 import { useForm, SubmitHandler } from "react-hook-form";
 import api from "../../api";
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -43,7 +44,9 @@ type Inputs = {
 const token = localStorage.getItem('token');
 const id = localStorage.getItem('id');
 
+
 export const ProntuarioForm = (props: ProntuarioFormProps) => {
+  const navigate = useNavigate()
   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const submitInfos = () => {
@@ -86,6 +89,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         });
     }
     submitInfos()
+    setTimeout(() => navigate('/prontuario'), 2000)
   };
 
   return (
