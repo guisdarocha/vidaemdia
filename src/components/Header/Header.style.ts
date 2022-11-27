@@ -116,7 +116,7 @@ z-index: 2;
   height: 6px;
   background: #F5F5F5;
   border-radius: 2px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .hamburguer::after{
@@ -127,7 +127,7 @@ z-index: 2;
   height: 6px;
   background: #F5F5F5;
   border-radius: 2px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .list{
