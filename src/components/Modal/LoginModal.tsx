@@ -51,10 +51,10 @@ export const LoginModal = (props: LoginModalProps) => {
     return (
         <BlurContainer>
             <ModalContainer>
-                <img src="/biological-scene.png" alt="" />
+                <img className="retangle" src="/biological-scene.png" alt="" />
                 <StyledContainer>
                     <p onClick={closeModal}>x</p>
-                    <img src="/Component1.svg" alt="" />
+                    <img className="vd-logo" src="/Component1.svg" alt="" />
                     <h3>Bem vindo de volta</h3>
                     <h4>Área de Login</h4>
                     <FormContainer>

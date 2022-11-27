@@ -133,6 +133,11 @@ export const  CadastroExameStyle = styled.form`
         }
     }
 
+    .obrigatorio{
+    display: contents;
+    color: #DC2113;
+  }
+
 `
 
 export const  AceiteTermos = styled.div`
