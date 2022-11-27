@@ -4,12 +4,12 @@ import Home from "../pages/Home";
 import QuemSomos from "../pages/QuemSomos";
 import Prontuario from "../pages/Prontuario"
 import Consultas from "../pages/Consultas";
-import { MeuProntuario, MeuProntuarioRealizado } from "../pages/MeuProntuario";
+import {  MeuProntuarioRealizado } from "../pages/MeuProntuario";
 import CadastroDeExame from "../pages/CadastroDeExame";
 import EditarExame from "../pages/EditarExame";
 import CadastroDeConsulta from "../pages/CadastroDeConsulta";
 import EditarConsulta from "../pages/EditarConsulta";
-import { Suporte } from "../pages/suporte";
+import { Suporte } from "../pages/Suporte";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
 
   {
     path: "/prontuario",
-    element: <Prontuario />,
+    element: <MeuProntuarioRealizado name={""} email={""} birthDate={""} telephone={""} maritalStatus={""} sex={""} weight={""} height={""} zipCode={""} address={""} number={""} neighborhood={""} complement={""} state={""} city={""} smoke={""} drugs={""} exercises={""} recreation={""} familialDisease={""} treatment={""} allergy={""} pregnant={""} medicines={""} disease={""} bloodType={""} />,
   },
   {
     path: "/exames",
