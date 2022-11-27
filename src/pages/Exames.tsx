@@ -9,6 +9,7 @@ import Header from '../components/Header'
 import { TopSection } from "./Exames.style"
 import jwt_decode from "jwt-decode";
 import api from "../api"
+import NenhumCadastrado from "../components/NenhumCadastrado/NenhumCadastrado"
 
 
 export type ExamesProps = {
@@ -75,20 +76,29 @@ const Exames = (props: ExamesProps) => {
         <div className="d-flex align-items-end pb-5">
           <Button text="cadastrar" link="/exames/cadastroexame/"/>
         </div>
-      </TopSection>
 
-      <div className="container">
-        {exames.slice(0).reverse().map((exame, i) => (<CardExame
-         index={total-=1}
-         id={exame.idExams}
-         date={data[i]}
-         diagnosis={exame.diagnosis}
-         exam={exame.exam}
-         clinic={exame.clinic}
-         doctor={exame.doctor}
-         comments={exame.comments}
-         />))}
-      </div>
+      </TopSection>
+      {exames.length === 0 ?
+        (
+          <NenhumCadastrado nome='um exame.'/>
+          )
+        :
+        (
+          <div className="container">
+            {exames.slice(0).reverse().map((exame, i) => (<CardExame
+            index={total-=1}
+            id={exame.idExams}
+            date={data[i]}
+            diagnosis={exame.diagnosis}
+            exam={exame.exam}
+            clinic={exame.clinic}
+            doctor={exame.doctor}
+            comments={exame.comments}
+            />))}
+          </div>
+          )
+        }
+
       <Footer />
     </>
   )

@@ -58,12 +58,11 @@ input{
   min-height: 53px;
   padding-left: 2px;
 }
+
 input::placeholder{
   background-color: #FAFAFA;
   color: #abafb3;
   font-size: 14px;
-
-
 }
 
 
@@ -168,20 +167,8 @@ input::placeholder{
 .diagnosticoDois,
 .diagnosticoTres,
 .diagnosticoQuatro{
-  display: grid;
-    
-    justify-content: center; 
-    align-items: baseline; 
+  /* background-color: #bbdefb; */
 
-    flex-direction: row; 
-    flex-wrap: nowrap; 
-    align-content: flex-start;
-
-    background-color: #bbdefb;
-    height: 100%;
-    padding: 15px;
-    gap: 5px;
-  
   input{
     margin-bottom: 0.4rem;
       max-width: 160px;
@@ -254,13 +241,13 @@ input[type="checkbox"] {
 }
 
 
-  .div-space {
+  .div-space { 
  
     display: flex;
     
     justify-content: flex-end; 
     align-items: center;   
-    margin-left: 12rem; 
+    margin-left: 23rem; 
   }
 
   .alinhamento-y {
@@ -277,12 +264,12 @@ input[type="checkbox"] {
   
   .fumar, 
   .drogas, 
-  .alcool,
-  .exercicios,
+  .alcool, 
+  .exercicios, 
   .recreacao,
   .familia,
-  .medicamento,
   .tratamento,
+  .medicamento, 
   .alergico,
   .gravida {
     width: 950px;
@@ -290,6 +277,41 @@ input[type="checkbox"] {
     align-items: center;
     margin-bottom: 10px;
   }
+
+  .sanguineo{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  input{
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 90px;
+      margin-bottom: 0.4rem;
+      max-width: 160px;
+      color: blue;
+      border-radius: 50%;
+      border: 1px solid blue;
+    }
+}
+
+.termos{
+  width: 40px;
+}
+
+.termos-span{
+  font-size: 16px;
+}
+
+.enviar {
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 30px;
+  background-color: #2C5EDE;
+  width: 300px;
+  height: 60px;
+}
 
   @media only screen and (max-width: 1400px){
     font-size: 15px;

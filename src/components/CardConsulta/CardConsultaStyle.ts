@@ -11,8 +11,10 @@ export const Card = styled.div`
   margin-bottom: 50px;
 
   @media only screen and (max-width: 800px){
-      height: 80vh;
-
+      height: 90vh;
+      button{
+        margin-bottom: 27px;
+      }
       }
 
     p{
