@@ -469,7 +469,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           </label>
         </div>
         <label className='d-flex align-items-center'>
-          <input className='termos' type="checkbox" {...register('status')} />
+          <input className='termos' type="checkbox" {...register('status', {required:true})} />
           <span className='termos-span'>Aceito e estou de acordo com os termos de uso deste site, bem como o armazenamento dos meus dados pessoais confiando na total segurança e privacidade.</span>
         </label>
         <div className="row d-flex justify-content-center">
