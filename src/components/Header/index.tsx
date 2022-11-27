@@ -69,7 +69,7 @@ const index = () => {
         </div>
       </Menu>
       <HeaderStyle className='d-flex justify-content-around align-items-center'>
-        <div><img src={logo} alt="logo" /></div>
+        <div><a href="https://vida-em-dia.vercel.app"><img src={logo} alt="logo" /></a></div>
         <div className='links'>
           {localStorage.token === '' ?
           (<>

@@ -153,7 +153,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <div className="col-12 col-md-2">
             <label className='altura bottom'>
               Altura<p className='obrigatorio'>*</p>
-              <input type='number' {...register('height', { required: true })} placeholder="1,80cm" />
+              <input type='number' {...register('height', { required: true })} placeholder="1,80m" />
             </label>
           </div>
         </div>
