@@ -1,13 +1,11 @@
-import Section from "../components/section";
+import Section from "../components/Section/section";
 import Article from "../components/Article/Article"
 import { Footer } from "../components/Footer/Footer"
 import HighLight from "../components/HighLight/HighLight";
 import Parceiros from "../components/Parceiros/Parceiros";
 import Header from "../components/Header";
 import { Cards } from "./Home.style";
-import {ControlledCarousel} from './Banner'
-
-
+import {ControlledCarousel} from '../components/Banner/Banner'
 
 type HomeProps = {
 
