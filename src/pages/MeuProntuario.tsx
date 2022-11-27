@@ -127,28 +127,35 @@ console.log(prontuario)
             <h3>Endereço</h3>
             <div className="info">
               <h5>CEP</h5>
-              {prontuario.zipCode}
+              <p>{prontuario.zipCode} </p>
             </div>
-            <div className="info">
+            <div className="info row">
+              <div className="col-md-9 col-12">
               <h5>Endereço</h5>
-              {prontuario.address}
-
-              <h5>Número</h5>
-              {prontuario.number}
+              <p>{prontuario.address}</p>
+              </div>
+              <div className="col-md-3 col-12">
+                <h5>Número</h5>
+                <p>{prontuario.number}</p>
+              </div>
             </div>
             <div className="info">
               <h5>Bairro</h5>
-              {prontuario.neighborhood}
+              <p>{prontuario.neighborhood}</p>
             </div>
             <div className="info">
               <h5>Complemento</h5>
-              {prontuario.complement}
+              <p>{prontuario.complement}</p>
             </div>
-            <div className="info">
-              <h5>Estado</h5>
-              {prontuario.state}
-              <h5>Cidade</h5>
-              {prontuario.city}
+            <div className="info row">
+              <div className="col-md-2 col-12">
+                <h5>Estado</h5>
+                <p>{prontuario.state}</p>
+              </div>
+              <div className="col-md-10 col-12">
+                <h5>Cidade</h5>
+                <p>{prontuario.city}</p>
+              </div>
             </div>
           </div>
           <hr />
