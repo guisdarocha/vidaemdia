@@ -62,7 +62,7 @@ const Consultas = (props: ConsultasProps) => {
       <TopSection className="container d-flex mobile">
         <div>
           <BemVindo
-            user={"Fernando Predes"}
+            user={decoded.name}
             text={"Insira aqui os dados da  sua consulta"}
             subtext={"*Insira e edite os dados sobre a consulta que foi realizada"}
             />

@@ -1,7 +1,7 @@
-import lupa from "../assets/vetor-search-doc.png"
-import { SectionCard } from "./Section.style";
+import lupa from "../../assets/vetor-search-doc.png"
+import { SectionCard } from "../Section/Section.style";
 
-import { Footer } from "./Footer/Footer";
+import { Footer } from "../Footer/Footer";
 
 type sectionProps = {
 }
