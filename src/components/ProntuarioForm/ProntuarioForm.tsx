@@ -1,8 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Header from "../Header";
 import { ProntuarioStyle , Select } from './ProntuarioForm.style';
 import { useForm, SubmitHandler } from "react-hook-form";
 import api from "../../api";
+
 
 
 type ProntuarioFormProps = {};
@@ -175,7 +177,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <div className="numero col-4">
             <label className='numero'>
               Número<p className='obrigatorio'>*</p>
-              <input {...register('number', { required: true })} placeholder="0123" />
+              <input {...register('number', { required: true })} placeholder="123" />
             </label>
           </div>
           <div className="bairro col-12">
