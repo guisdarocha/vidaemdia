@@ -6,9 +6,11 @@ import bloodtype from "../assets/icons/bloodtype.svg"
 import { useEffect, useState } from "react"
 import jwt_decode from "jwt-decode";
 import api from "../api"
-import { Dados } from "./MeuProntuario.style"
+import { BtnContainer, ButtonProntuario, Dados } from "./MeuProntuario.style"
 import sim from "../assets/icons/sim.svg";
 import nao from "../assets/icons/sim.svg";
+import { TopSection } from "./Exames.style"
+import Button from "../components/Button/Button"
 
 
 
@@ -79,6 +81,13 @@ console.log(prontuario)
   return (
     <>
       <Header />
+      <TopSection className="container d-flex mobile">
+        <div>
+          <BemVindo
+            user={decoded.name}
+            />
+        </div>
+      </TopSection>
       <>
         <Dados className="container">
           <h2>Visualizar aqui seu Prontuário Digital</h2>
@@ -222,6 +231,9 @@ console.log(prontuario)
             <hr className="mb-5" />
           </div>
         </Dados>
+        <BtnContainer className="container btn-editar">
+          <ButtonProntuario to={'#'}>Editar</ButtonProntuario>
+        </BtnContainer>
       </>
       <Footer />
     </>

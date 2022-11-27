@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const TopSection = styled.div`
@@ -13,7 +14,6 @@ export const Dados = styled.div`
   background: #F5F5F5;
   border: 0.9875px solid #CCCCCC;
   border-radius: 15.8px;
-  margin-top:60px;
   margin-bottom:60px;
   padding-left: 37px;
   padding-right: 27px;
@@ -99,4 +99,29 @@ export const Dados = styled.div`
         margin-right: 25px;
       }
     }
+
+`
+
+export const BtnContainer = styled.div`
+margin-bottom: 151px;
+
+`
+
+export const ButtonProntuario = styled(Link)`
+
+  font-weight: 700;
+  font-size: 41.7904px;
+  line-height: 49px;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  background: #2C5EDE;
+  border-radius: 10px;
+  padding: 10px 130px;
+
+
+  :hover{
+    color: #FFFFFF;
+  }
 `
