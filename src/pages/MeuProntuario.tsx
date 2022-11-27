@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import jwt_decode from "jwt-decode";
 import NenhumCadastrado from "../components/NenhumCadastrado/NenhumCadastrado"
 import api from "../api"
+import { Dados } from "./MeuProntuario.style"
 
 
 
@@ -75,76 +76,82 @@ console.log(prontuario)
     <>
       <Header />
       <>
-        <div className="container">
+        <Dados className="container">
           <h2>Visualizar aqui seu Prontuário Digital</h2>
           <div className="dados">
             <h3>Dados Pessoais</h3>
-            <div>
-              <h5>Seu Nome</h5>
-              {prontuario.name}
+            <div className="info">
+              <div>
+                <h5>Seu Nome</h5>
+                <p>{prontuario.name}</p>
+              </div>
             </div>
-            <div>
-              <h5>Email</h5>
-              {prontuario.email}
+
+            <div className="info d-flex row">
+              <div className="col-md-8 col-12">
+                <h5>Email</h5>
+                <p>{prontuario.email}</p>
+              </div>
+
+              <div className="col-md-4 col-12">
+                <h5>Telefone</h5>
+               <p>{prontuario.telephone}</p>
+              </div>
             </div>
-            <div>
-              <h5>Telefone</h5>
-              {prontuario.telephone}
-            </div>
-            <div>
-              <h5>Data de Nascimento</h5>
-              {prontuario.birthDate}
-            </div>
-            <div>
-              <h5>Estado Civil</h5>
-              {prontuario.maritalStatus}
-            </div>
-            <div>
-              <h5>Sexo</h5>
-              {prontuario.sex}
-            </div>
-            <div>
-              <h5>Peso</h5>
-              {prontuario.weight}
-            </div>
-            <div>
-              <h5>Altura</h5>
-              {prontuario.height}
+
+            <div className="info row">
+              <div className="col-md-3 col-12">
+                <h5>Data de Nascimento</h5>
+                <p>{prontuario.birthDate}</p>
+              </div>
+              <div className="col-md-3 col-12">
+                <h5>Estado Civil</h5>
+                <p>{prontuario.maritalStatus}</p>
+              </div>
+              <div className="col-md-2 col-12">
+                <h5>Sexo</h5>
+                <p>{prontuario.sex}</p>
+              </div>
+              <div className="col-md-2 col-12">
+                <h5>Peso</h5>
+                <p>{prontuario.weight}</p>
+              </div>
+              <div className="col-md-2 col-12">
+                <h5>Altura</h5>
+                <p>{prontuario.height}</p>
+              </div>
             </div>
           </div>
-
+          <hr />
           <div className="endereço">
             <h3>Endereço</h3>
-            <div>
+            <div className="info">
               <h5>CEP</h5>
               {prontuario.zipCode}
             </div>
-            <div>
+            <div className="info">
               <h5>Endereço</h5>
               {prontuario.address}
-            </div>
-            <div>
+
               <h5>Número</h5>
               {prontuario.number}
             </div>
-            <div>
+            <div className="info">
               <h5>Bairro</h5>
               {prontuario.neighborhood}
             </div>
-            <div>
+            <div className="info">
               <h5>Complemento</h5>
               {prontuario.complement}
             </div>
-            <div>
+            <div className="info">
+              <h5>Estado</h5>
+              {prontuario.state}
               <h5>Cidade</h5>
               {prontuario.city}
             </div>
-            <div>
-              <h5>Estado</h5>
-              {prontuario.state}
-            </div>
           </div>
-
+          <hr />
           <div className="historicoSocial">
             <h3>Histórico Social</h3>
             <div>
@@ -184,19 +191,20 @@ console.log(prontuario)
               {prontuario.pregnant}
             </div>
           </div>
-
+          <hr />
           <div className="diagnósticos">
             <h3> Diagnósticos </h3>
             TAGGGGGGGGGGGGGGGGGGGGGGGGGGG {prontuario.disease}
           </div>
-
+          <hr />
           <div className="tipoSanguineo">
             <h3> Tipo Sanguíneo </h3>
             <div>
               <img src={bloodtype} /> {prontuario.bloodType}
             </div>
+            <hr className="mb-5" />
           </div>
-        </div>
+        </Dados>
       </>
       <Footer />
     </>
