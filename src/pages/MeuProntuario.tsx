@@ -2,11 +2,15 @@ import { propTypes } from "react-bootstrap/esm/Image"
 import BemVindo from "../components/BemVindo/BemVindo"
 import { Footer } from "../components/Footer/Footer"
 import Header from '../components/Header'
-import bloodtype from "../assets/icons/bloodtype.png"
+import bloodtype from "../assets/icons/bloodtype.svg"
 import { useEffect, useState } from "react"
 import jwt_decode from "jwt-decode";
-import NenhumCadastrado from "../components/NenhumCadastrado/NenhumCadastrado"
 import api from "../api"
+import { BtnContainer, ButtonProntuario, Dados } from "./MeuProntuario.style"
+import sim from "../assets/icons/sim.svg";
+import nao from "../assets/icons/sim.svg";
+import { TopSection } from "./Exames.style"
+import Button from "../components/Button/Button"
 
 
 
@@ -35,7 +39,7 @@ type MeuProntuarioProps = {
 	allergy: string,
   pregnant: string,
 	medicines: string,
-	disease: string,
+	disease: Array<string>[],
 	bloodType: string,
 
 };
@@ -70,133 +74,166 @@ export const MeuProntuarioRealizado = ({
 
   }, [])
 
+  let doencas = prontuario.disease
+  console.log(doencas)
+
 console.log(prontuario)
   return (
     <>
       <Header />
+      <TopSection className="container d-flex mobile">
+        <div>
+          <BemVindo
+            user={decoded.name}
+            />
+        </div>
+      </TopSection>
       <>
-        <div className="container">
+        <Dados className="container">
           <h2>Visualizar aqui seu Prontuário Digital</h2>
           <div className="dados">
             <h3>Dados Pessoais</h3>
-            <div>
-              <h5>Seu Nome</h5>
-              {prontuario.name}
+            <div className="info">
+              <div>
+                <h5>Seu Nome</h5>
+                <p>{prontuario.name}</p>
+              </div>
             </div>
-            <div>
-              <h5>Email</h5>
-              {prontuario.email}
+
+            <div className="info d-flex row">
+              <div className="col-md-8 col-12">
+                <h5>Email</h5>
+                <p>{prontuario.email}</p>
+              </div>
+
+              <div className="col-md-4 col-12">
+                <h5>Telefone</h5>
+               <p>{prontuario.telephone}</p>
+              </div>
             </div>
-            <div>
-              <h5>Telefone</h5>
-              {prontuario.telephone}
-            </div>
-            <div>
-              <h5>Data de Nascimento</h5>
-              {prontuario.birthDate}
-            </div>
-            <div>
-              <h5>Estado Civil</h5>
-              {prontuario.maritalStatus}
-            </div>
-            <div>
-              <h5>Sexo</h5>
-              {prontuario.sex}
-            </div>
-            <div>
-              <h5>Peso</h5>
-              {prontuario.weight}
-            </div>
-            <div>
-              <h5>Altura</h5>
-              {prontuario.height}
+
+            <div className="info row">
+              <div className="col-md-3 col-12">
+                <h5>Data de Nascimento</h5>
+                <p>{prontuario.birthDate}</p>
+              </div>
+              <div className="col-md-3 col-12">
+                <h5>Estado Civil</h5>
+                <p>{prontuario.maritalStatus}</p>
+              </div>
+              <div className="col-md-2 col-12">
+                <h5>Sexo</h5>
+                <p>{prontuario.sex}</p>
+              </div>
+              <div className="col-md-2 col-12">
+                <h5>Peso</h5>
+                <p>{prontuario.weight}kg</p>
+              </div>
+              <div className="col-md-2 col-12">
+                <h5>Altura</h5>
+                <p>{prontuario.height}m</p>
+              </div>
             </div>
           </div>
-
+          <hr />
           <div className="endereço">
             <h3>Endereço</h3>
-            <div>
+            <div className="info">
               <h5>CEP</h5>
-              {prontuario.zipCode}
+              <p>{prontuario.zipCode} </p>
             </div>
-            <div>
+            <div className="info row">
+              <div className="col-md-9 col-12">
               <h5>Endereço</h5>
-              {prontuario.address}
+              <p>{prontuario.address}</p>
+              </div>
+              <div className="col-md-3 col-12">
+                <h5>Número</h5>
+                <p>{prontuario.number}</p>
+              </div>
             </div>
-            <div>
-              <h5>Número</h5>
-              {prontuario.number}
-            </div>
-            <div>
+            <div className="info">
               <h5>Bairro</h5>
-              {prontuario.neighborhood}
+              <p>{prontuario.neighborhood}</p>
             </div>
-            <div>
+            <div className="info">
               <h5>Complemento</h5>
-              {prontuario.complement}
+              <p>{prontuario.complement}</p>
             </div>
-            <div>
-              <h5>Cidade</h5>
-              {prontuario.city}
-            </div>
-            <div>
-              <h5>Estado</h5>
-              {prontuario.state}
+            <div className="info row">
+              <div className="col-md-2 col-12">
+                <h5>Estado</h5>
+                <p>{prontuario.state}</p>
+              </div>
+              <div className="col-md-10 col-12">
+                <h5>Cidade</h5>
+                <p>{prontuario.city}</p>
+              </div>
             </div>
           </div>
-
+          <hr />
           <div className="historicoSocial">
             <h3>Histórico Social</h3>
             <div>
               <h5>Fumo:</h5>
-              {prontuario.smoke}
+              <p>{prontuario.smoke}</p>
             </div>
             <div>
               <h5>Drogas:</h5>
-              {prontuario.drugs}
+             <p>{prontuario.drugs}</p>
             </div>
             <div>
               <h5>Pratica exercícios?</h5>
-              {prontuario.exercises}
+              <p>{prontuario.exercises}</p>
             </div>
             <div>
               <h5>Pratica alguma recreação?</h5>
-              {prontuario.recreation}
+              <p>{prontuario.recreation}</p>
             </div>
             <div>
               <h5>Doença na familia?</h5>
-              {prontuario.familialDisease}
+              <p>{prontuario.familialDisease}</p>
             </div>
             <div>
               <h5>Esta fazendo algum tratamento?</h5>
-              {prontuario.treatment}
+              <p>{prontuario.treatment}</p>
             </div>
             <div>
               <h5>Faz uso de algum medicamento?</h5>
-              {prontuario.medicines}
+             <p>{prontuario.medicines}</p>
             </div>
             <div>
               <h5>É alergico a algum medicamento?</h5>
-              {prontuario.allergy}
+              <p>{prontuario.allergy}</p>
             </div>
             <div>
               <h5>Está grávida?</h5>
-              {prontuario.pregnant}
+             <p>{prontuario.pregnant}</p>
             </div>
           </div>
-
+          <hr />
           <div className="diagnósticos">
             <h3> Diagnósticos </h3>
-            TAGGGGGGGGGGGGGGGGGGGGGGGGGGG {prontuario.disease}
-          </div>
-
-          <div className="tipoSanguineo">
-            <h3> Tipo Sanguíneo </h3>
-            <div>
-              <img src={bloodtype} /> {prontuario.bloodType}
+            <div className="grupo-diagnosis row">
+              {doencas && doencas.map((doenca) => (
+               <div className="diagnosis col-md-3 col-12">
+                  <img src={sim} alt="sinal check" /> <p className="doenca">{doenca}</p>
+                </div>
+                ))}
             </div>
           </div>
-        </div>
+          <hr />
+          <div className="tipoSanguineo">
+            <h3> Tipo Sanguíneo </h3>
+            <div className="d-flex">
+              <img src={bloodtype} /> <p>{prontuario.bloodType}</p>
+            </div>
+            <hr className="mb-5" />
+          </div>
+        </Dados>
+        <BtnContainer className="container btn-editar">
+          <ButtonProntuario to={'/editar/prontuario'}>Editar</ButtonProntuario>
+        </BtnContainer>
       </>
       <Footer />
     </>

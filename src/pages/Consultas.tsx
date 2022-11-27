@@ -52,7 +52,7 @@ const Consultas = (props: ConsultasProps) => {
   let data = consultas.map((consulta) => {
     return consulta.date.slice(0, -14).replace(/-/g,'/')
   })
-  console.log(data)
+
 
 
 
@@ -80,6 +80,7 @@ const Consultas = (props: ConsultasProps) => {
         (
           <div className="container">
             {consultas.slice(0).reverse().map((consulta, i) => (<CardConsulta
+            key={consulta.idAppointment}
             index={total-=1}
             id={consulta.idAppointment}
             date={data[i]}
