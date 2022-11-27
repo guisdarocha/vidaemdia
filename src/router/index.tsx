@@ -49,9 +49,5 @@ const router = createBrowserRouter([
     path: "/exames/editarconsulta/:id",
     element: <EditarConsulta />,
   },
-  {
-    path: "/suporte",
-    element: <Suporte />,
-  },
 ]);
 export default router
