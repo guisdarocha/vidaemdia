@@ -46,7 +46,7 @@ export const RegisterModal = () => {
                 });
         }
         registerUser();
-        setTimeout(() => navigate('/prontuario'), 3000)
+        setTimeout(() => navigate('/'), 3000)
     };
 
     const closeModal = () => {
