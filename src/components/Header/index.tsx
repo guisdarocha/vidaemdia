@@ -11,6 +11,8 @@ import { RegisterModal } from '../Modal/RegisterModal'
 
 
 const index = () => {
+  const USUARIO = localStorage.getItem('token');
+  console.log(USUARIO === null)
 
   const [active, setMode] = useState(false)
   const toggleMode = () => {
@@ -36,6 +38,7 @@ const index = () => {
         <div className={active ? 'menu menuOpen' : 'menu menuClose'}>
           <div className="list">
             <ul className="listItems">
+
               <Link to='/'><li>Home</li></Link>
               <Link to="/quemsomos"><li>Quem somos</li></Link>
               <Link to="/exames"><li>Meus Exames</li></Link>
@@ -51,14 +54,26 @@ const index = () => {
       <HeaderStyle className='d-flex justify-content-around align-items-center'>
         <div><img src={logo} alt="logo" /></div>
         <div className='links'>
-          <LinkStyle className='linksin' to="/">Home</LinkStyle>
-          <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
-          <LinkStyle className='linksin' to="/exames">Meus Exames</LinkStyle>
-          <LinkStyle className='linksin' to="/prontuario">Meu Prontuário</LinkStyle>
-          <LinkStyle className='linksin' to="/consultas">Minhas Consultas</LinkStyle>
-          <LinkStyle className='linksin' to="#">Suporte</LinkStyle>
-          <LinkStyle onClick={openLoginModal} className='linksin' to="#">Login</LinkStyle>
-          <img src={avatar} alt="" />
+          {USUARIO === null ?
+          (<>
+            <LinkStyle className='linksin' to="/">Home</LinkStyle>
+            <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
+            <LinkStyle className='linksin' to="#">Suporte</LinkStyle>
+            <LinkStyle onClick={openLoginModal} className='linksin' to="#">Login</LinkStyle>
+            <img src={avatar} alt="" />
+          </>
+          )
+          :
+          (<>
+            <LinkStyle className='linksin' to="/">Home</LinkStyle>
+            <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
+            <LinkStyle className='linksin' to="/exames">Meus Exames</LinkStyle>
+            <LinkStyle className='linksin' to="/prontuario">Meu Prontuário</LinkStyle>
+            <LinkStyle className='linksin' to="/consultas">Minhas Consultas</LinkStyle>
+            <LinkStyle className='linksin' to="#">Suporte</LinkStyle>
+            <LinkStyle className='linksin' to="#">Logout</LinkStyle>
+            <img src={avatar} alt="" />
+          </>)}
         </div>
       </HeaderStyle>
       {modalType === 'login' && <LoginModal onClick={openRegisterModal} />}
