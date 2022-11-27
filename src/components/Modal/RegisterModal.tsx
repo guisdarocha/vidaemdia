@@ -46,7 +46,7 @@ export const RegisterModal = () => {
                 });
         }
         registerUser();
-        setTimeout(() => navigate('/'), 3000)
+        window.location.reload()
     };
 
     const closeModal = () => {
