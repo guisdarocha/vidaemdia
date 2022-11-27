@@ -40,12 +40,13 @@ type MeuProntuarioProps = {
 
 };
 
+
 export const MeuProntuarioRealizado = ({
   name, email, birthDate, telephone, maritalStatus, sex, weight, height, zipCode, address,
   number, neighborhood, complement, state, city, smoke, drugs, exercises, recreation, familialDisease,
   treatment, allergy, pregnant, medicines, disease, bloodType}: MeuProntuarioProps) => {
 
-    const [prontuario, setProntuario] = useState<MeuProntuarioProps>([])
+    const [prontuario, setProntuario] = useState<MeuProntuarioProps>({} as MeuProntuarioProps)
 
   const USUARIO = localStorage.getItem('token');
   const ID = localStorage.getItem('id');
@@ -186,13 +187,13 @@ console.log(prontuario)
 
           <div className="diagnósticos">
             <h3> Diagnósticos </h3>
-            TAGGGGGGGGGGGGGGGGGGGGGGGGGGG {disease}
+            TAGGGGGGGGGGGGGGGGGGGGGGGGGGG {prontuario.disease}
           </div>
 
           <div className="tipoSanguineo">
             <h3> Tipo Sanguíneo </h3>
             <div>
-              <img src={bloodtype} /> {bloodType}
+              <img src={bloodtype} /> {prontuario.bloodType}
             </div>
           </div>
         </div>
