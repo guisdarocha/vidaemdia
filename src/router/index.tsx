@@ -7,6 +7,7 @@ import Consultas from "../pages/Consultas";
 import { MeuProntuario } from "../pages/MeuProntuario";
 import CadastroDeExame from "../pages/CadastroDeExame";
 import EditarExame from "../pages/EditarExame";
+import CadastroDeConsulta from "../pages/CadastroDeConsulta";
 
 const router = createBrowserRouter([
   {
@@ -22,8 +23,6 @@ const router = createBrowserRouter([
     path: "/prontuario",
     element: <Prontuario />,
   },
-
-
   {
     path: "/exames",
     element: <Exames decoded={[]} date={""} diagnosis={""} idExams={0} exam={""} clinic={""} doctor={""} comments={""} />,
@@ -39,6 +38,14 @@ const router = createBrowserRouter([
   {
     path: "/consultas",
     element: <Consultas decoded={[]} date={""} diagnosis={""} idAppointment={0} medicalSpecialties={""} hospital={""} doctor={""} comments={""}  />,
+  },
+  {
+    path: "/consultas/cadastroconsulta",
+    element: <CadastroDeConsulta />,
+  },
+  {
+    path: "/exames/editarconsulta/:id",
+    element: <CadastroDeExame />,
   },
 ]);
 export default router

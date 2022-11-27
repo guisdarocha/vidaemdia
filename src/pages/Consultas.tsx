@@ -33,7 +33,7 @@ const Consultas = (props: ConsultasProps) => {
   const decoded : any = jwt_decode(token!);
 
   async function getConsultas() {
-    const { data } = await  api.get(`/exam/${ID}`,{
+    const { data } = await  api.get(`/appointment/${ID}`,{
       headers: {
         Authorization: `Bearer ${USUARIO}`
       }
@@ -68,7 +68,7 @@ const Consultas = (props: ConsultasProps) => {
             />
         </div>
         <div className="d-flex align-items-end pb-5">
-        <Button text="cadastrar" link="/exames/cadastroconsulta/"/>
+        <Button text="cadastrar" link="/consultas/cadastroconsulta/"/>
         </div>
       </TopSection>
 
