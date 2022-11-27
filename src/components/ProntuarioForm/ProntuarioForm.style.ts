@@ -14,6 +14,11 @@ font-size: 20px;
 line-height: 23px;
 margin-bottom: 47px;
 
+@media only screen and (max-width: 375px){
+  max-width: 20rem;
+  
+}
+
 .bairro{
   display: grid;
   margin-top: 0.5rem;
@@ -63,6 +68,7 @@ input::placeholder{
   background-color: #FAFAFA;
   color: #abafb3;
   font-size: 14px;
+
 }
 
 
@@ -87,13 +93,7 @@ input::placeholder{
 
   .data{
     margin-top: 20px;
-    font-size: 19px;
-    input{
-      max-width: 160px;
-      margin-top: 9px;
-
-    }
-  }
+}
 
   .bottom{
     margin-top: 21.5px;
@@ -117,6 +117,10 @@ input::placeholder{
     justify-content: center;
     text-align: center;
     margin-bottom: 90px;
+    @media only screen and (max-width: 375px){
+      font-size: 36px;
+      margin-top: 5rem;
+}
   }
 
   label {
@@ -129,8 +133,7 @@ input::placeholder{
     cursor: pointer;
     appearance: none;
     border: 1px solid #2C5EDE;
-    border-radius: 50%;
-    position: relative;
+    border-radius: 100%;
     display: grid;
     flex-direction: row;
     align-items: center;
@@ -138,6 +141,10 @@ input::placeholder{
     outline: none;
     background: none;
     position: relative;
+    @media only screen and (max-width: 375px){
+    width: 55px;
+    height: 55px; 
+    }
   }
 
   .radio:before{
@@ -151,23 +158,31 @@ input::placeholder{
     transition: all 300ms ease-in-out;
     position: center;
     color: #2C5EDE;
+    @media only screen and (max-width: 375px){
+    width: 45px;
+    height: 45px;
+    }
   }
 
   .radio:checked:before{
     opacity: 1;
 }
 
-  input[type="radio"] {
+input[type="radio"] {
   -ms-transform: scale(0.5); /* IE 9 /
   -webkit-transform: scale(1.5); / Chrome, Safari, Opera */
   transform: scale(0.5);
-}
+  @media only screen and (max-width: 375px){
+  -ms-transform: scale(0.5); /* IE 9 /
+  -webkit-transform: scale(1.5); / Chrome, Safari, Opera */
+  transform: scale(0.5);
+}}
 
 .diagnostico,
 .diagnosticoDois,
 .diagnosticoTres,
 .diagnosticoQuatro{
-  /* background-color: #bbdefb; */
+background-color: #bbdefb;
 
   input{
     margin-bottom: 0.4rem;
@@ -175,6 +190,11 @@ input::placeholder{
       color: blue;
       border-radius: 50%;
       border: 1px solid blue;   
+    }
+    @media only screen and (max-width: 375px){
+      justify-content: center;
+      align-items: center;
+      display: grid;
     }
 }
 
@@ -255,7 +275,16 @@ input[type="checkbox"] {
     justify-content: flex-end; 
     align-items: center;   
     margin-left: 23rem; 
+    @media only screen and (max-width: 375px){
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: space-around;
+    margin-left: 0rem;
+
   }
+}
 
   .alinhamento-y {
     display: flex;
@@ -268,7 +297,14 @@ input[type="checkbox"] {
     justify-content: space-between;
     background-color: white;
     border-radius: 40px;
-  }
+    @media only screen and (max-width: 375px){
+    font-size: 20px;
+    display: flex;
+  
+    align-items: stretch; 
+    flex-direction: column;  
+    align-content: center;
+  }}
   
   .fumar, 
   .drogas, 
@@ -285,12 +321,31 @@ input[type="checkbox"] {
     align-items: center;
     margin-bottom: 10px;
     margin-left: 2%;
-  }
+    @media only screen and (max-width: 375px){
+    align-items: stretch; 
+    flex-direction: column;  
+  }}
 
   .sanguineo{
     align-items: center;
     justify-content: center;
     text-align: center;
+    @media only screen and (max-width: 375px){
+    font-size: 20px;
+    display: flex;
+    
+    justify-content: center; 
+    align-items: stretch; 
+    /* flex-flow: row; */ 
+    flex-direction: column;  
+    align-content: stretch;
+
+    background-color: #bbdefb;
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+    padding-top: 35px;
+  }
 
   input{
       align-items: center;
@@ -302,15 +357,35 @@ input[type="checkbox"] {
       color: blue;
       border-radius: 50%;
       border: 1px solid blue;
+      @media only screen and (max-width: 375px){
+      display: grid;
+      justify-content: center;
+      align-items: space-around;
+    }
     }
 }
 
 .termos{
-  width: 40px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 3px solid;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  outline: none;
 }
 
+
 .termos-span{
+  margin-left: 5px;
   font-size: 16px;
+  @media only screen and (max-width: 375px){
+  font-size: 8px;
+  line-height: 8px;
+  }
 }
 
 .enviar {

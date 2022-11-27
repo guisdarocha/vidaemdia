@@ -25,6 +25,8 @@ export const LoginModal = (props: LoginModalProps) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>({
         resolver: yupResolver(schema)
     });
+
+
     const onSubmit: SubmitHandler<Inputs> = (data) => {
         const loginUser = () => {
             api.post('/login', data)
@@ -49,7 +51,7 @@ export const LoginModal = (props: LoginModalProps) => {
     }
 
     return (
-        <BlurContainer>
+       <BlurContainer>
             <ModalContainer>
                 <img src="/biological-scene.png" alt="" />
                 <StyledContainer>
@@ -61,13 +63,13 @@ export const LoginModal = (props: LoginModalProps) => {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <label>
                                 Email:
-                                <StyledInput {...register("email", { required: true })} placeholder="Insira seu email" />
+                                <StyledInput {...register("email", { required: true })}placeholder="Insira seu email"  />
                                 <ErrorMessage>{errors.email?.message}</ErrorMessage>
                             </label>
-                            <label>
+                            <label>                               
                                 Senha:
                                 <StyledInput type='password'  {...register("password", { required: true })} placeholder="Insira sua senha" />
-                                <ErrorMessage>{errors.password?.message}</ErrorMessage>
+                                <ErrorMessage>{errors.password?.message}</ErrorMessage>                               
                             </label>
                             <a>Esqueceu sua senha ?</a>
                             <StyledButton> Entrar </StyledButton>
