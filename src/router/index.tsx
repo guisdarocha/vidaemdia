@@ -4,7 +4,7 @@ import Home from "../pages/Home";
 import QuemSomos from "../pages/QuemSomos";
 import Prontuario from "../pages/Prontuario"
 import Consultas from "../pages/Consultas";
-import { MeuProntuario } from "../pages/MeuProntuario";
+import { MeuProntuario, MeuProntuarioRealizado } from "../pages/MeuProntuario";
 import CadastroDeExame from "../pages/CadastroDeExame";
 import EditarExame from "../pages/EditarExame";
 import CadastroDeConsulta from "../pages/CadastroDeConsulta";
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
 
   {
     path: "/prontuario",
-    element: <Prontuario />,
+    element: <MeuProntuarioRealizado />,
   },
   {
     path: "/exames",

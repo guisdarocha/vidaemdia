@@ -63,8 +63,8 @@ const Consultas = (props: ConsultasProps) => {
         <div>
           <BemVindo
             user={decoded.name}
-            text={"Insira aqui os dados da  sua consulta"}
-            subtext={"*Insira e edite os dados sobre a consulta que foi realizada"}
+            text={"Aqui estão todas as suas consultas:"}
+
             />
         </div>
         <div className="d-flex align-items-end pb-5">
