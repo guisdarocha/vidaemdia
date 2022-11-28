@@ -7,7 +7,7 @@ export const  QuemSomosSection = styled.section`
             flex-direction: column;
             align-items: center;
         }
-    
+
     .text {
         padding: 4.75vw 6.25vw 6.25vw 14.5vw;
         @media only screen and (max-width: 428px){
@@ -19,7 +19,7 @@ export const  QuemSomosSection = styled.section`
             align-items: center;
             margin-top: 20vw;
             padding: 0;
-            
+
         }
     }
 
@@ -30,7 +30,7 @@ export const  QuemSomosSection = styled.section`
             align-items: center;
             width: 50vw;
             margin: 0 0 20vw 1vw;
-            
+
         }
 
     }
@@ -40,9 +40,9 @@ export const  QuemSomosSection = styled.section`
         margin-top: 15vw;
         @media only screen and (max-width: 428px){
             margin-left: 22vw;
-            font-size: 9vw; 
+            font-size: 9vw;
         }
-        
+
     }
 
     .text1 {
@@ -53,8 +53,8 @@ export const  QuemSomosSection = styled.section`
             width: 100vw;
             max-width: 60vw;
             text-align: justify;
-            
-            
+
+
         }
     }
 
@@ -65,7 +65,7 @@ export const  QuemSomosSection = styled.section`
             font-size: 3vw;
             text-align: justify;
             margin: 0;
-            
+
         }
     }
 
@@ -75,9 +75,9 @@ export const  QuemSomosSection = styled.section`
         max-width: 27vw;
         @media only screen and (max-width: 428px){
             max-width: 60vw;
-            
+
         }
-        
+
 
     }
 
@@ -88,9 +88,9 @@ export const  QuemSomosSection = styled.section`
             font-size: 3vw;
             position: relative;
             top: 100vw;
-            
+
         }
-        
+
     }
 
     h3 {
@@ -100,9 +100,9 @@ export const  QuemSomosSection = styled.section`
             font-size: 2vw;
             position: relative;
             top: 99vw;
-    
+
         }
-        
+
     }
 
     a {
@@ -111,7 +111,7 @@ export const  QuemSomosSection = styled.section`
 
     img {
         width: 20.7vw;
-        
+
     }
 
     .imgcel {
@@ -120,13 +120,12 @@ export const  QuemSomosSection = styled.section`
             align-items: center;
             justify-content: center;
             margin-bottom: 33vw;
-    
+
         }
-        
+
 
     }
 
 
 
 `
-
