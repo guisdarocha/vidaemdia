@@ -36,7 +36,7 @@ export const LoginModal = (props: LoginModalProps) => {
                     localStorage.setItem('id', `${String(res.data.User.idUser)}`);
                     console.log(res)
                     window.location.reload();
-                   
+
                 })
                 .catch((error) => {
                     console.log(error)
@@ -66,10 +66,10 @@ export const LoginModal = (props: LoginModalProps) => {
                                 <StyledInput {...register("email", { required: true })}placeholder="Insira seu email"  />
                                 <ErrorMessage>{errors.email?.message}</ErrorMessage>
                             </label>
-                            <label>                               
+                            <label>
                                 Senha:
                                 <StyledInput type='password'  {...register("password", { required: true })} placeholder="Insira sua senha" />
-                                <ErrorMessage>{errors.password?.message}</ErrorMessage>                               
+                                <ErrorMessage>{errors.password?.message}</ErrorMessage>
                             </label>
                             <a>Esqueceu sua senha ?</a>
                             <StyledButton> Entrar </StyledButton>
