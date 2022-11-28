@@ -36,7 +36,7 @@ const index = () => {
     setTimeout(() => navigate('/'), 1000)
   }
 
-
+  console.log(localStorage.token)
   return (
     <>
       <Menu className="Menu">
@@ -46,7 +46,7 @@ const index = () => {
         <div className={active ? 'menu menuOpen' : 'menu menuClose'}>
           <div className="list">
             <ul className="listItems">
-            {localStorage.token === '' ?
+            {localStorage.token === ('' || undefined ) ?
             (<>
               <Link to='/'><li>Home</li></Link>
               <Link to="/quemsomos"><li>Quem somos</li></Link>
@@ -70,7 +70,7 @@ const index = () => {
       <HeaderStyle className='d-flex justify-content-around align-items-center'>
         <div><a href="https://vida-em-dia.vercel.app"><img src={logo} alt="logo" /></a></div>
         <div className='links'>
-          {localStorage.token === '' ?
+          {localStorage.token === ('' || undefined ) ?
           (<>
             <LinkStyle className='linksin' to="/">Home</LinkStyle>
             <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
