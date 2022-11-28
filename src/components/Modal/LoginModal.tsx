@@ -4,6 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import api from "../../api";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 
 type Inputs = {
@@ -26,6 +27,7 @@ export const LoginModal = (props: LoginModalProps) => {
         resolver: yupResolver(schema)
     });
 
+    const navigate = useNavigate()
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
         const loginUser = () => {
@@ -35,7 +37,7 @@ export const LoginModal = (props: LoginModalProps) => {
                     localStorage.setItem('token', `${String(res.data.token)}`);
                     localStorage.setItem('id', `${String(res.data.User.idUser)}`);
                     console.log(res)
-                    window.location.reload();
+                    navigate('/');
 
                 })
                 .catch((error) => {
