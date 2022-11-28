@@ -49,8 +49,8 @@ const index = () => {
             {localStorage.token === '' ?
             (<>
               <Link to='/'><li>Home</li></Link>
-              <Link onClick={openLoginModal} to='#'><li>Login</li></Link>
               <Link to="/quemsomos"><li>Quem somos</li></Link>
+              <Link onClick={openLoginModal} to='#'><li>Login</li></Link>
             </>)
             :
             (<>
