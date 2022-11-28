@@ -38,6 +38,7 @@ export const LoginModal = (props: LoginModalProps) => {
                     localStorage.setItem('id', `${String(res.data.User.idUser)}`);
                     console.log(res)
                     navigate('/');
+                    window.location.reload();
 
                 })
                 .catch((error) => {

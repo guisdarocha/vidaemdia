@@ -132,10 +132,10 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
               Estado Civil<p className='obrigatorio'>*</p>
               <Select {...register('maritalStatus', { required: true })} required>
                 <option value="genero" hidden></option>
-                <option value="masculino">Solteiro</option>
-                <option value="feminino">Casado</option>
-                <option value="naodizer">Viúvo</option>
-                <option value="naodizer">União estável</option>
+                <option value="Solteiro">Solteiro</option>
+                <option value="Casado">Casado</option>
+                <option value="Viúvo">Viúvo</option>
+                <option value="União estável">União estável</option>
               </Select >
             </label>
           </div>
