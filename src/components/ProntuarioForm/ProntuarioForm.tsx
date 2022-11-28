@@ -4,6 +4,7 @@ import Header from "../Header";
 import { ProntuarioStyle , Select } from './ProntuarioForm.style';
 import { useForm, SubmitHandler } from "react-hook-form";
 import api from "../../api";
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -43,7 +44,9 @@ type Inputs = {
 const token = localStorage.getItem('token');
 const id = localStorage.getItem('id');
 
+
 export const ProntuarioForm = (props: ProntuarioFormProps) => {
+  const navigate = useNavigate()
   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const submitInfos = () => {
@@ -86,6 +89,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
         });
     }
     submitInfos()
+    setTimeout(() => navigate('/prontuario'), 2000)
   };
 
   return (
@@ -317,10 +321,10 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
   <h3> Diagnósticos </h3>
     <div className="row">
       <div className="col">
-        <label className='diagnostico'> 
+        <label className='diagnostico'>
           <div className="dado">
             <input value='Diabetes tipo 1'className='checkbox' type='checkbox' {...register('disease')} />
-            Diabetes tipo 1 
+            Diabetes tipo 1
           </div>
           <div className="dado">
             <input value='Diabetes tipo 2' className='checkbox' type='checkbox' {...register('disease')} />
@@ -336,11 +340,11 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
             </div>
           <div className="dado">
             <input value='Covid-19' className='checkbox' type='checkbox' {...register('disease')} />
-             Covid-19 
+             Covid-19
             </div>
           <div className="dado">
             <input value='Burnout' className='checkbox' type='checkbox' {...register('disease')} />
-             Burnout 
+             Burnout
             </div>
           <div className="dado">
             <input value='Depressão' className='checkbox'  type='checkbox' {...register('disease')} />
@@ -352,7 +356,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <label className='diagnosticoDois'>
           <div className="dado">
             <input value='TAG-Transtorno de Ansiedade Generalizada' className='checkbox' type='checkbox'{...register('disease')} />
-             TAG 
+             TAG
              <h5>(Transtorno de Ansiedade Generalizada)</h5>
             </div>
             <div className="dado">

@@ -35,7 +35,7 @@ const index = () => {
     localStorage.setItem('id', ``);
     setTimeout(() => navigate('/'), 1000)
   }
-  console.log(localStorage.token)
+
 
   return (
     <>
@@ -49,8 +49,6 @@ const index = () => {
             {localStorage.token === '' ?
             (<>
               <Link to='/'><li>Home</li></Link>
-              <Link to="/quemsomos"><li>Quem somos</li></Link>
-              <Link to='/suporte'><li>Suporte</li></Link>
               <Link onClick={openLoginModal} to='#'><li>Login</li></Link>
             </>)
             :
@@ -74,8 +72,6 @@ const index = () => {
           {localStorage.token === '' ?
           (<>
             <LinkStyle className='linksin' to="/">Home</LinkStyle>
-            <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
-            <LinkStyle className='linksin' to="/suporte">Suporte</LinkStyle>
             <LinkStyle onClick={openLoginModal} className='linksin' to="#">Login</LinkStyle>
             <img src={avatar} alt="" />
           </>

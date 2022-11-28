@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Card } from './CardExameStyle'
 import lata from '../../assets/lata.svg'
 import lapis from '../../assets/pencil.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import api from '../../api'
 import jwt_decode from "jwt-decode";
 import { ExamesProps } from '../../pages/Exames'
@@ -28,6 +28,8 @@ const CardExame = ({id, date, exam, clinic, doctor, comments, diagnosis, index}:
   const token = USUARIO;
   const decoded : any = jwt_decode(token!);
 
+  const navigate = useNavigate()
+
   async function getExames() {
     const { data } = await  api.get(`/exam/${ID}`,{
       headers: {
@@ -48,7 +50,7 @@ const CardExame = ({id, date, exam, clinic, doctor, comments, diagnosis, index}:
         Authorization: `Bearer ${USUARIO}`
       }
     })
-      window.location.reload()
+      setTimeout(() => navigate('/'), 1000)
     }
 
 

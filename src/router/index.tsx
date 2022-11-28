@@ -23,7 +23,7 @@ const router = createBrowserRouter([
 
   {
     path: "/prontuario",
-    element: <MeuProntuarioRealizado name={""} email={""} birthDate={""} telephone={""} maritalStatus={""} sex={""} weight={""} height={""} zipCode={""} address={""} number={""} neighborhood={""} complement={""} state={""} city={""} smoke={""} drugs={""} exercises={""} recreation={""} familialDisease={""} treatment={""} allergy={""} pregnant={""} medicines={""} disease={""} bloodType={""} />,
+    element: <MeuProntuarioRealizado name={""} email={""} birthDate={""} telephone={""} maritalStatus={""} sex={""} weight={""} height={""} zipCode={""} address={""} number={""} neighborhood={""} complement={""} state={""} city={""} smoke={""} drugs={""} exercises={""} recreation={""} familialDisease={""} treatment={""} allergy={""} pregnant={""} medicines={""} bloodType={""} disease={[]} />,
   },
   {
     path: "/exames",
