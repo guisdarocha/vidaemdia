@@ -475,7 +475,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <span className='termos-span'>Aceito e estou de acordo com os termos de uso deste site, bem como o armazenamento dos meus dados pessoais confiando na total segurança e privacidade.</span>
         </label>
         <div className="row d-flex justify-content-center">
-        <button type="button" className="btn btn-primary enviar">ENVIAR</button>
+        <button type="submit" className="btn btn-primary enviar">ENVIAR</button>
         </div>
       </ProntuarioStyle>
     </>
