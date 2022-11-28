@@ -433,6 +433,7 @@ input[type="checkbox"] {
       max-width: 100px;
     }
   }
+  
 
    @media only screen and (max-width: 767px){
 
