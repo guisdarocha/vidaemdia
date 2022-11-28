@@ -136,6 +136,11 @@ export const ErrorMessage = styled.span `
     right: 45px;
     bottom: 5px;
     text-align: end;   
+
+    @media only screen and (max-width: 428px) {
+     right: 45%;
+     top:3px
+ }
 `
 export const StyledInput = styled.input `
  display: block;
