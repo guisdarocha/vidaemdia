@@ -210,7 +210,6 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           </div>
         </div>
 
-
         {/* Histórico Social */}
 
         <h3> Histórico Social </h3>
