@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import Exames from "../pages/Exames";
 import Home from "../pages/Home";
 import QuemSomos from "../pages/QuemSomos";
@@ -10,6 +10,7 @@ import EditarExame from "../pages/EditarExame";
 import CadastroDeConsulta from "../pages/CadastroDeConsulta";
 import EditarConsulta from "../pages/EditarConsulta";
 import { Suporte } from "../pages/Suporte";
+import NotFound from "../pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,14 @@ const router = createBrowserRouter([
   {
     path:'/editar/prontuario',
     element: <Prontuario />,
+  },
+  {
+    path:'/404',
+    element: <NotFound />,
+  },
+  {
+    path:'*',
+    element: <Navigate to='/404'/>,
   }
 
 ]);
