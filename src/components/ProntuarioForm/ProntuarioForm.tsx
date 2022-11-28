@@ -124,7 +124,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <div className="col-12 col-md-2 ">
             <label className='data'>
               Data de Nascimento<p className='obrigatorio'>*</p>
-              <input {...register('birthDate', { required: true })} placeholder="01/01/2022" />
+              <input {...register('birthDate', { required: true })} placeholder="mm/dd/yyyy" />
             </label>
           </div>
           <div className="col-12 col-md-2 ">
