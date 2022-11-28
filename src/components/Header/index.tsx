@@ -73,7 +73,7 @@ const index = () => {
           {localStorage.token === '' ?
           (<>
             <LinkStyle className='linksin' to="/">Home</LinkStyle>
-            <LinkStyle to="/quemsomos">Quem somos</LinkStyle>
+            <LinkStyle className='linksin' to="/quemsomos">Quem somos</LinkStyle>
             <LinkStyle onClick={openLoginModal} className='linksin' to="#">Login</LinkStyle>
             <img src={avatar} alt="" />
           </>
