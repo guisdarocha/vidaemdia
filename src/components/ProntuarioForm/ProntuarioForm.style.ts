@@ -182,7 +182,7 @@ input[type="radio"] {
 .diagnosticoDois,
 .diagnosticoTres,
 .diagnosticoQuatro{
-background-color: #bbdefb;
+
 
   input{
     margin-bottom: 0.4rem;
