@@ -15,7 +15,7 @@ export const FooterContainer = styled.div `
     font-size: 20px;
 
     
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 428px) {
         flex-direction: column;
 
         span {
@@ -23,16 +23,7 @@ export const FooterContainer = styled.div `
             text-align: center;
             width: 280px;
         }
-    }    
-    @media only screen and (max-width: 390px) {
-        flex-direction: column;
-
-        span {
-            font-size: 12px;
-            text-align: center;
-            width: 280px;
-        }
-    }    
+    }     
 `
 
 export const IconsContainer = styled.div `
@@ -42,19 +33,13 @@ export const IconsContainer = styled.div `
         padding: 0 10px;
     }
    
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 428px) {
         img {
             height: 25px;
             margin-top:8px;
         }
     }
-    
-    @media only screen and (max-width: 390px) {
-        img {
-            height: 25px;
-            margin-top: 8px;
-        }
-    }
+   
 
 `
 
