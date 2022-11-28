@@ -34,8 +34,12 @@ export const BemVindoStyle = styled.div `
     color: #777777;
     margin-bottom: 61px;
   }
+  span{
+    text-transform: capitalize;
 
- 
+  }
+
+
 
   @media only screen and (max-width: 375px){
     h1{
