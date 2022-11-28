@@ -36,11 +36,19 @@ margin-bottom: 47px;
 .estado{
   display: grid;
   margin-top: 0.5rem;
+  @media only screen and (max-width: 428px){
+    width: 200px;
+}
+
 }
 
 .cidade{
   display: grid;
   margin-top: 0.5rem;
+  @media only screen and (max-width: 428px){
+  width: 200px;
+}
+
 }
 
 h3{
@@ -227,7 +235,7 @@ input[type="radio"] {
     justify-content: center;
     outline: none;
     background: none;
-    position: relative;
+    
   }
 
   .checkbox:before{
@@ -255,33 +263,21 @@ input[type="checkbox"] {
 
 
 
-.diagnosticoDois{
-  display: grid;
-  align-items: center;
-  justify-content: flex;
-  
-  input{
-      margin-left: 55px;
-      margin-bottom: 5px;
-      max-width: 160px;
-    }
-}
-
 
   .div-space { 
  
     display: flex;
-    
     justify-content: flex-end; 
     align-items: center;   
     margin-left: 23rem; 
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 428px){
     font-size: 20px;
     display: flex;
     justify-content: center;
     justify-items: center;
     align-items: space-around;
     margin-left: 0rem;
+    margin-right: 45px;
 
   }
 }
@@ -297,10 +293,9 @@ input[type="checkbox"] {
     justify-content: space-between;
     background-color: white;
     border-radius: 40px;
-    @media only screen and (max-width: 375px){
-    font-size: 20px;
+    @media only screen and (max-width: 428px){
+    font-size: 18px;
     display: flex;
-  
     align-items: stretch; 
     flex-direction: column;  
     align-content: center;
@@ -321,7 +316,9 @@ input[type="checkbox"] {
     align-items: center;
     margin-bottom: 10px;
     margin-left: 2%;
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 428px){
+    margin-left: 20px;
+    margin-top: 20px;
     align-items: stretch; 
     flex-direction: column;  
   }}
@@ -330,7 +327,7 @@ input[type="checkbox"] {
     align-items: center;
     justify-content: center;
     text-align: center;
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width:428px){
     font-size: 20px;
     display: flex;
     
@@ -340,7 +337,6 @@ input[type="checkbox"] {
     flex-direction: column;  
     align-content: stretch;
 
-    background-color: #bbdefb;
     height: 100%;
     padding: 15px;
     gap: 5px;
@@ -357,7 +353,7 @@ input[type="checkbox"] {
       color: blue;
       border-radius: 50%;
       border: 1px solid blue;
-      @media only screen and (max-width: 375px){
+      @media only screen and (max-width: 428px){
       display: grid;
       justify-content: center;
       align-items: space-around;
@@ -382,9 +378,10 @@ input[type="checkbox"] {
 .termos-span{
   margin-left: 5px;
   font-size: 16px;
-  @media only screen and (max-width: 375px){
-  font-size: 8px;
-  line-height: 8px;
+  
+  @media only screen and (max-width: 428px){
+  font-size: 12px;
+  line-height: 16px;
   }
 }
 
@@ -436,8 +433,6 @@ input[type="checkbox"] {
       max-width: 100px;
     }
   }
-}
-
 
    @media only screen and (max-width: 767px){
 
@@ -463,6 +458,7 @@ input[type="checkbox"] {
     }
 
    }
+  }
 `
 export const Select = styled.select`
       width: 100%;

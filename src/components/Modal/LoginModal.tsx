@@ -39,7 +39,6 @@ export const LoginModal = (props: LoginModalProps) => {
                     console.log(res)
                     navigate('/');
                     window.location.reload();
-
                 })
                 .catch((error) => {
                     console.log(error)
