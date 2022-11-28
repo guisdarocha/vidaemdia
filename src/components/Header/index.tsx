@@ -50,9 +50,7 @@ const index = () => {
             (<>
               <Link to='/'><li>Home</li></Link>
               <Link onClick={openLoginModal} to='#'><li>Login</li></Link>
-
-              
-              
+              <Link to="/quemsomos"><li>Quem somos</li></Link>
             </>)
             :
             (<>
@@ -76,6 +74,7 @@ const index = () => {
           (<>
             <LinkStyle className='linksin' to="/">Home</LinkStyle>
             <LinkStyle onClick={openLoginModal} className='linksin' to="#">Login</LinkStyle>
+            <Link to="/quemsomos"><li>Quem somos</li></Link>
             <img src={avatar} alt="" />
           </>
           )
