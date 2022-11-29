@@ -108,7 +108,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <div className="col ">
             <label className='email'>
               E-mail<p className='obrigatorio'>*</p>
-              <input {...register('email', { required: true })} placeholder="seuemail@gmail.com" />
+              <input {...register('email', { required: true })} type={'email'} pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="seuemail@gmail.com" />
             </label>
           </div>
         </div>
@@ -153,13 +153,13 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <div className="col-12 col-md-2 ">
             <label className='peso bottom'>
               Peso<p className='obrigatorio'>*</p>
-              <input type='number' {...register('weight', { required: true })} placeholder="75kg" />
+              <input type='number' min={0} step=".1" {...register('weight', { required: true })} placeholder="75.00kg" />
             </label>
           </div>
           <div className="col-12 col-md-2">
             <label className='altura bottom'>
               Altura<p className='obrigatorio'>*</p>
-              <input type='number' {...register('height', { required: true })} placeholder="1,80m" />
+              <input type='number' min={0} step=".01" {...register('height', { required: true })} placeholder="1.80m" />
             </label>
           </div>
         </div>
@@ -181,7 +181,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <div className="numero col-12">
             <label className='numero'>
               Número<p className='obrigatorio'>*</p>
-              <input {...register('number', { required: true })} placeholder="123" />
+              <input {...register('number', { required: true })} type={"number"} min={0} placeholder="123" />
             </label>
           </div>
           <div className="bairro col-12">
@@ -199,7 +199,7 @@ export const ProntuarioForm = (props: ProntuarioFormProps) => {
           <div className="estado col-6">
             <label className='estado'>
               Estado<p className='obrigatorio'>*</p>
-              <input {...register('state', { required: true })} placeholder="RJ" />
+              <input {...register('state', { required: true })} maxLength={2} placeholder="RJ" />
             </label>
           </div>
           <div className="cidade col-6">
