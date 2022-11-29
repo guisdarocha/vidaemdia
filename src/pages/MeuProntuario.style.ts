@@ -100,6 +100,9 @@ export const Dados = styled.div`
       }
     }
 
+    .nome{
+      text-transform: capitalize;
+    }
 `
 
 export const BtnContainer = styled.div`
