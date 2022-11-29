@@ -8,7 +8,7 @@ import jwt_decode from "jwt-decode";
 import api from "../api"
 import { BtnContainer, ButtonProntuario, Dados } from "./MeuProntuario.style"
 import sim from "../assets/icons/sim.svg";
-import nao from "../assets/icons/sim.svg";
+import nao from "../assets/icons/nao.svg";
 import { TopSection } from "./Exames.style"
 import Button from "../components/Button/Button"
 
@@ -187,41 +187,41 @@ export const MeuProntuarioRealizado = ({
           <hr />
           <div className="historicoSocial">
             <h3>Histórico Social</h3>
-            <div>
-              <h5>Fumo:</h5>
-              <p>{prontuario.smoke}</p>
+            <div className="d-flex align-items-center">
+              <h5>Fuma?</h5>
+              <p>{(prontuario.smoke === 'sim'?<img src={sim} alt="" /> : <img src={nao} alt="" /> )}{prontuario.smoke} </p>
             </div>
-            <div>
-              <h5>Drogas:</h5>
-             <p>{prontuario.drugs}</p>
+            <div className="d-flex align-items-center">
+              <h5>Faz uso de drogas?</h5>
+             <p>{(prontuario.drugs === 'sim'?<img src={sim} alt="" /> : <img src={nao} alt="" /> )}{prontuario.drugs}</p>
             </div>
-            <div>
+            <div className="d-flex align-items-center">
               <h5>Pratica exercícios?</h5>
-              <p>{prontuario.exercises}</p>
+              <p>{(prontuario.exercises === 'sim'?<img src={sim} alt="" /> : <img src={nao} alt="" /> )}{prontuario.exercises}</p>
             </div>
-            <div>
-              <h5>Pratica alguma recreação?</h5>
-              <p>{prontuario.recreation}</p>
+            <div className="d-flex align-items-center">
+              <h5>Pratica alguma atividade de lazer?</h5>
+              <p>{(prontuario.recreation === 'sim'?<img src={sim} alt="" /> : <img src={nao} alt="" /> )}{prontuario.recreation}</p>
             </div>
-            <div>
+            <div className="d-flex align-items-center">
               <h5>Doença na familia?</h5>
-              <p>{prontuario.familialDisease}</p>
+              <p>{(prontuario.familialDisease === 'sim'?<img src={sim} alt="" /> : <img src={nao} alt="" /> )}{prontuario.familialDisease}</p>
             </div>
-            <div>
+            <div className="d-flex align-items-center">
               <h5>Esta fazendo algum tratamento?</h5>
-              <p>{prontuario.treatment}</p>
+              <p>{(prontuario.treatment === 'sim'?<img src={sim} alt="" /> : <img src={nao} alt="" /> )}{prontuario.familialDisease}</p>
             </div>
-            <div>
+            <div className="d-flex align-items-center">
               <h5>Faz uso de algum medicamento?</h5>
-             <p>{prontuario.medicines}</p>
+             <p>{(prontuario.medicines === 'sim'?<img src={sim} alt="" /> : <img src={nao} alt="" /> )}{prontuario.medicines}</p>
             </div>
-            <div>
+            <div className="d-flex align-items-center">
               <h5>É alergico a algum medicamento?</h5>
-              <p>{prontuario.allergy}</p>
+              <p>{(prontuario.allergy === 'sim'?<img src={sim} alt="" /> : <img src={nao} alt="" /> )}{prontuario.allergy}</p>
             </div>
-            <div>
+            <div className="d-flex align-items-center">
               <h5>Está grávida?</h5>
-             <p>{prontuario.pregnant}</p>
+             <p>{(prontuario.pregnant === 'sim'?<img src={sim} alt="" /> : <img src={nao} alt="" /> )}{prontuario.pregnant}</p>
             </div>
           </div>
           <hr />

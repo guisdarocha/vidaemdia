@@ -107,6 +107,13 @@ export const Dados = styled.div`
     .check{
       max-width: 3vh;
     }
+
+    .historicoSocial{
+
+      img{
+        margin: 0 1rem 0 2rem;
+      }
+    }
 `
 
 export const BtnContainer = styled.div`
