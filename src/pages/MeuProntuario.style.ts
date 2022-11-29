@@ -103,6 +103,10 @@ export const Dados = styled.div`
     .nome{
       text-transform: capitalize;
     }
+
+    .check{
+      max-width: 3vh;
+    }
 `
 
 export const BtnContainer = styled.div`
