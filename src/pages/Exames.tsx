@@ -54,12 +54,21 @@ const Exames = (props: ExamesProps) => {
 
   let total = exames.length +1
 
-  let data = exames.map((exame) => {
-    return exame.date.slice(0, -14).replace(/-/g,'/')
-  })
-  console.log(data)
+  // let data = exames.map((exame) => {
+  //   return exame.date.slice(0, -14).replace(/-/g,'/')
+  // })
 
 
+
+  function transformaDatas(datainicial :any) {
+    const date = new Date(datainicial)
+
+    const day = date.getDate().toString().padStart(2, '0')
+    const month = (date.getMonth() + 1).toString().padStart(2, '0')
+    const year = date.getFullYear()
+
+    return `${day}/${month}/${year}`
+  }
 
   return (
     <>
@@ -86,9 +95,10 @@ const Exames = (props: ExamesProps) => {
         (
           <div className="container">
             {exames.slice(0).reverse().map((exame, i) => (<CardExame
+            key={i}
             index={total-=1}
             id={exame.idExams}
-            date={data[i]}
+            date={transformaDatas(exame.date)}
             diagnosis={exame.diagnosis}
             exam={exame.exam}
             clinic={exame.clinic}

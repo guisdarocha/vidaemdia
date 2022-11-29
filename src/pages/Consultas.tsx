@@ -49,12 +49,20 @@ const Consultas = (props: ConsultasProps) => {
 
   let total = consultas.length +1
 
-  let data = consultas.map((consulta) => {
-    return consulta.date.slice(0, -14).replace(/-/g,'/')
-  })
+  // let data = consultas.map((consulta) => {
+  //   return consulta.date.slice(0, -14).replace(/-/g,'/')
+  // })
 
 
+  function transformaDatas(datainicial :any) {
+    const date = new Date(datainicial)
 
+    const day = date.getDate().toString().padStart(2, '0')
+    const month = (date.getMonth() + 1).toString().padStart(2, '0')
+    const year = date.getFullYear()
+
+    return `${day}/${month}/${year}`
+  }
 
   return (
     <>
@@ -80,10 +88,10 @@ const Consultas = (props: ConsultasProps) => {
         (
           <div className="container">
             {consultas.slice(0).reverse().map((consulta, i) => (<CardConsulta
-            key={consulta.idAppointment}
+            key={i}
             index={total-=1}
             id={consulta.idAppointment}
-            date={data[i]}
+            date={transformaDatas(consulta.date)}
             diagnosis={consulta.diagnosis}
             hospital={consulta.hospital}
             doctor={consulta.doctor}

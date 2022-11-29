@@ -75,9 +75,22 @@ export const MeuProntuarioRealizado = ({
   }, [])
 
   let doencas = prontuario.disease
-  console.log(doencas)
 
-console.log(prontuario)
+
+  function transformaDatas(datainicial :any) {
+    const date = new Date(datainicial)
+
+    const day = date.getDate().toString().padStart(2, '0')
+    const month = (date.getMonth() + 1).toString().padStart(2, '0')
+    const year = date.getFullYear()
+
+    return `${day}/${month}/${year}`
+}
+
+  function removeCasas(word:string) {
+    word.slice(0, -2)
+  }
+
   return (
     <>
       <Header />
@@ -90,13 +103,13 @@ console.log(prontuario)
       </TopSection>
       <>
         <Dados className="container">
-          <h2>Visualizar aqui seu Prontuário Digital</h2>
+          <h2>Visualize aqui seu Prontuário Digital</h2>
           <div className="dados">
             <h3>Dados Pessoais</h3>
             <div className="info">
               <div>
                 <h5>Seu Nome</h5>
-                <p>{prontuario.name}</p>
+                <p className="nome">{prontuario.name}</p>
               </div>
             </div>
 
@@ -115,7 +128,7 @@ console.log(prontuario)
             <div className="info row">
               <div className="col-md-3 col-12">
                 <h5>Data de Nascimento</h5>
-                <p>{prontuario.birthDate}</p>
+                <p>{transformaDatas(prontuario.birthDate)}</p>
               </div>
               <div className="col-md-3 col-12">
                 <h5>Estado Civil</h5>
@@ -127,11 +140,11 @@ console.log(prontuario)
               </div>
               <div className="col-md-2 col-12">
                 <h5>Peso</h5>
-                <p>{prontuario.weight}kg</p>
+                <p>{Number(prontuario.weight)}kg</p>
               </div>
               <div className="col-md-2 col-12">
                 <h5>Altura</h5>
-                <p>{prontuario.height}m</p>
+                <p>{Number(prontuario.height)}m</p>
               </div>
             </div>
           </div>
