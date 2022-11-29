@@ -80,7 +80,7 @@ export const MeuProntuarioRealizado = ({
   function transformaDatas(datainicial :any) {
     const date = new Date(datainicial)
 
-    const day = date.getDate().toString().padStart(2, '0')
+    const day = (date.getDate()+1).toString().padStart(2, '0')
     const month = (date.getMonth() + 1).toString().padStart(2, '0')
     const year = date.getFullYear()
 
@@ -230,7 +230,7 @@ export const MeuProntuarioRealizado = ({
             <div className="grupo-diagnosis row">
               {doencas && doencas.map((doenca) => (
                <div className="diagnosis col-md-2 col-12">
-                  <img src={sim} alt="sinal check" /> <p className="doenca">{doenca}</p>
+                  <img className="check" src={sim} alt="sinal check" /> <p className="doenca">{doenca}</p>
                 </div>
                 ))}
             </div>
